@@ -35,15 +35,7 @@ if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
 // Local settings. These come last so that they can override anything.
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
-}$databases['default']['default'] = array (
-  'database' => 'opensocial',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
+}
+
 $settings['hash_salt'] = 'g2NjzV5_yxRj6Rka9Bx6aN8ZRI2Xhl_9GAeY9jehd-VZNiVKeItStuVke4sHxGezMp6xphF4dw';
 $settings['install_profile'] = 'social';
