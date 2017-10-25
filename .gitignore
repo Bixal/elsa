@@ -7,3 +7,5 @@
 /html/libraries
 vendor/
 .idea
+.settings.local.php
+.DS_Store
