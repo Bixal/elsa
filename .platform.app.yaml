@@ -37,6 +37,12 @@ mounts:
 build:
     flavor: composer
 
+# The build-time dependencies of the app.
+dependencies:
+    php:
+        "drush/drush": "^8.0"
+        "drupal/console": "@stable"
+
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     # The deploy hook runs after your application has been deployed and started.
@@ -104,3 +110,12 @@ crons:
     drupal:
         spec: '*/20 * * * *'
         cmd: 'cd html ; drush core-cron'
+
+hooks:
+# We run deploy hook after your application has been deployed and started.
+# @TODO Re-import configuration
+    deploy: 
+        cd html
+        drush -y cache-rebuild
+        drush -y updatedb
+        drush -y entup
