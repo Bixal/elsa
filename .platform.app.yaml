@@ -110,12 +110,3 @@ crons:
     drupal:
         spec: '*/20 * * * *'
         cmd: 'cd html ; drush core-cron'
-
-hooks:
-# We run deploy hook after your application has been deployed and started.
-# @TODO Re-import configuration
-    deploy: 
-        cd html
-        drush -y cache-rebuild
-        drush -y updatedb
-        drush -y entup
