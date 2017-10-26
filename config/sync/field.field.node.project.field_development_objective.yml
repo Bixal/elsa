@@ -1,0 +1,28 @@
+uuid: 19898406-8dc2-41cd-83ec-697d9f55c15b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_development_objective
+    - node.type.development_objective
+    - node.type.project
+id: node.project.field_development_objective
+field_name: field_development_objective
+entity_type: node
+bundle: project
+label: 'Development Objective'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      development_objective: development_objective
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
