@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a46fde771e6fdd0e8c3a31a3363e268",
+    "content-hash": "f2dd02493fa231d4680f852f090a690d",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -175,6 +175,32 @@
                 "stack"
             ],
             "time": "2017-04-11T20:03:41+00:00"
+        },
+        {
+            "name": "bixal/style_guide_response",
+            "version": "1.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/bixal/bixal_style_guide_response.git",
+                "reference": "05dfc8bc6a65fe9a4206bfcaa0db87bf22f9f3a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/bixal/bixal_style_guide_response/get/05dfc8bc6a65fe9a4206bfcaa0db87bf22f9f3a1.zip",
+                "reference": "05dfc8bc6a65fe9a4206bfcaa0db87bf22f9f3a1",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "This modules takes the compiled HTML style guide and serves it on a url",
+            "homepage": "https://bitbucket.org/bixal/bixal_style_guide_response/issues",
+            "keywords": [
+                "drupal"
+            ],
+            "time": "2017-10-11T21:25:18+00:00"
         },
         {
             "name": "bower-asset/autosize",
@@ -1798,6 +1824,57 @@
             }
         },
         {
+            "name": "drupal/components",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/components",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/components-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "adb1872a655466d575c2d3396f7ca2daba0a2918"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1461060840",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                }
+            ],
+            "description": "Registers “component libraries” defined in modules and themes with the Twig system",
+            "homepage": "https://www.drupal.org/project/components",
+            "support": {
+                "source": "http://cgit.drupalcode.org/components"
+            }
+        },
+        {
             "name": "drupal/config_update",
             "version": "1.4.0",
             "source": {
@@ -3141,7 +3218,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/link_css"
             },
-            "time": "2016-11-08T03:19:30+00:00"
+            "time": "2016-11-08 03:19:30"
         },
         {
             "name": "drupal/mailsystem",
@@ -3453,7 +3530,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/r4032login"
             },
-            "time": "2017-02-08T04:20:19+00:00"
+            "time": "2017-02-08 04:20:19"
         },
         {
             "name": "drupal/search_api",
@@ -8316,7 +8393,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "bixal/style_guide_response": 5
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

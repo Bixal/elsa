@@ -15,7 +15,9 @@
         "doctrine/common": "2.7.2",
         "doctrine/inflector": "1.1.0",
         "drupal/console": "^1.0",
-        "drush/drush": "^8.1"
+        "drush/drush": "^8.1",
+        "drupal/components": "^1.0",
+        "bixal/style_guide_response": "^1.0@RC"
     },
     "repositories": [
         {

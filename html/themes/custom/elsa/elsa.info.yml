@@ -1,0 +1,22 @@
+name: ELSA
+type: theme
+description: Open Social socialbase sub-theme
+package: Custom
+core: 8.x
+base theme: socialbase
+# Defines libraries group in which we can add css/js
+libraries:
+  - elsa/global-css
+  - elsa/global-js
+# Components
+component-libraries:
+  atoms:
+    paths:
+      - components/01-atoms
+  molecules:
+    paths:
+      - components/02-molecules
+  organisms:
+    paths:
+      - components/03-organisms
+# Regions

@@ -1,0 +1,21 @@
+/*
+@styleguide
+
+@title Captions
+
+Use the img-catption class on `<p>` elements wrapping `<caption>` elements.
+
+<p class="img-caption"><caption>Under this pricing agreement with Mylan Laboratories Limited and Aurobindo Pharma, regimens will cost about $75 per person per year.</caption></p>
+
+    <p class="img-caption"><caption>Use "img-caption" class for images that have captions.</caption></p>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+//styles that accompany images
+// TODO: figure out if we can assign this to the caption element
+.img-caption {
+    @include font ($body-font-default, 1.4rem, $grey, 500, 2rem);
+    @include vertical-margin($sml-margin);
+    caption-side: bottom-outside;
+  }

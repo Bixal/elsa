@@ -1,0 +1,61 @@
+/*
+@styleguide
+
+@title Breaks
+
+Use vertical breaks to seperate content from left or right
+
+<p class="vertical-break--right">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+    <p class="vertical-break--right">Use the vertical-break--class as needed</p>
+
+<p class="vertical-break--left">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+    <p class="vertical-break--left">Use the vertical-break--class as needed</p>
+
+<p class="vertical-break--both">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+    <p class="vertical-break--both">Use the vertical-break--class as needed</p>
+
+Use horizontal breaks to seperate from content below
+
+<p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+<br class="horizontal-break"></br>
+<p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+    <br class="horizontal-break"></br>
+
+<span style="font-weight:bold; font-size:22px;">CSS<span>
+*/
+
+.horizontal-break {
+  display: block;
+  content: "";
+  width: 100%;
+  border-top: solid $op-grey 2px;
+}
+
+//our vertical break mixins
+@mixin vertical-break-before {
+  padding-left: $sml-padding;
+  border-left: solid $op-grey 2px;
+}
+
+@mixin vertical-break-after {
+  padding-right: $sml-padding;
+  border-right: solid $op-grey 2px;
+}
+
+//our vertical break classes
+.vertical-break--right {
+  @include vertical-break-after;
+}
+
+.vertical-break--left {
+  @include vertical-break-before;
+}
+
+.vertical-break--both {
+  @include vertical-break-before;
+  @include vertical-break-after;
+}

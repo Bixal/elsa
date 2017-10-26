@@ -1,0 +1,9 @@
+<div id="search-form">
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% include '@atoms/form-fields/input.html.twig' %}
+  {% include '@atoms/buttons/input--submit.html.twig' %}
+</div>
