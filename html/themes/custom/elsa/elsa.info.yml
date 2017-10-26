@@ -10,13 +10,16 @@ libraries:
   - elsa/global-js
 # Components
 component-libraries:
+  base:
+    paths:
+      - components/01-base
   atoms:
     paths:
-      - components/01-atoms
+      - components/02-atoms
   molecules:
     paths:
-      - components/02-molecules
+      - components/03-molecules
   organisms:
     paths:
-      - components/03-organisms
+      - components/04-organisms
 # Regions
