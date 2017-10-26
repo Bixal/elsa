@@ -23,12 +23,12 @@ Use horizontal breaks to seperate from content below
 <br class="horizontal-break"></br>
 <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
 
-    <br class="horizontal-break"></br>
+    <hr class="horizontal-break"></hr>
 
 <span style="font-weight:bold; font-size:22px;">CSS<span>
 */
 
-.horizontal-break {
+hr.horizontal-break {
   display: block;
   content: "";
   width: 100%;
@@ -37,12 +37,12 @@ Use horizontal breaks to seperate from content below
 
 //our vertical break mixins
 @mixin vertical-break-before {
-  padding-left: $sml-padding;
+  padding-left: $small-padding;
   border-left: solid $op-grey 2px;
 }
 
 @mixin vertical-break-after {
-  padding-right: $sml-padding;
+  padding-right: $small-padding;
   border-right: solid $op-grey 2px;
 }
 

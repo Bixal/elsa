@@ -1,20 +1,22 @@
 // This file globs all partials from folders in the SCSS root. You shouldn't need to touch anything here.
 // Note: There seem to be some issues with $variables and globbing, and for that reason, we're keeping
 // Import our Utilities
-@import '../00-utilities/_reboot.scss';
-@import '../00-utilities/_global-mixins.scss';
-@import '../00-utilities/_breakpoints.scss';
-@import '../00-utilities/_colours.scss';
-@import '../00-utilities/_margin.scss';
-@import '../00-utilities/_padding.scss';
-@import '../00-utilities/_pseudo.scss';
-@import '../00-utilities/_typography.scss';
+// @import '../00-utilities/_reboot.scss';
+// @import '../00-utilities/_global-mixins.scss';
+// @import '../00-utilities/_breakpoints.scss';
+// @import '../00-utilities/_colours.scss';
+// @import '../00-utilities/_margin.scss';
+// @import '../00-utilities/_padding.scss';
+// @import '../00-utilities/_pseudo.scss';
+// @import '../00-utilities/_typography.scss';
 
 // Import
-@import '../01-atoms/**/*';
-@import '../02-molecules/**/*';
-@import '../03-organisms/**/*';
-
+@import '../00-config/variables/*';
+@import '../00-config/mixins/*';
+@import '../01-base/**/*';
+@import '../02-atoms/**/*';
+@import '../03-molecules/**/*';
+@import '../04-organisms/**/*';
 
 @import '../../style-guide/_style-guide.scss';
 
