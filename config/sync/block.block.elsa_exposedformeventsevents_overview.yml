@@ -1,0 +1,37 @@
+uuid: 9d7c0db5-2b5c-4cf3-b9a4-9e1270e60b12
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - elsa
+id: elsa_exposedformeventsevents_overview
+theme: elsa
+region: sidebar_first
+weight: 1
+provider: null
+plugin: 'views_exposed_filter_block:events-events_overview'
+settings:
+  id: 'views_exposed_filter_block:events-events_overview'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: '/user/*/events'
+    negate: false
+    context_mapping: {  }

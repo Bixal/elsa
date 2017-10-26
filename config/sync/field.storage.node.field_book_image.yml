@@ -1,0 +1,32 @@
+uuid: 9a1ba4ce-c257-4944-9622-d0697f2f233d
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: dSWT4ND9JHuRRaai1ecSdkCFP4VgSgjNt6y5-IVfifY
+id: node.field_book_image
+field_name: field_book_image
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

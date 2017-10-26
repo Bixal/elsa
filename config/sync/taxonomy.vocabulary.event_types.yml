@@ -1,0 +1,11 @@
+uuid: 5747376e-15d3-4598-a9f7-bb410d1d0896
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vUbmBPNXsJ-bcdrk0Eqsg4bZC-4dinRva9qSHlcwuac
+name: 'Event types'
+vid: event_types
+description: 'Event types'
+hierarchy: 0
+weight: 0

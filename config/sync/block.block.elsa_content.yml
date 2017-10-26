@@ -1,0 +1,20 @@
+uuid: a99ca3dc-97c6-41b1-a84f-9c70ef21b80a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - elsa
+id: elsa_content
+theme: elsa
+region: content
+weight: -13
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

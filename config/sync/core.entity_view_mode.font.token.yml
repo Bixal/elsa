@@ -1,0 +1,10 @@
+uuid: d9e99972-505d-47a2-b373-1462ca584d6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_font
+id: font.token
+label: Token
+targetEntityType: font
+cache: true

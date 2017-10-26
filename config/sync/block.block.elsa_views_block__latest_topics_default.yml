@@ -1,0 +1,30 @@
+uuid: 5ea9000d-df02-4047-b67e-3549601bbc3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_topics
+  module:
+    - system
+    - views
+  theme:
+    - elsa
+id: elsa_views_block__latest_topics_default
+theme: elsa
+region: sidebar_first
+weight: 3
+provider: null
+plugin: 'views_block:latest_topics-block_latest_topics'
+settings:
+  id: 'views_block:latest_topics-block_latest_topics'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stream\r\n/explore"
+    negate: false
+    context_mapping: {  }

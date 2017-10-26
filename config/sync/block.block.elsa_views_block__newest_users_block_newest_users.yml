@@ -1,0 +1,30 @@
+uuid: eeee52b1-620d-4e42-9b8f-55b8aeb8aea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.newest_users
+  module:
+    - system
+    - views
+  theme:
+    - elsa
+id: elsa_views_block__newest_users_block_newest_users
+theme: elsa
+region: sidebar_first
+weight: 5
+provider: null
+plugin: 'views_block:newest_users-block_newest_users'
+settings:
+  id: 'views_block:newest_users-block_newest_users'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stream\r\n/explore"
+    negate: false
+    context_mapping: {  }

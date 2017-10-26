@@ -1,0 +1,30 @@
+uuid: b8700701-35e9-48e4-bab8-89f7494d982c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - elsa
+id: elsa_views_block__events_block_events_on_profile
+theme: elsa
+region: sidebar_first
+weight: 1
+provider: null
+plugin: 'views_block:events-block_events_on_profile'
+settings:
+  id: 'views_block:events-block_events_on_profile'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/stream'
+    negate: false
+    context_mapping: {  }

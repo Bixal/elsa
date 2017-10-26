@@ -1,0 +1,17 @@
+uuid: fe2dea1b-ffe3-4d06-a1af-6155292e3475
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: TTwGbTaqOR9e2rMgGBVpo-s3afaI1JvfQtWCkOI8Rmw
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content: {  }
+hidden:
+  member_for: true
+  profile_main: true
+  profile_profile: true

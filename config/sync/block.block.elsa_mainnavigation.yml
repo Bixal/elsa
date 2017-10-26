@@ -1,0 +1,24 @@
+uuid: 4a11340c-351f-47ee-bd9a-8566487a8770
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - elsa
+id: elsa_mainnavigation
+theme: elsa
+region: header
+weight: 4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

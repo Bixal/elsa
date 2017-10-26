@@ -1,0 +1,26 @@
+uuid: bf76370d-f56c-4970-84f0-9d0a0b09dc44
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_event
+    - system
+  theme:
+    - elsa
+id: elsa_event_add_block
+theme: elsa
+region: sidebar_first
+weight: -99
+provider: null
+plugin: event_add_block
+settings:
+  id: event_add_block
+  label: 'Event add block'
+  provider: social_event
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/events'
+    negate: false
+    context_mapping: {  }
