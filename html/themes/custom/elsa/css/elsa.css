@@ -450,6 +450,9 @@ sup {
 sub {
   bottom: -0.25em; }
 
+ul {
+  list-style: none !important; }
+
 /*
 @styleguide
 
@@ -760,21 +763,26 @@ Use the .icn and its --modifiers to implement icons
   width: 1.5rem;
   height: 1.5rem;
   background-size: 1.5rem 1.5rem; }
+  .icn--small {
+    color: white; }
+
+.btn-icon {
+  display: none; }
 
 .icn--linkedin {
-  background-image: url("/themes/custom/elsa/components/01-atoms/icons/linkedin-logo.svg");
+  background-image: url("/themes/custom/elsa/components/02-atoms/icons/linkedin-logo.svg");
   background-size: cover; }
 
 .icn--facebook {
-  background-image: url("/themes/custom/elsa/components/01-atoms/icons/facebook-logo.svg");
+  background-image: url("/themes/custom/elsa/components/02-atoms/icons/facebook-logo.svg");
   background-size: cover; }
 
 .icn--twitter {
-  background-image: url("/themes/custom/elsa/components/01-atoms/icons/twitter-logo-silhouette.svg");
+  background-image: url("/themes/custom/elsa/components/02-atoms/icons/twitter-logo-silhouette.svg");
   background-size: cover; }
 
 .icn--chat {
-  background-image: url("/themes/custom/elsa/components/01-atoms/icons/chat.svg");
+  background-image: url("/themes/custom/elsa/components/02-atoms/icons/chat.svg");
   background-size: cover; }
 
 /*
@@ -784,11 +792,11 @@ Use the .icn and its --modifiers to implement icons
 
 These are our image styles
 
-<img src="/themes/custom/elsa/components/01-atoms/images/style-img.png"></img>
+<img src="/themes/custom/elsa/components/02-atoms/images/style-img.png"></img>
 
-<p><img class="img-align-right" src="/themes/custom/elsa/components/01-atoms/images/style-img-square.png" align="right"></img>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+<p><img class="img-align-right" src="/themes/custom/elsa/components/02-atoms/images/style-img-square.png" align="right"></img>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
 
-<p><img class="img-align-left" src="/themes/custom/elsa/components/01-atoms/images/style-img-square.png" align="left">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+<p><img class="img-align-left" src="/themes/custom/elsa/components/02-atoms/images/style-img-square.png" align="left">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
 
 <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
 
@@ -867,8 +875,7 @@ ul li {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   color: #000000;
-  line-height: 3.2rem;
-  list-style: square; }
+  line-height: 3.2rem; }
 
 /*
 @styleguide
