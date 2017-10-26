@@ -1,0 +1,31 @@
+uuid: d089d64a-7ea2-42ba-bc39-38b0e1650cdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_teaser
+    - field.field.node.topic.body
+    - field.field.node.topic.field_content_visibility
+    - field.field.node.topic.field_files
+    - field.field.node.topic.field_topic_comments
+    - field.field.node.topic.field_topic_image
+    - field.field.node.topic.field_topic_type
+    - node.type.topic
+  module:
+    - user
+_core:
+  default_config_hash: quB_X5kzX-ufIO_h_dp_i4p5e07dfQD6LV9jKF1amWs
+id: node.topic.small_teaser
+targetEntityType: node
+bundle: topic
+mode: small_teaser
+content: {  }
+hidden:
+  body: true
+  field_content_visibility: true
+  field_files: true
+  field_topic_comments: true
+  field_topic_image: true
+  field_topic_type: true
+  like_and_dislike: true
+  links: true

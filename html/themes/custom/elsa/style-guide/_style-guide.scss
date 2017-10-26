@@ -1,0 +1,54 @@
+/*
+@styleguide
+
+@title Styleguide Styles
+
+tracking our temp styleguide styles
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+.psg-menu {
+  position: absolute;
+  width: 100%;
+  background: white;
+  height: 20px;
+  z-index: 1;
+  padding: 0 2rem;
+  -webkit-box-shadow: -12px 17px 74px -14px rgba(0,0,0,0.37);
+  -moz-box-shadow: -12px 17px 74px -14px rgba(0,0,0,0.37);
+  box-shadow: -12px 17px 74px -14px rgba(0,0,0,0.37);
+}
+
+.psg-menu:hover {
+  height: auto;
+  max-height: 50vh;
+}
+
+ul.psg-componentList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
+
+  li {
+    margin: 0 2rem;
+    flex: 1 1 auto;
+  }
+
+}
+
+h2.psg-componentTitle {
+  font-size: 3.9rem;
+}
+
+.psg-updatedTime,
+.psg-colorBox-color,
+.psg-colorBox-name {
+font-size: 1.4rem;
+}
+
+.icn-style-grid {
+  display: flex;
+  justify-content: space-around;
+}

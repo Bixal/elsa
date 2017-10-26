@@ -1,0 +1,20 @@
+uuid: 2f637565-75c6-4c14-affb-24d86ea73a9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - socialbase
+id: socialbase_content
+theme: socialbase
+region: content
+weight: -13
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

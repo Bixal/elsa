@@ -1,0 +1,14 @@
+uuid: 831e39df-a30f-4c72-a076-758e3577996e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vyCdkkefvOpkZ7JeB2BoNPPPIT2tyd8DmKJI-Zc0bro
+label: Small
+id: teaser
+description: 'Teaser image in overviews'
+aspect_ratio: '220:220'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

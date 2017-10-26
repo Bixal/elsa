@@ -1,0 +1,19 @@
+//breakpoint variables
+
+//at tablet portriat we should already be getting the desktop experience
+$tablet: 569px;
+//any adjustments larger than tablet landscape should should this breakpoint
+$desktop: 1025px;
+
+//@include breakpoint(point){}
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media (min-width: $mobile) { @content ; }
+ }
+  @else if $point == tablet {
+    @media (min-width: $tablet) { @content ; }
+ }
+   @else if $point == desktop {
+    @media (min-width: $desktop) { @content ; }
+ }
+}

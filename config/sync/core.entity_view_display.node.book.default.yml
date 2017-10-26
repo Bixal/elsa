@@ -1,0 +1,58 @@
+uuid: 588caed1-6b8f-4e6e-973a-142c91fff528
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.book.body
+    - field.field.node.book.field_book_comments
+    - field.field.node.book.field_book_image
+    - field.field.node.book.field_content_visibility
+    - field.field.node.book.field_files
+    - node.type.book
+  module:
+    - file
+    - group_core_comments
+    - text
+    - user
+_core:
+  default_config_hash: eaZ8NBVSZoctNCiTs4_KHr50E9eM5HxJBn4-P1ITd0g
+id: node.book.default
+targetEntityType: node
+bundle: book
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_book_comments:
+    type: comment_group_content
+    weight: 2
+    label: above
+    settings:
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_files:
+    type: file_default
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  flag_follow_content:
+    weight: 10
+    region: content
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_book_image: true
+  field_content_visibility: true

@@ -1,0 +1,23 @@
+uuid: 8e6af90a-1327-4ad1-ae09-16f41dff1f43
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - elsa
+id: elsa_sitebranding
+theme: elsa
+region: header
+weight: 3
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

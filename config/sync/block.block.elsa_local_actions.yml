@@ -1,0 +1,18 @@
+uuid: bbedf2c6-d512-4930-8e72-a0896442ecfe
+langcode: en
+status: true
+dependencies:
+  theme:
+    - elsa
+id: elsa_local_actions
+theme: elsa
+region: content
+weight: -18
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

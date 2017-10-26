@@ -1,0 +1,28 @@
+uuid: b0d96f5a-ba54-4ad3-b427-b668f21caba2
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post_photo
+    - system
+  theme:
+    - elsa
+_core:
+  default_config_hash: jM4rDaxSleva7mQiyaRj-ESpAcur9wzSXDfeXdGbOjk
+id: elsa_postongroupblock
+theme: elsa
+region: sidebar_first
+weight: -9
+provider: null
+plugin: post_photo_group_block
+settings:
+  id: post_group_block
+  label: 'Post on group block'
+  provider: social_post
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/stream'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,29 @@
+/*
+@styleguide
+
+@title Lists
+
+Our list styles are specific to the element and the class breadcrumbs
+
+<ul>
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+</ul>
+
+    <ul>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ul>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+//lists
+ul li {
+  @include font ($body-font-default, 1.6rem, $black, null, 3.2rem);
+  list-style: square;
+}

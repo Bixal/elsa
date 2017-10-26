@@ -1,0 +1,20 @@
+// TODO: see if we can use scss variables instead
+//including special calls to the module for printing color
+/* @start color */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #6C6463;
+    --op-grey: rgba(#6C6463, 0.3);
+    --primary-colour: #002F6C;
+    --secondary-colour: #D0021B;
+    }
+/* @end color */
+
+// color variables
+$black: #000000 !default;
+$white: #ffffff !default;
+$grey: #6C6463 !default;
+$op-grey: rgba($grey, 0.3);
+$primary-colour: #002F6C !default;
+$secondary-colour: #D0021B !default;

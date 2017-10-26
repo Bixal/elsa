@@ -1,0 +1,29 @@
+uuid: 930b033a-de90-46d2-8151-04f2e8856dcf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - elsa
+id: elsa_breadcrumbs
+theme: elsa
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

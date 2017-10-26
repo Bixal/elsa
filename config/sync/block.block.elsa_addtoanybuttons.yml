@@ -1,0 +1,30 @@
+uuid: 799f569b-1cff-4cce-88e8-0bae28b4e9e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - addtoany
+    - node
+  theme:
+    - elsa
+id: elsa_addtoanybuttons
+theme: elsa
+region: sidebar_first
+weight: -25
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'Share this page'
+  provider: addtoany
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      event: event
+      page: page
+      topic: topic
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,20 @@
+uuid: c2be2222-2944-41cd-952a-c7712aa3c29f
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_search
+  theme:
+    - socialbase
+id: search_content_block_header
+theme: socialbase
+region: content_top
+weight: -9
+provider: null
+plugin: search_content_block
+settings:
+  id: search_content_block
+  label: 'Search content block'
+  provider: social_search
+  label_display: '0'
+visibility: {  }
