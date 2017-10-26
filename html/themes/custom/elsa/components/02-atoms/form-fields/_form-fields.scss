@@ -23,7 +23,7 @@ Use the input--field class on `<input>` elements.
 input[type="text-input"] {
 
   &.input--field {
-    @include vertical-margin ($lrg-margin)
+    @include vertical-margin ($lrg-margin);
     height: 3.5rem;
     width: 100%;
 

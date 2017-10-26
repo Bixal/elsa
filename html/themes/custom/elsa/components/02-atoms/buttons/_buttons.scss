@@ -51,7 +51,7 @@ input[type="submit"] {
 //buttons
 button {
 
-  &.btn {
+  // &.btn {
     @include button;
     background-color: $primary-colour;
 
@@ -63,6 +63,6 @@ button {
       background-color: $op-grey;
     }
 
-  }
+  // }
 
 }
