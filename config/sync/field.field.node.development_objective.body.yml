@@ -1,0 +1,22 @@
+uuid: de282a26-34fb-4ee7-89a4-7a49c732bdb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.development_objective
+  module:
+    - text
+id: node.development_objective.body
+field_name: body
+entity_type: node
+bundle: development_objective
+label: Overview
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,23 @@
+uuid: 84916a69-3885-4f08-ab46-405587d2a2d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_devobj_number
+    - node.type.development_objective
+id: node.development_objective.field_devobj_number
+field_name: field_devobj_number
+entity_type: node
+bundle: development_objective
+label: 'DevObj number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
