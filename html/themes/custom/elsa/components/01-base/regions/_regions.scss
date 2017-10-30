@@ -1,0 +1,72 @@
+/*
+@styleguide
+
+@title Regions
+
+Use regions to place our blocks. The regions will use a gridCSS formula to deal with structure and placement at breakpoints.
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+  
+// //define our named region desktop grid layout
+// .grid-layout--desktop {
+//   grid-template-areas: 
+//     "nav header sidebar"
+//     "nav main-content sidebar"      
+//     "nav bottom-content bottom-content";
+//   grid-template-columns: 300px auto 250px; // column-width
+//   grid-template-rows: auto; // row-height
+// }
+
+//define our named region desktop grid layout
+.grid-layout {
+    grid-template-areas:   
+    "nav nav nav"
+    "header header header"    
+    "auxiliary-sidebar main-content sidebar-right-top"
+    "auxiliary-sidebar main-content sidebar-right-bottom"    
+    "bottom-content bottom-content bottom-content";
+  grid-template-columns: 300px 300px 250px;
+  grid-template-rows: 1fr;
+  }
+  
+  //define our grid area namesystem
+
+  .region {
+
+    &--nav {
+        grid-area: nav;
+        background-color: lightcoral;
+      }
+      
+      &--header {
+        grid-area: header;
+        background-color: lightgreen;
+      }
+    
+      &--auxiliary-sidebar {
+        grid-area: auxiliary-sidebar;
+        background-color: lightgoldenrodyellow;    
+      }
+      
+      &--sidebar-right-top {
+        grid-area: sidebar-right-top;
+        background-color: lightcyan;    
+      }
+      
+      &--sidebar-right-bottom {
+        grid-area: sidebar-right-bottom;
+        background-color: lightgrey;    
+      }
+      
+      &--main-content {
+        grid-area: main-content;
+        background-color: lightblue;  
+      }
+      
+      &--bottom-content {
+        grid-area: bottom-content;
+        background-color: lightseagreen;    
+      }
+
+  }

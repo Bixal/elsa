@@ -1,7 +1,6 @@
-{#
-/**
+ {# 
  * @file
- * Socialbase's theme implementation to display a page.
+ * Theme implementation to display a page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
  * can be found in the html.html.twig template normally located in the
@@ -29,90 +28,61 @@
  *
  *
  * @see template_preprocess_page()
- * @see html.html.twig
- */
-#}
+ * @see html.html.twig 
+ #}
 
-{% if page.header %}
-  {{ page.header }}
-{% endif %}
+<main id="content" class="main-container grid-layout" role="main">
+ 
+    {% if page.nav %}
+    {{ page.nav }} 
+    {% endif %} 
 
-<main id="content" class="main-container" role="main">
+    <section>
+    
+      {% if page.header %}
+      {{ page.header }} 
+      {% endif %} 
 
-  {% if page.breadcrumb %}
-    {{ page.breadcrumb }}
-  {% endif %}
+    </section>
 
-  {% if page.hero %}
-    {{ page.hero }}
-  {% endif %}
+    <section>
 
-  {% if page.secondary_navigation %}
-    {{ page.secondary_navigation }}
-  {% endif %}
+        {% if page.auxiliary_sidebar %}
+        <aside class="" role="complementary">
+            {{ page.auxiliary_sidebar }}
+        </aside>
+        {% endif %} 
 
-  {% if page.content_top %}
-    {{ page.content_top }}
-  {% endif %}
+        {% if page.sidebar_right_top or page.sidebar_right_bottom %}
+        <aside class="" role="complementary">
+            {% if page.sidebar_right_top %} 
+            {{ page.sidebar_right_top }} 
+            {% endif %} 
 
-  {# Content, see Style guide Templates for documentation #}
-  {%
-    set content_classes = [
-      'row',
-      'container',
-      page.title and display_page_title ? 'with-title-region',
-      page.complementary_top or page.complementary_bottom ? 'layout--with-complementary',
-      page.sidebar_first is empty and page.sidebar_second is empty ? 'layout--with-complementary',
-      page.complementary_top is empty and page.complementary_bottom is empty and page.sidebar_first and page.sidebar_second ? 'layout--with-three-columns',
-      page.complementary_top is empty and page.complementary_bottom is empty and page.sidebar_second is empty and page.sidebar_first ? 'layout--with-two-columns',
-      page.complementary_top is empty and page.complementary_bottom is empty and page.sidebar_first is empty and page.sidebar_second ? 'layout--with-two-columns',
-    ]
-  %}
+            {% if page.sidebar_right_bottom %} 
+            {{ page.sidebar_right_bottom }} 
+            {% endif %}
+        </aside>
+        {% endif %} 
 
-  <section{{ content_attributes.addClass(content_classes) }}>
-
-    {% if page.title and display_page_title %}
-      {{ page.title }}
-    {% endif %}
-
-    {% if page.complementary_top or page.complementary_bottom %}
-      <aside class="region--complementary" role="complementary">
-        {% if page.complementary_top %}
-          {{ page.complementary_top }}
+        {% if page.main_content %}
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.main_content }} 
         {% endif %}
-        {% if page.complementary_bottom %}
-          {{ page.complementary_bottom }}
+
+    </section>
+
+    <section>
+
+        {% if page.bottom_content %}
+        {{ page.bottom_content }} 
         {% endif %}
-      </aside>
-    {% endif %}
 
-    {% block content %}
-      <a id="main-content" tabindex="-1"></a>
-      {{ page.content }}
-    {% endblock %}
-
-    {# an extra check for complementary regions to be empty #}
-    {% if page.sidebar_first and not page.complementary_top and not page.complementary_bottom %}
-      {% block sidebar_first %}
-        {{ page.sidebar_first }}
-      {% endblock %}
-    {% endif %}
-
-    {# an extra check for complementary regions to be empty #}
-    {% if page.sidebar_second and not page.complementary_top and not page.complementary_bottom %}
-      {% block sidebar_second %}
-        {{ page.sidebar_second }}
-      {% endblock %}
-    {% endif %}
-
-  </section>
-
-  {% if page.content_bottom %}
-    {{ page.content_bottom }}
-  {% endif %}
+    </section>
 
 </main>
 
-{% if page.footer %}
-  {{ page.footer }}
+{# we are not using a footer at the moment but that could change #} 
+{% if page.footer %} 
+{{ page.footer }} 
 {% endif %}
