@@ -18,11 +18,11 @@ main {
   grid-template-rows: auto;
   grid-template-areas:   
   "header" 
-  "maincontent"
-  "auxiliarysidebar"  
-  "sidebarrighttop"     
-  "sidebarrightbottom" 
-  "bottomcontent"
+  "main-content"
+  "auxiliary-sidebar"  
+  "sidebar-right-top"     
+  "sidebar-right-bottom" 
+  "bottom-content"
   "nav";
 
   @include breakpoint (tablet) {
@@ -30,10 +30,10 @@ main {
     grid-template-areas:   
     "nav nav" 
     "header header" 
-    "maincontent auxiliarysidebar"
-    "maincontent sidebarrighttop"     
-    "maincontent sidebarrightbottom" 
-    "bottomcontent bottomcontent";
+    "main-content auxiliary-sidebar"
+    "main-content sidebar-right-top"     
+    "main-content sidebar-right-bottom" 
+    "bottom-content bottom-content";
   }
 
   @include breakpoint (desktop) {
