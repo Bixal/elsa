@@ -9,8 +9,8 @@ dependencies:
     - elsa
 id: elsa_accountheaderblock
 theme: elsa
-region: header
-weight: 2
+region: nav
+weight: -21
 provider: null
 plugin: account_header_block
 settings:

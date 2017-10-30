@@ -30,3 +30,5 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_devobj_number: true
+  field_location: true

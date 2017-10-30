@@ -9,8 +9,8 @@ dependencies:
     - elsa
 id: elsa_profile_hero_block
 theme: elsa
-region: sidebar_first
-weight: -15
+region: sidebar_right_bottom
+weight: -4
 provider: null
 plugin: profile_hero_block
 settings:

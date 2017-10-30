@@ -11,8 +11,8 @@ _core:
   default_config_hash: jM4rDaxSleva7mQiyaRj-ESpAcur9wzSXDfeXdGbOjk
 id: elsa_postongroupblock
 theme: elsa
-region: sidebar_first
-weight: -9
+region: sidebar_right_bottom
+weight: -17
 provider: null
 plugin: post_photo_group_block
 settings:

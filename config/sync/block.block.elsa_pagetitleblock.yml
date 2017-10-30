@@ -10,8 +10,8 @@ dependencies:
     - elsa
 id: elsa_pagetitleblock
 theme: elsa
-region: sidebar_first
-weight: -15
+region: main_content
+weight: -24
 provider: null
 plugin: social_page_title_block
 settings:

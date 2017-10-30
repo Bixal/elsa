@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_views_block__activity_stream_profile_block_1
 theme: elsa
-region: content
-weight: -9
+region: sidebar_right_bottom
+weight: -18
 provider: null
 plugin: 'views_block:activity_stream_profile-block_1'
 settings:

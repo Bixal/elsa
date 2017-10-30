@@ -12,8 +12,8 @@ dependencies:
     - elsa
 id: elsa_anhomepageheroblock
 theme: elsa
-region: sidebar_first
-weight: -15
+region: sidebar_right_bottom
+weight: -5
 provider: null
 plugin: 'block_content:8bb9d4bb-f182-4afc-b138-8a4b802824e4'
 settings:

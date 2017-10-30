@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_exposedformlatest_topicspage_latest_topics
 theme: elsa
-region: sidebar_first
-weight: 1
+region: bottom_content
+weight: -21
 provider: null
 plugin: 'views_exposed_filter_block:latest_topics-page_latest_topics'
 settings:

@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_views_block__groups_block_user_groups
 theme: elsa
-region: sidebar_first
-weight: 4
+region: sidebar_right_bottom
+weight: -8
 provider: null
 plugin: 'views_block:groups-block_user_groups'
 settings:

@@ -9,8 +9,8 @@ dependencies:
     - elsa
 id: elsa_booknavigation
 theme: elsa
-region: sidebar_first
-weight: null
+region: auxiliary_sidebar
+weight: -20
 provider: null
 plugin: book_navigation
 settings:

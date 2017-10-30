@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_views_block__activity_stream_block_stream_homepage
 theme: elsa
-region: content
-weight: null
+region: main_content
+weight: -22
 provider: null
 plugin: 'views_block:activity_stream-block_stream_homepage'
 settings:

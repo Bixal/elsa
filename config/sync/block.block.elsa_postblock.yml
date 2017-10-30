@@ -11,8 +11,8 @@ _core:
   default_config_hash: P48P5vAKh5cdHENgfiw66njirMIylYzdKUN2jOQg00o
 id: elsa_postblock
 theme: elsa
-region: sidebar_first
-weight: -7
+region: header
+weight: -22
 provider: null
 plugin: post_photo_block
 settings:

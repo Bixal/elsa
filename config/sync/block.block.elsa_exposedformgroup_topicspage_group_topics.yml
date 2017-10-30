@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_exposedformgroup_topicspage_group_topics
 theme: elsa
-region: sidebar_first
-weight: -9
+region: sidebar_right_bottom
+weight: -2
 provider: null
 plugin: 'views_exposed_filter_block:group_topics-page_group_topics'
 settings:

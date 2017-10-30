@@ -30,3 +30,10 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_budget: true
+  field_development_objective: true
+  field_event_date: true
+  field_event_date_end: true
+  field_link_to_usaid_page: true
+  field_location: true
+  field_themes: true
