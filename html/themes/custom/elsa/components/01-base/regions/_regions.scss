@@ -7,66 +7,85 @@ Use regions to place our blocks. The regions will use a gridCSS formula to deal 
 
 <span style="font-weight:bold; font-size:22px;">CSS</span>
 */
-  
-// //define our named region desktop grid layout
-// .grid-layout--desktop {
-//   grid-template-areas: 
-//     "nav header sidebar"
-//     "nav main-content sidebar"      
-//     "nav bottom-content bottom-content";
-//   grid-template-columns: 300px auto 250px; // column-width
-//   grid-template-rows: auto; // row-height
-// }
 
-//define our named region desktop grid layout
+main {
+  display: grid;
+}
+
+// define our named region desktop grid layout
 .grid-layout {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:   
+  "header" 
+  "maincontent"
+  "auxiliarysidebar"  
+  "sidebarrighttop"     
+  "sidebarrightbottom" 
+  "bottomcontent"
+  "nav";
+
+  @include breakpoint (tablet) {
+    grid-template-columns: auto minmax(300px, 1fr);
     grid-template-areas:   
-    "nav nav nav"
-    "header header header"    
-    "auxiliary-sidebar main-content sidebar-right-top"
-    "auxiliary-sidebar main-content sidebar-right-bottom"    
-    "bottom-content bottom-content bottom-content";
-  grid-template-columns: 300px 300px 250px;
-  grid-template-rows: 1fr;
+    "nav nav" 
+    "header header" 
+    "maincontent auxiliarysidebar"
+    "maincontent sidebarrighttop"     
+    "maincontent sidebarrightbottom" 
+    "bottomcontent bottomcontent";
   }
-  
-  //define our grid area namesystem
 
+  @include breakpoint (desktop) {
+    grid-template-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
+    grid-template-areas:   
+    "nav nav nav" 
+    "header header header" 
+    "auxiliarysidebar maincontent sidebarrighttop" 
+    "auxiliarysidebar maincontent sidebarrightbottom" 
+    "bottomcontent bottomcontent bottomcontent";
+  }
+
+
+  // define our grid area namesystem
   .region {
-
-    &--nav {
-        grid-area: nav;
-        background-color: lightcoral;
-      }
-      
-      &--header {
-        grid-area: header;
-        background-color: lightgreen;
-      }
     
-      &--auxiliary-sidebar {
-        grid-area: auxiliary-sidebar;
-        background-color: lightgoldenrodyellow;    
-      }
+      &--nav {
+          grid-area: nav;
+          // background-color: lightcoral;
+        }
+        
+        &--header {
+          grid-area: header;
+          // background-color: lightgreen;
+        }
       
-      &--sidebar-right-top {
-        grid-area: sidebar-right-top;
-        background-color: lightcyan;    
-      }
-      
-      &--sidebar-right-bottom {
-        grid-area: sidebar-right-bottom;
-        background-color: lightgrey;    
-      }
-      
-      &--main-content {
-        grid-area: main-content;
-        background-color: lightblue;  
-      }
-      
-      &--bottom-content {
-        grid-area: bottom-content;
-        background-color: lightseagreen;    
-      }
+        &--auxiliary-sidebar {
+          grid-area: auxiliarysidebar;
+          // background-color: lightgoldenrodyellow;    
+        }
+        
+        &--sidebar-right-top {
+          grid-area: sidebarright-top;
+          // background-color: lightcyan;    
+        }
+        
+        &--sidebar-right-bottom {
+          grid-area: sidebarright-bottom;
+          // background-color: lightgrey;    
+        }
+        
+        &--main-content {
+          grid-area: maincontent;
+          // background-color: lightblue;
+          // max-width: 650px;  
+        }
+        
+        &--bottom-content {
+          grid-area: bottomcontent;
+          // background-color: lightseagreen;    
+        }
+    
+    }
 
   }
