@@ -377,30 +377,23 @@ main {
       grid-template-areas: "nav nav"  "header header"  "main-content auxiliary-sidebar" "main-content sidebar-right-top"      "main-content sidebar-right-bottom"  "bottom-content bottom-content"; } }
   @media (min-width: 1025px) {
     .grid-layout {
-      -ms-grid-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
-          grid-template-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
+      -ms-grid-columns: 300px minmax(auto, 650px) minmax(300px, 1fr);
+          grid-template-columns: 300px minmax(auto, 650px) minmax(300px, 1fr);
       grid-template-areas: "nav nav nav"  "header header header"  "auxiliary-sidebar main-content sidebar-right-top"  "auxiliary-sidebar main-content sidebar-right-bottom"  "bottom-content bottom-content bottom-content"; } }
   .grid-layout .region--nav {
-    grid-area: nav;
-    background-color: lightcoral; }
+    grid-area: nav; }
   .grid-layout .region--header {
-    grid-area: header;
-    background-color: lightgreen; }
+    grid-area: header; }
   .grid-layout .region--auxiliary-sidebar {
-    grid-area: auxiliary-sidebar;
-    background-color: lightgoldenrodyellow; }
+    grid-area: auxiliary-sidebar; }
   .grid-layout .region--sidebar-right-top {
-    grid-area: sidebar-right-top;
-    background-color: lightcyan; }
+    grid-area: sidebar-right-top; }
   .grid-layout .region--sidebar-right-bottom {
-    grid-area: sidebar-right-bottom;
-    background-color: lightgrey; }
+    grid-area: sidebar-right-bottom; }
   .grid-layout .region--main-content {
-    grid-area: main-content;
-    background-color: lightblue; }
+    grid-area: main-content; }
   .grid-layout .region--bottom-content {
-    grid-area: bottom-content;
-    background-color: lightseagreen; }
+    grid-area: bottom-content; }
 
 /*
 @styleguide

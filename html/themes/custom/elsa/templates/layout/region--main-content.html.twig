@@ -1,0 +1,12 @@
+{# assiging the region prefix to our automate our classing system for region --suffix #}
+{%
+  set classes = [
+    'region--' ~ region|clean_class,
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <a id="main-content" tabindex="-1"></a>
+    {{ content }}
+  </div>
+{% endif %}

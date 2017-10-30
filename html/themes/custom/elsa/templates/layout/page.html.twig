@@ -47,6 +47,10 @@
         </aside>
         {% endif %} 
 
+        {% if page.main_content %}
+        {{ page.main_content }} 
+        {% endif %}
+
         {% if page.sidebar_right_top or page.sidebar_right_bottom %}
         <aside class="" role="complementary">
             {% if page.sidebar_right_top %} 
@@ -58,11 +62,6 @@
             {% endif %}
         </aside>
         {% endif %} 
-
-        {% if page.main_content %}
-        <a id="main-content" tabindex="-1"></a>
-        {{ page.main_content }} 
-        {% endif %}
 
         {% if page.bottom_content %}
         {{ page.bottom_content }} 

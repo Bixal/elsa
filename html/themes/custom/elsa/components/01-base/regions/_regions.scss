@@ -37,7 +37,7 @@ main {
   }
 
   @include breakpoint (desktop) {
-    grid-template-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
+    grid-template-columns: 300px minmax(auto, 650px) minmax(300px, 1fr);
     grid-template-areas:   
     "nav nav nav" 
     "header header header" 
@@ -48,42 +48,42 @@ main {
 
 
   // define our grid area namesystem
+  // colours toggled for troubleshooting
   .region {
     
       &--nav {
           grid-area: nav;
-          background-color: lightcoral;
+          // background-color: lightcoral;
         }
         
         &--header {
           grid-area: header;
-          background-color: lightgreen;
+          // background-color: lightgreen;
         }
       
         &--auxiliary-sidebar {
           grid-area: auxiliary-sidebar;
-          background-color: lightgoldenrodyellow;    
+          // background-color: lightgoldenrodyellow;   
         }
         
         &--sidebar-right-top {
           grid-area: sidebar-right-top;
-          background-color: lightcyan;    
+          // background-color: lightcyan;    
         }
         
         &--sidebar-right-bottom {
           grid-area: sidebar-right-bottom;
-          background-color: lightgrey;    
+          // background-color: lightgrey;    
         }
         
         &--main-content {
           grid-area: main-content;
-          background-color: lightblue;
-          // max-width: 650px;  
+          // background-color: lightblue; 
         }
         
         &--bottom-content {
           grid-area: bottom-content;
-          background-color: lightseagreen;    
+          // background-color: lightseagreen;    
         }
     
     }
