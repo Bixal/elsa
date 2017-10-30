@@ -41,9 +41,9 @@ main {
     grid-template-areas:   
     "nav nav nav" 
     "header header header" 
-    "auxiliarysidebar maincontent sidebarrighttop" 
-    "auxiliarysidebar maincontent sidebarrightbottom" 
-    "bottomcontent bottomcontent bottomcontent";
+    "auxiliary-sidebar main-content sidebar-right-top" 
+    "auxiliary-sidebar main-content sidebar-right-bottom" 
+    "bottom-content bottom-content bottom-content";
   }
 
 
@@ -52,38 +52,38 @@ main {
     
       &--nav {
           grid-area: nav;
-          // background-color: lightcoral;
+          background-color: lightcoral;
         }
         
         &--header {
           grid-area: header;
-          // background-color: lightgreen;
+          background-color: lightgreen;
         }
       
         &--auxiliary-sidebar {
-          grid-area: auxiliarysidebar;
-          // background-color: lightgoldenrodyellow;    
+          grid-area: auxiliary-sidebar;
+          background-color: lightgoldenrodyellow;    
         }
         
         &--sidebar-right-top {
-          grid-area: sidebarright-top;
-          // background-color: lightcyan;    
+          grid-area: sidebar-right-top;
+          background-color: lightcyan;    
         }
         
         &--sidebar-right-bottom {
-          grid-area: sidebarright-bottom;
-          // background-color: lightgrey;    
+          grid-area: sidebar-right-bottom;
+          background-color: lightgrey;    
         }
         
         &--main-content {
-          grid-area: maincontent;
-          // background-color: lightblue;
+          grid-area: main-content;
+          background-color: lightblue;
           // max-width: 650px;  
         }
         
         &--bottom-content {
-          grid-area: bottomcontent;
-          // background-color: lightseagreen;    
+          grid-area: bottom-content;
+          background-color: lightseagreen;    
         }
     
     }
