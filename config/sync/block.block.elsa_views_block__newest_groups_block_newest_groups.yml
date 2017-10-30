@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_views_block__newest_groups_block_newest_groups
 theme: elsa
-region: sidebar_first
-weight: 4
+region: bottom_content
+weight: -20
 provider: null
 plugin: 'views_block:newest_groups-block_newest_groups'
 settings:

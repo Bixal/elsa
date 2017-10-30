@@ -9,8 +9,8 @@ dependencies:
     - elsa
 id: elsa_groupheroblock
 theme: elsa
-region: sidebar_first
-weight: null
+region: bottom_content
+weight: -24
 provider: null
 plugin: group_hero_block
 settings:

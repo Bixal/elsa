@@ -10,8 +10,8 @@ dependencies:
     - elsa
 id: elsa_mainnavigation
 theme: elsa
-region: header
-weight: 4
+region: nav
+weight: -24
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -9,8 +9,8 @@ dependencies:
     - elsa
 id: elsa_event_add_block
 theme: elsa
-region: sidebar_first
-weight: -99
+region: sidebar_right_bottom
+weight: -25
 provider: null
 plugin: event_add_block
 settings:

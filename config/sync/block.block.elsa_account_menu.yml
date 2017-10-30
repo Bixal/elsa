@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_account_menu
 theme: elsa
-region: header
-weight: 1
+region: nav
+weight: -22
 provider: null
 plugin: 'system_menu_block:account'
 settings:

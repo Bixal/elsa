@@ -12,8 +12,8 @@ dependencies:
     - elsa
 id: elsa_exposedformeventsevents_overview
 theme: elsa
-region: sidebar_first
-weight: 1
+region: bottom_content
+weight: -22
 provider: null
 plugin: 'views_exposed_filter_block:events-events_overview'
 settings:

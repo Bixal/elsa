@@ -8,8 +8,8 @@ dependencies:
     - elsa
 id: elsa_sitebranding
 theme: elsa
-region: header
-weight: 3
+region: nav
+weight: -25
 provider: null
 plugin: system_branding_block
 settings:

@@ -12,8 +12,8 @@ dependencies:
     - elsa
 id: elsa_exposedformtopicspage_profile
 theme: elsa
-region: sidebar_first
-weight: 3
+region: sidebar_right_top
+weight: -25
 provider: null
 plugin: 'views_exposed_filter_block:topics-page_profile'
 settings:

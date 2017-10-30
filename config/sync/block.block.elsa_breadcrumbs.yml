@@ -9,8 +9,8 @@ dependencies:
     - elsa
 id: elsa_breadcrumbs
 theme: elsa
-region: breadcrumb
-weight: 0
+region: header
+weight: -23
 provider: null
 plugin: system_breadcrumb_block
 settings:

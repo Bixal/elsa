@@ -8,8 +8,8 @@ dependencies:
     - elsa
 id: elsa_help
 theme: elsa
-region: content
-weight: -16
+region: header
+weight: -24
 provider: null
 plugin: help_block
 settings:
