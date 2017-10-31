@@ -1,0 +1,28 @@
+uuid: 7f60fb5f-e8c1-4af2-8b7c-2cd1888efe0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_themes
+    - node.type.learning_library_item
+    - taxonomy.vocabulary.themes
+id: node.learning_library_item.field_themes
+field_name: field_themes
+entity_type: node
+bundle: learning_library_item
+label: Themes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      themes: themes
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

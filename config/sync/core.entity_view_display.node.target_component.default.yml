@@ -1,0 +1,41 @@
+uuid: 87fe4e92-0a14-41a0-92dc-1c9187d25393
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.target_component.body
+    - field.field.node.target_component.field_topic_image
+    - node.type.target_component
+  module:
+    - image
+    - text
+    - user
+id: node.target_component.default
+targetEntityType: node
+bundle: target_component
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_topic_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  flag_follow_content:
+    weight: 10
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true

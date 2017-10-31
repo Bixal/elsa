@@ -1,0 +1,23 @@
+uuid: 3d6e8ca4-c434-4f42-911e-6217eb9dee13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_page
+    - node.type.implementing_partner
+  module:
+    - link
+id: node.implementing_partner.field_link_to_page
+field_name: field_link_to_page
+entity_type: node
+bundle: implementing_partner
+label: 'Link to page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

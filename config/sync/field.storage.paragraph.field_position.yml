@@ -1,0 +1,45 @@
+uuid: 5f0acf7a-1596-4256-85c4-aa82ce84dd84
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_position
+field_name: field_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: chief-of-party
+      label: 'Chief of Party'
+    -
+      value: deputy-chief-of-party
+      label: 'Deputy Chief of Party'
+    -
+      value: monitoring-and-evaluation-specialist
+      label: 'Monitoring and Evaluation Specialist'
+    -
+      value: monitoring-and-evaluation-assistant
+      label: 'Monitoring and Evaluation Assistant'
+    -
+      value: statistics-analyst
+      label: 'Statistics Analyst'
+    -
+      value: gender-specialist
+      label: 'Gender Specialist'
+    -
+      value: vulnerable-populations-specialist
+      label: 'Vulnerable Populations Specialist'
+    -
+      value: communications-specialist
+      label: 'Communications Specialist'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

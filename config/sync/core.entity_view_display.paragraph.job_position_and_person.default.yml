@@ -1,0 +1,31 @@
+uuid: cdbc19f2-04dc-4afe-8f97-a17dc499659f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job_position_and_person.field_person_name
+    - field.field.paragraph.job_position_and_person.field_position
+    - paragraphs.paragraphs_type.job_position_and_person
+  module:
+    - options
+id: paragraph.job_position_and_person.default
+targetEntityType: paragraph
+bundle: job_position_and_person
+mode: default
+content:
+  field_person_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_position:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }
