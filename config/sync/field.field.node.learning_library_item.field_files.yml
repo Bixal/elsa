@@ -1,0 +1,27 @@
+uuid: 7814265e-995e-4daa-aa79-3afdc09beff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.learning_library_item
+  module:
+    - file
+id: node.learning_library_item.field_files
+field_name: field_files
+entity_type: node
+bundle: learning_library_item
+label: Files
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf png jpeg gif doc docx xls xlsx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

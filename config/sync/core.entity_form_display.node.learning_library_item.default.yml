@@ -1,26 +1,24 @@
-uuid: fb5ed744-f81e-4248-9bde-0a1fdeada057
+uuid: 9dc45cd8-e514-41b4-a5ee-468a393a8bbf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.project.body
-    - field.field.node.project.field_budget
-    - field.field.node.project.field_development_objective
-    - field.field.node.project.field_event_date
-    - field.field.node.project.field_event_date_end
-    - field.field.node.project.field_implementing_partner
-    - field.field.node.project.field_link_to_usaid_page
-    - field.field.node.project.field_location
-    - field.field.node.project.field_themes
-    - node.type.project
+    - field.field.node.learning_library_item.body
+    - field.field.node.learning_library_item.field_development_objective
+    - field.field.node.learning_library_item.field_files
+    - field.field.node.learning_library_item.field_library_comments
+    - field.field.node.learning_library_item.field_project
+    - field.field.node.learning_library_item.field_publication_type
+    - field.field.node.learning_library_item.field_themes
+    - node.type.learning_library_item
   module:
-    - datetime
-    - link
+    - comment
+    - file
     - path
     - text
-id: node.project.default
+id: node.learning_library_item.default
 targetEntityType: node
-bundle: project
+bundle: learning_library_item
 mode: default
 content:
   body:
@@ -38,36 +36,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_budget:
-    weight: 37
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
   field_development_objective:
-    weight: 38
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_event_date:
     weight: 33
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_event_date_end:
-    weight: 34
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_implementing_partner:
-    weight: 39
     settings:
       match_operator: CONTAINS
       size: 60
@@ -75,15 +45,29 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_link_to_usaid_page:
-    weight: 35
+  field_files:
+    weight: 36
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: link_default
+    type: file_generic
     region: content
-  field_location:
+  field_library_comments:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_project:
+    weight: 34
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_publication_type:
     weight: 32
     settings:
       match_operator: CONTAINS
@@ -93,7 +77,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_themes:
-    weight: 36
+    weight: 35
     settings:
       match_operator: CONTAINS
       size: 60

@@ -1,0 +1,9 @@
+uuid: 31bf46af-8e41-4c63-b8f6-072bb035895c
+langcode: en
+status: true
+dependencies: {  }
+id: job_position_and_person
+label: 'Job position and person'
+icon_uuid: null
+description: 'Implementing partners job positions and persons'
+behavior_plugins: {  }

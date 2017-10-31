@@ -1,0 +1,9 @@
+uuid: b099cd6d-fa98-47ae-a0b5-4c9412a618d9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Publication types'
+vid: publication_types
+description: 'Publication types for learning library items'
+hierarchy: 0
+weight: 0
