@@ -9,9 +9,12 @@ dependencies:
     - field.field.node.project.field_implementing_partner
     - field.field.node.project.field_link_to_usaid_page
     - field.field.node.project.field_location
+    - field.field.node.project.field_project_end_date
+    - field.field.node.project.field_project_start_date
     - field.field.node.project.field_themes
     - node.type.project
   module:
+    - datetime
     - link
     - text
     - user
@@ -73,6 +76,24 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_project_end_date:
+    weight: 111
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_project_start_date:
+    weight: 110
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_themes:
     weight: 106
