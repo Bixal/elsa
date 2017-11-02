@@ -6,11 +6,11 @@ dependencies:
     - field.field.node.project.body
     - field.field.node.project.field_budget
     - field.field.node.project.field_development_objective
-    - field.field.node.project.field_event_date
-    - field.field.node.project.field_event_date_end
     - field.field.node.project.field_implementing_partner
     - field.field.node.project.field_link_to_usaid_page
     - field.field.node.project.field_location
+    - field.field.node.project.field_project_end_date
+    - field.field.node.project.field_project_start_date
     - field.field.node.project.field_themes
     - node.type.project
   module:
@@ -49,24 +49,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_event_date:
-    weight: 103
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_event_date_end:
-    weight: 104
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_implementing_partner:
     weight: 109
     label: above
@@ -94,6 +76,24 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_project_end_date:
+    weight: 111
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_project_start_date:
+    weight: 110
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_themes:
     weight: 106

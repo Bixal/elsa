@@ -1,18 +1,16 @@
-uuid: 7920c1f3-4408-4b6d-871e-f83a148e1774
+uuid: 63c64279-db8d-4011-be6f-0d50f1b78ce1
 langcode: en
 status: true
 dependencies:
   module:
     - datetime
     - node
-_core:
-  default_config_hash: 7MJM1J1RJynow3ZTVPB0C9bGkvidD_LBMvwqMCquN2Q
-id: node.field_event_date_end
-field_name: field_event_date_end
+id: node.field_project_end_date
+field_name: field_project_end_date
 entity_type: node
 type: datetime
 settings:
-  datetime_type: datetime
+  datetime_type: date
 module: datetime
 locked: false
 cardinality: 1
