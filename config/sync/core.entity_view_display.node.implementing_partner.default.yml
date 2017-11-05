@@ -1,0 +1,63 @@
+uuid: 5c78c9b5-88cb-465e-8659-b9ceee8b4118
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.implementing_partner.field_contact_email
+    - field.field.node.implementing_partner.field_event_address
+    - field.field.node.implementing_partner.field_link_to_page
+    - field.field.node.implementing_partner.field_position_and_person
+    - node.type.implementing_partner
+  module:
+    - address
+    - entity_reference_revisions
+    - link
+    - user
+id: node.implementing_partner.default
+targetEntityType: node
+bundle: implementing_partner
+mode: default
+content:
+  field_contact_email:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_event_address:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_link_to_page:
+    weight: 104
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_position_and_person:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  flag_follow_content:
+    weight: 10
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true

@@ -1,0 +1,28 @@
+uuid: 902d811d-6a4d-4ff8-811d-29378d642b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_type
+    - node.type.learning_library_item
+    - taxonomy.vocabulary.publication_types
+id: node.learning_library_item.field_publication_type
+field_name: field_publication_type
+entity_type: node
+bundle: learning_library_item
+label: 'Publication type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      publication_types: publication_types
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

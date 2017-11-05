@@ -1,0 +1,28 @@
+uuid: c2fff347-9d44-4f0d-9004-2126661167a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_development_objective
+    - node.type.development_objective
+    - node.type.learning_library_item
+id: node.learning_library_item.field_development_objective
+field_name: field_development_objective
+entity_type: node
+bundle: learning_library_item
+label: 'Development Objective'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      development_objective: development_objective
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

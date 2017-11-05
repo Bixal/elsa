@@ -8,8 +8,8 @@ dependencies:
     - elsa
 id: elsa_messages
 theme: elsa
-region: content
-weight: -17
+region: header
+weight: -25
 provider: null
 plugin: system_messages_block
 settings:

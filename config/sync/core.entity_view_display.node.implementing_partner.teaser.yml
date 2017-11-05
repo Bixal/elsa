@@ -1,0 +1,22 @@
+uuid: 6605ed3a-4d21-4642-a28a-f4053f6dcb2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.implementing_partner
+  module:
+    - user
+id: node.implementing_partner.teaser
+targetEntityType: node
+bundle: implementing_partner
+mode: teaser
+content:
+  flag_follow_content:
+    weight: 10
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true

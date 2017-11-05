@@ -10,8 +10,8 @@ dependencies:
     - elsa
 id: elsa_footer
 theme: elsa
-region: footer
-weight: -23
+region: bottom_content
+weight: -25
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

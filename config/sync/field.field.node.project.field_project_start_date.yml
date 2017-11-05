@@ -1,20 +1,20 @@
-uuid: b0327ee0-4f46-4815-b02e-7410f43c2111
+uuid: 00969e59-be79-43d5-9c07-9bd1b4a1c7ee
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_event_date_end
+    - field.storage.node.field_project_start_date
     - node.type.project
   module:
     - datetime
-id: node.project.field_event_date_end
-field_name: field_event_date_end
+id: node.project.field_project_start_date
+field_name: field_project_start_date
 entity_type: node
 bundle: project
-label: 'End date'
+label: 'Project start date'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.topic.body
     - field.field.node.topic.field_content_visibility
+    - field.field.node.topic.field_development_objective
     - field.field.node.topic.field_files
     - field.field.node.topic.field_topic_comments
     - field.field.node.topic.field_topic_image
@@ -97,6 +98,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_development_objective:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_files:
     weight: 8

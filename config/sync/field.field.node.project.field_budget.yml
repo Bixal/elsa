@@ -19,5 +19,5 @@ settings:
   min: null
   max: null
   prefix: $
-  suffix: M
+  suffix: Millions
 field_type: decimal

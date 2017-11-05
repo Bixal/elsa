@@ -1,0 +1,21 @@
+uuid: a0040633-e195-4c6b-bbc0-642fdcdf8b1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_position
+    - paragraphs.paragraphs_type.job_position_and_person
+  module:
+    - options
+id: paragraph.job_position_and_person.field_position
+field_name: field_position
+entity_type: paragraph
+bundle: job_position_and_person
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

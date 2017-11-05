@@ -1,0 +1,31 @@
+uuid: 400b7649-ef9b-4e5f-8f35-2100637ddd6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job_position_and_person.field_person_name
+    - field.field.paragraph.job_position_and_person.field_position
+    - paragraphs.paragraphs_type.job_position_and_person
+id: paragraph.job_position_and_person.default
+targetEntityType: paragraph
+bundle: job_position_and_person
+mode: default
+content:
+  field_person_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_position:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

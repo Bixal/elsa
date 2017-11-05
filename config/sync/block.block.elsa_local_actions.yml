@@ -6,8 +6,8 @@ dependencies:
     - elsa
 id: elsa_local_actions
 theme: elsa
-region: content
-weight: -18
+region: main_content
+weight: -25
 provider: null
 plugin: local_actions_block
 settings:

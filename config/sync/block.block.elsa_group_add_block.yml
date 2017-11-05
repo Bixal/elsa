@@ -9,8 +9,8 @@ dependencies:
     - elsa
 id: elsa_group_add_block
 theme: elsa
-region: sidebar_first
-weight: -97
+region: sidebar_right_bottom
+weight: -23
 provider: null
 plugin: group_add_block
 settings:

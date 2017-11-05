@@ -9,8 +9,8 @@ dependencies:
     - elsa
 id: elsa_addtoanybuttons
 theme: elsa
-region: sidebar_first
-weight: -25
+region: auxiliary_sidebar
+weight: -21
 provider: null
 plugin: addtoany_block
 settings:

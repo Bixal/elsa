@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_views_block__topics_block_user_topics
 theme: elsa
-region: sidebar_first
-weight: 3
+region: sidebar_right_bottom
+weight: -10
 provider: null
 plugin: 'views_block:topics-block_user_topics'
 settings:

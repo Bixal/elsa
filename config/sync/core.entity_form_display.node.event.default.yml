@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_content_visibility
+    - field.field.node.event.field_development_objective
     - field.field.node.event.field_event_address
     - field.field.node.event.field_event_comments
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_date_end
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_type
     - field.field.node.event.field_files
     - image.style.social_x_large
     - node.type.event
@@ -29,6 +31,7 @@ third_party_settings:
       children:
         - title
         - field_event_image
+        - field_event_type
       parent_name: ''
       weight: 0
       label: 'Title & image'
@@ -128,6 +131,15 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_development_objective:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_event_address:
     weight: 14
     settings:
@@ -174,6 +186,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_event_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_files:
     weight: 12

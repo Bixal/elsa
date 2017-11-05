@@ -8,8 +8,8 @@ dependencies:
     - elsa
 id: elsa_content
 theme: elsa
-region: content
-weight: -13
+region: main_content
+weight: -21
 provider: null
 plugin: system_main_block
 settings:
