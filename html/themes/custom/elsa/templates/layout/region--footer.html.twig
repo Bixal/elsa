@@ -1,7 +1,12 @@
+{# assiging the region prefix to our automate our classing system for region --suffix #}
+{%
+  set classes = [
+    'region--' ~ region|clean_class,
+  ]
+%}
+{# NOTE: we are not using a footer at the moment, but keeping it in for when /ifthat changes #}
 {% if content %}
-  <footer class="site-footer brand-bg-primary" role="contentinfo">
-    <div class="container row">
-      {{ content }}
-    </div>
+  <footer role="contentinfo">
+    {{ content }}
   </footer>
 {% endif %}

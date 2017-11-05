@@ -23,3 +23,12 @@ component-libraries:
     paths:
       - components/04-organisms
 # Regions
+regions:
+  nav: 'Navigation'
+  header: "Header"
+  main_content: 'Main Content'
+  bottom_content: 'Bottom Content'
+  auxiliary_sidebar: 'Auxiliary Sidebar'
+  sidebar_right_top: 'Sidebar Right Top'
+  sidebar_right_bottom: 'Sidebar Right Bottom'
+  disabled: 'Disabled'

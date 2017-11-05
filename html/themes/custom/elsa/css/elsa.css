@@ -354,6 +354,50 @@ template {
 /*
 @styleguide
 
+@title Regions
+
+Use regions to place our blocks. The regions will use a gridCSS formula to deal with structure and placement at breakpoints.
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+main {
+  display: -ms-grid;
+  display: grid; }
+
+.grid-layout {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-template-areas: "header"  "maincontent" "auxiliarysidebar"   "sidebarrighttop"      "sidebarrightbottom"  "bottomcontent" "nav"; }
+  @media (min-width: 767px) {
+    .grid-layout {
+      -ms-grid-columns: auto minmax(300px, 1fr);
+          grid-template-columns: auto minmax(300px, 1fr);
+      grid-template-areas: "nav nav"  "header header"  "maincontent auxiliarysidebar" "maincontent sidebarrighttop"      "maincontent sidebarrightbottom"  "bottomcontent bottomcontent"; } }
+  @media (min-width: 1025px) {
+    .grid-layout {
+      -ms-grid-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
+          grid-template-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
+      grid-template-areas: "nav nav nav"  "header header header"  "auxiliarysidebar maincontent sidebarrighttop"  "auxiliarysidebar maincontent sidebarrightbottom"  "bottomcontent bottomcontent bottomcontent"; } }
+  .grid-layout .region--nav {
+    grid-area: nav; }
+  .grid-layout .region--header {
+    grid-area: header; }
+  .grid-layout .region--auxiliary-sidebar {
+    grid-area: auxiliarysidebar; }
+  .grid-layout .region--sidebar-right-top {
+    grid-area: sidebarright-top; }
+  .grid-layout .region--sidebar-right-bottom {
+    grid-area: sidebarright-bottom; }
+  .grid-layout .region--main-content {
+    grid-area: maincontent; }
+  .grid-layout .region--bottom-content {
+    grid-area: bottomcontent; }
+
+/*
+@styleguide
+
 @title Typography
 
 Default styles are assigned to elements.
@@ -810,12 +854,12 @@ img {
   height: auto; }
   img.img-align-left {
     margin-right: 2.5rem; }
-    @media (min-width: 569px) {
+    @media (min-width: 767px) {
       img.img-align-left {
         width: auto; } }
   img.img-align-right {
     margin-left: 2.5rem; }
-    @media (min-width: 569px) {
+    @media (min-width: 767px) {
       img.img-align-right {
         width: auto; } }
 

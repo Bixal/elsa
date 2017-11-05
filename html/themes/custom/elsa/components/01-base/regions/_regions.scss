@@ -1,0 +1,91 @@
+/*
+@styleguide
+
+@title Regions
+
+Use regions to place our blocks. The regions will use a gridCSS formula to deal with structure and placement at breakpoints.
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+main {
+  display: grid;
+}
+
+// define our named region desktop grid layout
+.grid-layout {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:   
+  "header" 
+  "maincontent"
+  "auxiliarysidebar"  
+  "sidebarrighttop"     
+  "sidebarrightbottom" 
+  "bottomcontent"
+  "nav";
+
+  @include breakpoint (tablet) {
+    grid-template-columns: auto minmax(300px, 1fr);
+    grid-template-areas:   
+    "nav nav" 
+    "header header" 
+    "maincontent auxiliarysidebar"
+    "maincontent sidebarrighttop"     
+    "maincontent sidebarrightbottom" 
+    "bottomcontent bottomcontent";
+  }
+
+  @include breakpoint (desktop) {
+    grid-template-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
+    grid-template-areas:   
+    "nav nav nav" 
+    "header header header" 
+    "auxiliarysidebar maincontent sidebarrighttop" 
+    "auxiliarysidebar maincontent sidebarrightbottom" 
+    "bottomcontent bottomcontent bottomcontent";
+  }
+
+
+  // define our grid area namesystem
+  .region {
+    
+      &--nav {
+          grid-area: nav;
+          // background-color: lightcoral;
+        }
+        
+        &--header {
+          grid-area: header;
+          // background-color: lightgreen;
+        }
+      
+        &--auxiliary-sidebar {
+          grid-area: auxiliarysidebar;
+          // background-color: lightgoldenrodyellow;    
+        }
+        
+        &--sidebar-right-top {
+          grid-area: sidebarright-top;
+          // background-color: lightcyan;    
+        }
+        
+        &--sidebar-right-bottom {
+          grid-area: sidebarright-bottom;
+          // background-color: lightgrey;    
+        }
+        
+        &--main-content {
+          grid-area: maincontent;
+          // background-color: lightblue;
+          // max-width: 650px;  
+        }
+        
+        &--bottom-content {
+          grid-area: bottomcontent;
+          // background-color: lightseagreen;    
+        }
+    
+    }
+
+  }

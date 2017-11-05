@@ -5,7 +5,7 @@
   ]
 %}
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
+  <nav {{ attributes.addClass(classes).setAttribute('id', 'nav') }} role="banner">  
     {{ content }}
-  </div>
+  </nav>
 {% endif %}
