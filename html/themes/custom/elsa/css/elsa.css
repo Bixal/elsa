@@ -369,31 +369,31 @@ main {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  grid-template-areas: "header"  "maincontent" "auxiliarysidebar"   "sidebarrighttop"      "sidebarrightbottom"  "bottomcontent" "nav"; }
+  grid-template-areas: "header"  "main-content" "auxiliary-sidebar"   "sidebar-right-top"      "sidebar-right-bottom"  "bottom-content" "nav"; }
   @media (min-width: 767px) {
     .grid-layout {
       -ms-grid-columns: auto minmax(300px, 1fr);
           grid-template-columns: auto minmax(300px, 1fr);
-      grid-template-areas: "nav nav"  "header header"  "maincontent auxiliarysidebar" "maincontent sidebarrighttop"      "maincontent sidebarrightbottom"  "bottomcontent bottomcontent"; } }
+      grid-template-areas: "nav nav"  "header header"  "main-content auxiliary-sidebar" "main-content sidebar-right-top"      "main-content sidebar-right-bottom"  "bottom-content bottom-content"; } }
   @media (min-width: 1025px) {
     .grid-layout {
-      -ms-grid-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
-          grid-template-columns: minmax(300px, 1fr) minmax(auto, 650px) minmax(300px, 1fr);
-      grid-template-areas: "nav nav nav"  "header header header"  "auxiliarysidebar maincontent sidebarrighttop"  "auxiliarysidebar maincontent sidebarrightbottom"  "bottomcontent bottomcontent bottomcontent"; } }
+      -ms-grid-columns: 300px minmax(auto, 650px) minmax(300px, 1fr);
+          grid-template-columns: 300px minmax(auto, 650px) minmax(300px, 1fr);
+      grid-template-areas: "nav nav nav"  "header header header"  "auxiliary-sidebar main-content sidebar-right-top"  "auxiliary-sidebar main-content sidebar-right-bottom"  "bottom-content bottom-content bottom-content"; } }
   .grid-layout .region--nav {
     grid-area: nav; }
   .grid-layout .region--header {
     grid-area: header; }
   .grid-layout .region--auxiliary-sidebar {
-    grid-area: auxiliarysidebar; }
+    grid-area: auxiliary-sidebar; }
   .grid-layout .region--sidebar-right-top {
-    grid-area: sidebarright-top; }
+    grid-area: sidebar-right-top; }
   .grid-layout .region--sidebar-right-bottom {
-    grid-area: sidebarright-bottom; }
+    grid-area: sidebar-right-bottom; }
   .grid-layout .region--main-content {
-    grid-area: maincontent; }
+    grid-area: main-content; }
   .grid-layout .region--bottom-content {
-    grid-area: bottomcontent; }
+    grid-area: bottom-content; }
 
 /*
 @styleguide
