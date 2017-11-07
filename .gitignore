@@ -11,3 +11,4 @@ settings.local.php
 .DS_Store
 *--dump.sql
 node_modules
+/html/private
