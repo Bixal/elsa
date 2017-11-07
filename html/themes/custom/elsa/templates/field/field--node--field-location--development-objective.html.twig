@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Theme override for a development objective's location field.
+ * @see template_preprocess_field()
+ */
+#}
+
+{% for item in items %}
+  <div{{ item.attributes.addClass('location--development-objective') }}>{{ item.content }}</div>
+{% endfor %}

@@ -64,12 +64,19 @@
  */
 #}
 
-{{ attach_library('socialbase/page-node')}}
-
-{%
+{# NOTE: removed social styles included card style #}
+{# {{ attach_library('socialbase/page-node')}} #}
+{# {%
   set classes = [
     'card',
     'brand-border-radius',
+    node.isPromoted() ? 'node--promoted',
+    not node.isPublished() ? 'node--unpublished',
+  ]
+%} #}
+
+{%
+  set classes = [
     node.isPromoted() ? 'node--promoted',
     not node.isPublished() ? 'node--unpublished',
   ]
@@ -82,8 +89,8 @@
 {% endif %}
 
 <article{{ attributes.addClass(classes) }}>
-
-  <div{{ content_attributes.addClass('card__body') }}>
+  {# <div{{ content_attributes.addClass('card__body') }}> #}
+  <div>  
 
     {% if not node.isPublished() %}
       <div class="node--unpublished__label">{% trans %} unpublished {% endtrans %}</div>

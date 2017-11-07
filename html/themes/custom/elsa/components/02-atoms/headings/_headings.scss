@@ -17,7 +17,14 @@ h1,
   @include vertical-margin($lrg-margin);
 }
 
-.section-title {
+h2,
+.h2 {
+  @include font ($secondary-font, 3.9rem, $primary-colour, 600, 4.6rem);
+  @include vertical-margin($med-margin);
+}
+
+.section-title, // note this is an overwrite of the base theme .section-title
+.section-title--bottom-content {
   @include font ($primary-font, 2.4rem, $primary-colour, 600, 3.9rem);
   @include vertical-margin($med-margin);
   text-transform: uppercase;
@@ -34,12 +41,6 @@ h1,
 
   } 
 
-}
-
-h2,
-.h2 {
-  @include font ($secondary-font, 3.9rem, $primary-colour, 600, 4.6rem);
-  @include vertical-margin($med-margin);
 }
 
 h4,

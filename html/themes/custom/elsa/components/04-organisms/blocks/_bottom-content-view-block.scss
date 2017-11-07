@@ -1,0 +1,17 @@
+section.bottom-content-view-block {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(auto, 650px) minmax(300px, 1fr) 1fr;   
+    grid-template-areas:   
+    "... bottom-content-title bottom-content-title bottom-content-title ..."
+    "... bottom-content-view bottom-content-view bottom-content-view ...";
+    @include vertical-margin ($section-margin);
+
+    .section-title--bottom-content {
+        grid-area: bottom-content-title;
+    }
+
+    .view {
+        grid-area: bottom-content-view;
+    }
+
+}

@@ -6,6 +6,10 @@
 
 {% else %}
 
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  
   <div class="body-text clearfix">
     {% for item in items %}
       {{ item.content }}
