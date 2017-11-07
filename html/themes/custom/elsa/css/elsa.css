@@ -360,40 +360,147 @@ Use regions to place our blocks. The regions will use a gridCSS formula to deal 
 
 <span style="font-weight:bold; font-size:22px;">CSS</span>
 */
-main {
-  display: -ms-grid;
-  display: grid; }
+@media (min-width: 767px) {
+  main {
+    display: grid;
+    display: -ms-grid; } }
 
-.grid-layout {
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  grid-template-areas: "header"  "main-content" "auxiliary-sidebar"   "sidebar-right-top"      "sidebar-right-bottom"  "bottom-content" "nav"; }
+.main-container {
+  padding: 0; }
+
+@media (min-width: 767px) {
+  .grid-layout {
+    -ms-grid-columns: minmax(0px, 650px) minmax(300px, 1fr);
+        grid-template-columns: minmax(0px, 650px) minmax(300px, 1fr);
+    grid-template-areas: "nav nav"  "header header"  "main-content auxiliary-sidebar" "main-content sidebar-right-top"      "main-content sidebar-right-bottom"  "bottom-content bottom-content"; } }
+
+@media (min-width: 1025px) {
+  .grid-layout {
+    -ms-grid-columns: 1fr auto minmax(0px, 650px) minmax(300px, 1fr) 1fr;
+        grid-template-columns: 1fr auto minmax(0px, 650px) minmax(300px, 1fr) 1fr;
+    grid-template-areas: "nav nav nav nav nav"  "... header header header ..."  "... auxiliary-sidebar main-content sidebar-right-top ..."  "... auxiliary-sidebar main-content sidebar-right-bottom ..."  "bottom-content bottom-content bottom-content bottom-content bottom-content"; } }
+
+.grid-layout .region--nav {
+  grid-area: nav;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 0;
+  grid-column: 1/6;
+  grid-row: 1/1; }
+
+.grid-layout .region--header {
+  grid-area: header; }
   @media (min-width: 767px) {
-    .grid-layout {
-      -ms-grid-columns: auto minmax(300px, 1fr);
-          grid-template-columns: auto minmax(300px, 1fr);
-      grid-template-areas: "nav nav"  "header header"  "main-content auxiliary-sidebar" "main-content sidebar-right-top"      "main-content sidebar-right-bottom"  "bottom-content bottom-content"; } }
+    .grid-layout .region--header {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 0;
+      grid-column: 1/2;
+      grid-row: 2/2; } }
   @media (min-width: 1025px) {
-    .grid-layout {
-      -ms-grid-columns: 300px minmax(auto, 650px) minmax(300px, 1fr);
-          grid-template-columns: 300px minmax(auto, 650px) minmax(300px, 1fr);
-      grid-template-areas: "nav nav nav"  "header header header"  "auxiliary-sidebar main-content sidebar-right-top"  "auxiliary-sidebar main-content sidebar-right-bottom"  "bottom-content bottom-content bottom-content"; } }
-  .grid-layout .region--nav {
-    grid-area: nav; }
-  .grid-layout .region--header {
-    grid-area: header; }
-  .grid-layout .region--auxiliary-sidebar {
-    grid-area: auxiliary-sidebar; }
-  .grid-layout .region--sidebar-right-top {
-    grid-area: sidebar-right-top; }
+    .grid-layout .region--header {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 0;
+      grid-column: 2/5;
+      grid-row: 2/2; } }
+
+.grid-layout .region--auxiliary-sidebar {
+  grid-area: auxiliary-sidebar; }
+  @media (min-width: 767px) {
+    .grid-layout .region--auxiliary-sidebar {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 0;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 0;
+      grid-column: 2/2;
+      grid-row: 3/3; } }
+  @media (min-width: 1025px) {
+    .grid-layout .region--auxiliary-sidebar {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 0;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 0;
+      grid-column: 2/2;
+      grid-row: 3/3; } }
+
+.grid-layout .region--sidebar-right-top {
+  grid-area: sidebar-right-top; }
+  @media (min-width: 767px) {
+    .grid-layout .region--sidebar-right-top {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 0;
+      -ms-grid-row: 4;
+      -ms-grid-row-span: 0;
+      grid-column: 2/2;
+      grid-row: 4/4; } }
+  @media (min-width: 1025px) {
+    .grid-layout .region--sidebar-right-top {
+      -ms-grid-column: 4;
+      -ms-grid-column-span: 0;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 0;
+      grid-column: 4/4;
+      grid-row: 3/3; } }
+
+@media (min-width: 767px) {
   .grid-layout .region--sidebar-right-bottom {
-    grid-area: sidebar-right-bottom; }
-  .grid-layout .region--main-content {
-    grid-area: main-content; }
-  .grid-layout .region--bottom-content {
-    grid-area: bottom-content; }
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 0;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 0;
+    grid-column: 2/2;
+    grid-row: 5/5; } }
+
+@media (min-width: 1025px) {
+  .grid-layout .region--sidebar-right-bottom {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 0;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 0;
+    grid-column: 4/4;
+    grid-row: 4/4; } }
+
+.grid-layout .region--main-content {
+  grid-area: main-content; }
+  @media (min-width: 767px) {
+    .grid-layout .region--main-content {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 0;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 3;
+      grid-column: 1/1;
+      grid-row: 3/6; } }
+  @media (min-width: 1025px) {
+    .grid-layout .region--main-content {
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 0;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 2;
+      grid-column: 3/3;
+      grid-row: 3/5; } }
+
+.grid-layout .region--bottom-content {
+  grid-area: bottom-content; }
+  @media (min-width: 767px) {
+    .grid-layout .region--bottom-content {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 6;
+      -ms-grid-row-span: 0;
+      grid-column: 1/2;
+      grid-row: 6/6; } }
+  @media (min-width: 1025px) {
+    .grid-layout .region--bottom-content {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 5;
+      -ms-grid-row: 5;
+      -ms-grid-row-span: 0;
+      grid-column: 1/6;
+      grid-row: 5/5; } }
 
 /*
 @styleguide
@@ -608,6 +715,9 @@ button {
   button--go {
     background-color: rgba(108, 100, 99, 0.3); }
 
+.hero-action-button {
+  float: right; }
+
 /*
 @styleguide
 
@@ -716,23 +826,13 @@ input[type="text-input"].input--field {
 
 h1,
 .h1 {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-family: "Gill Sans", Gill Sans MT, Calibri, sans-serif;
   font-size: 6.4rem;
   color: #002F6C;
   font-weight: 600;
   line-height: 6.9rem;
   margin-top: 0;
   margin-bottom: 2.5rem; }
-
-.section-title {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-size: 2.4rem;
-  color: #002F6C;
-  font-weight: 600;
-  line-height: 3.9rem;
-  margin-top: 0;
-  margin-bottom: 2rem;
-  text-transform: uppercase; }
 
 h2,
 .h2 {
@@ -743,6 +843,17 @@ h2,
   line-height: 4.6rem;
   margin-top: 0;
   margin-bottom: 2rem; }
+
+.section-title,
+.section-title--bottom-content {
+  font-family: "Gill Sans", Gill Sans MT, Calibri, sans-serif;
+  font-size: 2.4rem;
+  color: #002F6C;
+  font-weight: 600;
+  line-height: 3.9rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-transform: uppercase; }
 
 h4,
 .h4 {
@@ -1054,15 +1165,44 @@ th {
   .table-responsive .table-bordered {
     border: 0; }
 
-/*
-@styleguide
+.block-views-blockprojects-block-1 .view,
+.block-views-blocknews-and-highlights-topic-view--block-1 .view {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+  .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
+  .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+    margin-top: 0;
+    margin-bottom: 2rem; }
+    @media (min-width: 767px) {
+      .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
+      .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
+        width: 50%; } }
+    @media (min-width: 1025px) {
+      .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
+      .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
+        width: 25%; } }
 
-@title Regions
+section.bottom-content-view-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto minmax(auto, 650px) minmax(300px, 1fr) 1fr;
+      grid-template-columns: 1fr auto minmax(auto, 650px) minmax(300px, 1fr) 1fr;
+  grid-template-areas: "... bottom-content-title bottom-content-title bottom-content-title ..." "... bottom-content-view bottom-content-view bottom-content-view ...";
+  margin-top: 0;
+  margin-bottom: 6.7rem; }
+  section.bottom-content-view-block .section-title--bottom-content {
+    grid-area: bottom-content-title; }
+  section.bottom-content-view-block .view {
+    grid-area: bottom-content-view; }
 
-Use regions to place our blocks. The regions will use a gridCSS formula to deal with structure and placement at breakpoints.
-
-<span style="font-weight:bold; font-size:22px;">CSS</span>
-*/
 /*
 @styleguide
 

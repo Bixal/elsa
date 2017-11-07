@@ -1,0 +1,33 @@
+uuid: 343ea7ea-4141-45a7-8e83-f6c6e38684d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.upcoming_events_block
+  module:
+    - node
+    - views
+  theme:
+    - elsa
+id: views_block__upcoming_events_block
+theme: elsa
+region: bottom_content
+weight: -17
+provider: null
+plugin: 'views_block:upcoming_events_block-block_1'
+settings:
+  id: 'views_block:upcoming_events_block-block_1'
+  label: Events
+  provider: views
+  label_display: visible
+  views_label: Events
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - node
     - system
-    - user
   theme:
     - elsa
 id: elsa_breadcrumbs
 theme: elsa
 region: header
-weight: -23
+weight: -25
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -19,11 +19,10 @@ settings:
   provider: system
   label_display: '0'
 visibility:
-  user_role:
-    id: user_role
-    roles:
-      authenticated: authenticated
-      administrator: administrator
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
     negate: false
     context_mapping:
-      user: '@user.current_user_context:current_user'
+      node: '@node.node_route_context:node'

@@ -18,7 +18,8 @@
         "drush/drush": "^8.1",
         "drupal/components": "^1.0",
         "bixal/style_guide_response": "^1.0@RC",
-        "drupal/paragraphs": "^1.2"
+        "drupal/paragraphs": "^1.2",
+        "drupal/twig_tweak": "^1.9"
     },
     "repositories": [
         {

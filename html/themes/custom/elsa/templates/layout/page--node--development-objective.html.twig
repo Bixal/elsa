@@ -1,6 +1,6 @@
  {# 
  * @file
- * Theme implementation to display a page.
+ * Theme implementation to display a development objective content type page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
  * can be found in the html.html.twig template normally located in the
@@ -31,8 +31,8 @@
  * @see html.html.twig 
  #}
 
-<main id="content" class="main-container grid-layout" role="main">
- 
+<main id="content" class="main-container grid-layout page--development-objective" role="main">
+
     {% if page.nav %}
     {{ page.nav }} 
     {% endif %} 
@@ -41,17 +41,13 @@
       {{ page.header }} 
       {% endif %} 
 
-        {% if page.auxiliary_sidebar %}
-        {{ page.auxiliary_sidebar }}
-        {% endif %} 
-
         {% if page.main_content %}
         {{ page.main_content }} 
         {% endif %}
 
         {% if page.sidebar_right_top or page.sidebar_right_bottom %}
             {% if page.sidebar_right_top %} 
-            {{ page.sidebar_right_top }} 
+            {{ page.sidebar_right_top }}            
             {% endif %} 
 
             {% if page.sidebar_right_bottom %} 

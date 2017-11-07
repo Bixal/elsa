@@ -5,8 +5,14 @@
  */
 #}
 
-<nav class="navbar navbar-secondary brand-bg-secondary" role="navigation">
-  <div class="navbar-scrollable">
+{%
+  set classes = [
+    'local-tasks',
+  ]
+%}
+
+<nav {{ attributes.addClass(classes) }} role="navigation">
+  <div>
     {{ content }}
   </div>
 </nav>

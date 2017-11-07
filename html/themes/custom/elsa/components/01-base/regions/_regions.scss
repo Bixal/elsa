@@ -9,24 +9,36 @@ Use regions to place our blocks. The regions will use a gridCSS formula to deal 
 */
 
 main {
-  display: grid;
-}
-
-// define our named region desktop grid layout
-.grid-layout {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:   
-  "header" 
-  "main-content"
-  "auxiliary-sidebar"  
-  "sidebar-right-top"     
-  "sidebar-right-bottom" 
-  "bottom-content"
-  "nav";
+  // we are not using grid at mobile since there are no complicated regions to be defined
 
   @include breakpoint (tablet) {
-    grid-template-columns: auto minmax(300px, 1fr);
+    display: grid;
+    display: -ms-grid;
+  }
+  
+}
+
+//fallbacks for IE mixin
+@mixin grid-child ($col-start, $col-end, $row-start, $row-end) {
+  -ms-grid-column: $col-start;
+  -ms-grid-column-span: $col-end - $col-start;
+  -ms-grid-row: $row-start;
+  -ms-grid-row-span: $row-end - $row-start;
+  grid-column: #{$col-start}/#{$col-end};
+  grid-row: #{$row-start}/#{$row-end};
+}
+
+//main-container class is left over from the base theme, you can overwrite here
+.main-container {
+  padding: 0;
+}
+
+// define our named region tablet/desktop grid layout
+.grid-layout {
+
+  @include breakpoint (tablet) {
+    // grid-template-rows: auto;
+    grid-template-columns: minmax(0px, 650px) minmax(300px, 1fr);   
     grid-template-areas:   
     "nav nav" 
     "header header" 
@@ -37,54 +49,117 @@ main {
   }
 
   @include breakpoint (desktop) {
-    grid-template-columns: 300px minmax(auto, 650px) minmax(300px, 1fr);
+    grid-template-columns: 1fr auto minmax(0px, 650px) minmax(300px, 1fr) 1fr;   
     grid-template-areas:   
-    "nav nav nav" 
-    "header header header" 
-    "auxiliary-sidebar main-content sidebar-right-top" 
-    "auxiliary-sidebar main-content sidebar-right-bottom" 
-    "bottom-content bottom-content bottom-content";
+    "nav nav nav nav nav" 
+    "... header header header ..." 
+    "... auxiliary-sidebar main-content sidebar-right-top ..." 
+    "... auxiliary-sidebar main-content sidebar-right-bottom ..." 
+    "bottom-content bottom-content bottom-content bottom-content bottom-content";
   }
-
 
   // define our grid area namesystem
   // colours toggled for troubleshooting
   .region {
     
       &--nav {
-          grid-area: nav;
-          // background-color: lightcoral;
+        grid-area: nav;
+
+        //fallbacks for IE
+        @include grid-child (1, 6, 1, 1);
+        
+        // background-color: lightcoral;
+      }
+        
+      &--header {
+        grid-area: header;
+
+        //fallbacks for IE
+        @include breakpoint (tablet) {
+          @include grid-child (1, 2, 2, 2);
+        }
+
+        @include breakpoint (desktop) {
+          @include grid-child (2, 5, 2, 2);
+        }
+
+        // background-color: lightgreen;
+      }
+    
+      &--auxiliary-sidebar {
+        grid-area: auxiliary-sidebar;
+
+        //fallbacks for IE
+        @include breakpoint (tablet) {
+          @include grid-child (2, 2, 3, 3);
+        }
+
+        @include breakpoint (desktop) {
+          @include grid-child (2, 2, 3, 3);
         }
         
-        &--header {
-          grid-area: header;
-          // background-color: lightgreen;
-        }
+        // background-color: lightgoldenrodyellow;   
+      }
       
-        &--auxiliary-sidebar {
-          grid-area: auxiliary-sidebar;
-          // background-color: lightgoldenrodyellow;   
+      &--sidebar-right-top {
+        grid-area: sidebar-right-top;
+
+        //fallbacks for IE
+        @include breakpoint (tablet) {
+          @include grid-child (2, 2, 4, 4);
         }
-        
-        &--sidebar-right-top {
-          grid-area: sidebar-right-top;
-          // background-color: lightcyan;    
+
+        @include breakpoint (desktop) {
+          @include grid-child (4, 4, 3, 3);
         }
-        
-        &--sidebar-right-bottom {
-          grid-area: sidebar-right-bottom;
-          // background-color: lightgrey;    
+
+        // background-color: lightcyan; 
+      }
+      
+      &--sidebar-right-bottom {
+        // grid-area: sidebar-right-bottom;
+
+        //fallbacks for IE
+        @include breakpoint (tablet) {
+          @include grid-child (2, 2, 5, 5);
         }
-        
-        &--main-content {
-          grid-area: main-content;
-          // background-color: lightblue; 
+
+        @include breakpoint (desktop) {
+          @include grid-child (4, 4, 4, 4);
         }
-        
-        &--bottom-content {
-          grid-area: bottom-content;
-          // background-color: lightseagreen;    
+
+        // background-color: lightgrey;    
+      }
+      
+      &--main-content {
+        grid-area: main-content;
+
+        //fallbacks for IE
+        @include breakpoint (tablet) {
+          @include grid-child (1, 1, 3, 6);
         }
+
+        @include breakpoint (desktop) {
+          @include grid-child (3, 3, 3, 5);
+        }
+
+        // background-color: lightblue; 
+      }
+      
+      &--bottom-content {
+        grid-area: bottom-content;
+
+        //fallbacks for IE
+        @include breakpoint (tablet) {
+          @include grid-child (1, 2, 6, 6);
+        }
+
+        @include breakpoint (desktop) {
+          @include grid-child (1, 6, 5, 5);
+        }
+
+        // background-color: lightseagreen;    
+      }
     
     }
 

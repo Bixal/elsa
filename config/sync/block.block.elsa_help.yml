@@ -9,7 +9,7 @@ dependencies:
 id: elsa_help
 theme: elsa
 region: header
-weight: -24
+weight: -26
 provider: null
 plugin: help_block
 settings:
