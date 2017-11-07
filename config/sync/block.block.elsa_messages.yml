@@ -9,7 +9,7 @@ dependencies:
 id: elsa_messages
 theme: elsa
 region: header
-weight: -25
+weight: -27
 provider: null
 plugin: system_messages_block
 settings:

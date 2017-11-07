@@ -30,3 +30,9 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_development_objective: true
+  field_files: true
+  field_library_comments: true
+  field_project: true
+  field_publication_type: true
+  field_themes: true

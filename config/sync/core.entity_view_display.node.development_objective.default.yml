@@ -16,34 +16,38 @@ bundle: development_objective
 mode: default
 content:
   body:
-    label: hidden
+    label: above
     type: text_default
     weight: 101
     settings: {  }
     third_party_settings: {  }
     region: content
   field_devobj_number:
-    weight: 103
-    label: above
+    type: number_integer
+    weight: 0
+    region: content
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
-    region: content
   field_location:
-    weight: 102
-    label: above
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   flag_follow_content:
     weight: 10
     region: content
+    settings: {  }
+    third_party_settings: {  }
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
