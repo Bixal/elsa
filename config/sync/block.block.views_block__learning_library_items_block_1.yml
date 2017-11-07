@@ -1,0 +1,24 @@
+uuid: f3d83e57-118c-4e81-b21d-bb60b95f113d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.learning_library_items
+  module:
+    - views
+  theme:
+    - socialblue
+id: views_block__learning_library_items_block_1
+theme: socialblue
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:learning_library_items-block_1'
+settings:
+  id: 'views_block:learning_library_items-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

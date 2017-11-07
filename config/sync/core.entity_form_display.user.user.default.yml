@@ -10,6 +10,7 @@ third_party_settings:
     group_information:
       children:
         - account
+        - field_gender
       parent_name: ''
       weight: 0
       label: 'Account information'

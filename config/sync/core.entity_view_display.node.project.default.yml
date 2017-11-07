@@ -81,8 +81,8 @@ content:
     weight: 111
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: social_long_date
     third_party_settings: {  }
     type: datetime_default
     region: content
@@ -90,8 +90,8 @@ content:
     weight: 110
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: social_long_date
     third_party_settings: {  }
     type: datetime_default
     region: content
@@ -106,8 +106,12 @@ content:
   flag_follow_content:
     weight: 10
     region: content
+    settings: {  }
+    third_party_settings: {  }
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true

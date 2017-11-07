@@ -118,6 +118,7 @@ permissions:
   - 'view node.event.field_content_visibility:community content'
   - 'view node.event.field_content_visibility:group content'
   - 'view node.event.field_content_visibility:public content'
+  - 'view node.learning_library_item.field_content_visibility:group content'
   - 'view node.page.field_content_visibility:community content'
   - 'view node.page.field_content_visibility:group content'
   - 'view node.page.field_content_visibility:public content'

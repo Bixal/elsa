@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.learning_library_item.body
+    - field.field.node.learning_library_item.field_content_visibility
     - field.field.node.learning_library_item.field_development_objective
     - field.field.node.learning_library_item.field_files
     - field.field.node.learning_library_item.field_library_comments
@@ -14,6 +16,7 @@ dependencies:
   module:
     - comment
     - file
+    - options
     - text
     - user
 id: node.learning_library_item.default
@@ -27,6 +30,13 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_content_visibility:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_development_objective:
     weight: 103

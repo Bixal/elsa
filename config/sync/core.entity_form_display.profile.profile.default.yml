@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.profile.profile.field_gender
     - field.field.profile.profile.field_profile_address
     - field.field.profile.profile.field_profile_expertise
     - field.field.profile.profile.field_profile_first_name
@@ -29,6 +30,7 @@ third_party_settings:
       children:
         - field_profile_first_name
         - field_profile_last_name
+        - field_gender
         - field_profile_image
       parent_name: ''
       weight: 0
@@ -87,6 +89,12 @@ targetEntityType: profile
 bundle: profile
 mode: default
 content:
+  field_gender:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_profile_address:
     weight: 7
     settings:
@@ -112,7 +120,7 @@ content:
     type: string_textfield
     region: content
   field_profile_function:
-    weight: 2
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -120,7 +128,7 @@ content:
     type: string_textfield
     region: content
   field_profile_image:
-    weight: 3
+    weight: 4
     settings:
       show_default_crop: true
       preview_image_style: social_x_large
@@ -132,6 +140,7 @@ content:
         - profile_small
       progress_indicator: throbber
       show_crop_area: true
+      warn_multiple_usages: true
     third_party_settings: {  }
     type: image_widget_crop
     region: content
@@ -153,7 +162,7 @@ content:
     type: string_textfield
     region: content
   field_profile_organization:
-    weight: 3
+    weight: 11
     settings:
       size: 60
       placeholder: ''

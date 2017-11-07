@@ -20,3 +20,7 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_contact_email: true
+  field_event_address: true
+  field_link_to_page: true
+  field_position_and_person: true

@@ -14,6 +14,7 @@ permissions:
   - 'view like widget'
   - 'view node.book.field_content_visibility:public content'
   - 'view node.event.field_content_visibility:public content'
+  - 'view node.learning_library_item.field_content_visibility:public content'
   - 'view node.page.field_content_visibility:public content'
   - 'view node.topic.field_content_visibility:public content'
   - 'view public posts'

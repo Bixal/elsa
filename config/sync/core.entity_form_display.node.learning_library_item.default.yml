@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.learning_library_item.body
+    - field.field.node.learning_library_item.field_content_visibility
     - field.field.node.learning_library_item.field_development_objective
     - field.field.node.learning_library_item.field_files
     - field.field.node.learning_library_item.field_library_comments
@@ -36,6 +37,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_content_visibility:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_development_objective:
     weight: 9
     settings:
