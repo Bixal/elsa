@@ -1,12 +1,12 @@
-uuid: d2fab0e9-e450-4c17-943c-f5ae350a74a5
+uuid: 23ce1131-d4f8-4527-b5b0-7eb2fd3997a5
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - profile
-id: profile.field_gender
-field_name: field_gender
+id: profile.field_profile_gender
+field_name: field_profile_gender
 entity_type: profile
 type: list_string
 settings:

@@ -1,14 +1,14 @@
-uuid: 4f3ae72c-194f-43f3-b4c5-0f8c552521d1
+uuid: d2431cd6-9c37-460d-87f4-8a16956d85db
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.profile.field_gender
+    - field.storage.profile.field_profile_gender
     - profile.type.profile
   module:
     - options
-id: profile.profile.field_gender
-field_name: field_gender
+id: profile.profile.field_profile_gender
+field_name: field_profile_gender
 entity_type: profile
 bundle: profile
 label: Gender

@@ -3,22 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.profile.profile.field_gender
-    - field.field.profile.profile.field_profile_address
     - field.field.profile.profile.field_profile_expertise
     - field.field.profile.profile.field_profile_first_name
     - field.field.profile.profile.field_profile_function
+    - field.field.profile.profile.field_profile_gender
     - field.field.profile.profile.field_profile_image
     - field.field.profile.profile.field_profile_interests
     - field.field.profile.profile.field_profile_last_name
+    - field.field.profile.profile.field_profile_location
     - field.field.profile.profile.field_profile_organization
-    - field.field.profile.profile.field_profile_phone_number
     - field.field.profile.profile.field_profile_profile_tag
+    - field.field.profile.profile.field_profile_project
     - field.field.profile.profile.field_profile_self_introduction
     - field.field.profile.profile.field_profile_show_email
     - profile.type.profile
   module:
-    - address
+    - options
     - text
 _core:
   default_config_hash: b9q_GhKabHpKC-5LKg5V8F4Qefjx9WwWNzrZXh0Mj_4
@@ -27,13 +27,6 @@ targetEntityType: profile
 bundle: profile
 mode: default
 content:
-  field_profile_address:
-    weight: 2
-    label: visually_hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
   field_profile_expertise:
     weight: 5
     label: visually_hidden
@@ -41,6 +34,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_profile_gender:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_profile_interests:
     weight: 4
@@ -50,13 +50,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_profile_phone_number:
-    weight: 0
-    label: visually_hidden
+  field_profile_location:
+    weight: 7
+    label: above
     settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
-    type: string
+    type: entity_reference_label
     region: content
   field_profile_profile_tag:
     type: entity_reference_label
@@ -66,6 +66,14 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_profile_project:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_profile_self_introduction:
     weight: 3
     label: visually_hidden
@@ -74,7 +82,6 @@ content:
     type: text_default
     region: content
 hidden:
-  field_gender: true
   field_profile_first_name: true
   field_profile_function: true
   field_profile_image: true

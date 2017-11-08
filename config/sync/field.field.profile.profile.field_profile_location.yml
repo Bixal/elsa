@@ -1,0 +1,28 @@
+uuid: 49bd8d6d-2de0-42fb-9073-574819bcb09b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_location
+    - profile.type.profile
+    - taxonomy.vocabulary.locations
+id: profile.profile.field_profile_location
+field_name: field_profile_location
+entity_type: profile
+bundle: profile
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

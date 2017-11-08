@@ -1,0 +1,20 @@
+uuid: 09c1bac3-2249-4abf-bd5f-03835a003773
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+    - taxonomy
+id: profile.field_profile_location
+field_name: field_profile_location
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

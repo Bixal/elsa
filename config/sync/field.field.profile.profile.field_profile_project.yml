@@ -1,0 +1,28 @@
+uuid: 32c6b057-e5c8-43b8-b6e5-41bd55b1b244
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_project
+    - node.type.project
+    - profile.type.profile
+id: profile.profile.field_profile_project
+field_name: field_profile_project
+entity_type: profile
+bundle: profile
+label: Project
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
