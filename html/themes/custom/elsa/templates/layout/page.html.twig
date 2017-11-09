@@ -37,30 +37,24 @@
     {{ page.nav }} 
     {% endif %} 
 
-      {% if page.header %}
-      {{ page.header }} 
-      {% endif %} 
+    {% if page.header %}
+    {{ page.header }} 
+    {% endif %} 
 
-        {% if page.auxiliary_sidebar %}
-        {{ page.auxiliary_sidebar }}
-        {% endif %} 
+    {% if page.auxiliary_sidebar %}
+    {{ page.auxiliary_sidebar }}
+    {% endif %} 
 
-        {% if page.main_content %}
-        {{ page.main_content }} 
-        {% endif %}
+    {% if page.main_content %}
+    {{ page.main_content }} 
+    {% endif %}
 
-        {% if page.sidebar_right_top or page.sidebar_right_bottom %}
-            {% if page.sidebar_right_top %} 
-            {{ page.sidebar_right_top }} 
-            {% endif %} 
+    {% if page.sidebar_right_top %} 
+    {{ page.sidebar_right_top }} 
+    {% endif %} 
 
-            {% if page.sidebar_right_bottom %} 
-            {{ page.sidebar_right_bottom }} 
-            {% endif %}
-        {% endif %}
-
-        {% if page.bottom_content %}
-        {{ page.bottom_content }} 
-        {% endif %}
+    {% if page.bottom_content %}
+    {{ page.bottom_content }} 
+    {% endif %}
 
 </main>

@@ -1,6 +1,6 @@
 uuid: ecc008a5-2713-4b5d-b388-a1e7439a2f79
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.activity_stream_profile
@@ -11,7 +11,7 @@ dependencies:
     - elsa
 id: elsa_views_block__activity_stream_profile_block_1
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -18
 provider: null
 plugin: 'views_block:activity_stream_profile-block_1'

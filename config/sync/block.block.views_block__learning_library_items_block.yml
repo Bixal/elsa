@@ -1,26 +1,26 @@
-uuid: 343ea7ea-4141-45a7-8e83-f6c6e38684d2
+uuid: d8e9bebb-1f66-44cf-a6c3-1b549b1a4d78
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.upcoming_events_block
+    - views.view.learning_library_items
   module:
     - node
     - views
   theme:
     - elsa
-id: views_block__upcoming_events_block
+id: views_block__learning_library_items_block
 theme: elsa
 region: bottom_content
-weight: -16
+weight: -18
 provider: null
-plugin: 'views_block:upcoming_events_block-block_1'
+plugin: 'views_block:learning_library_items-block_1'
 settings:
-  id: 'views_block:upcoming_events_block-block_1'
-  label: Events
+  id: 'views_block:learning_library_items-block_1'
+  label: Resources
   provider: views
   label_display: visible
-  views_label: Events
+  views_label: Resources
   items_per_page: none
   context_mapping: {  }
 visibility:

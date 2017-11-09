@@ -1,6 +1,6 @@
 uuid: c688c60c-0bca-424f-bb2a-ff3b0ac6170e
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - social_topic
@@ -9,7 +9,7 @@ dependencies:
     - elsa
 id: elsa_topic_add_block
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -24
 provider: null
 plugin: topic_add_block

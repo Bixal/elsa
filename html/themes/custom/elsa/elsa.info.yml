@@ -30,5 +30,4 @@ regions:
   bottom_content: 'Bottom Content'
   auxiliary_sidebar: 'Auxiliary Sidebar'
   sidebar_right_top: 'Sidebar Right Top'
-  sidebar_right_bottom: 'Sidebar Right Bottom'
   disabled: 'Disabled'

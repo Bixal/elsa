@@ -1,6 +1,6 @@
 uuid: a46a148d-0cb2-4169-9f3c-00413d174c5b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.topics
@@ -11,7 +11,7 @@ dependencies:
     - elsa
 id: elsa_views_block__topics_block_user_topics
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -10
 provider: null
 plugin: 'views_block:topics-block_user_topics'

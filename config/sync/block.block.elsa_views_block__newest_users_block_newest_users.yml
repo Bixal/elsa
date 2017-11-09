@@ -1,6 +1,6 @@
 uuid: eeee52b1-620d-4e42-9b8f-55b8aeb8aea6
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.newest_users
@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_views_block__newest_users_block_newest_users
 theme: elsa
-region: sidebar_right_bottom
-weight: -6
+region: nav
+weight: -27
 provider: null
 plugin: 'views_block:newest_users-block_newest_users'
 settings:

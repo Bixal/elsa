@@ -12,7 +12,7 @@ dependencies:
 id: views_block__news_and_highlights__block
 theme: elsa
 region: bottom_content
-weight: -18
+weight: -17
 provider: null
 plugin: 'views_block:news_and_highlights_topic_view_-block_1'
 settings:

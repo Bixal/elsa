@@ -1,6 +1,6 @@
 uuid: f25a9408-dd24-479c-872e-21f71a710e4c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.groups
@@ -11,7 +11,7 @@ dependencies:
     - elsa
 id: elsa_views_block__groups_block_user_groups
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -8
 provider: null
 plugin: 'views_block:groups-block_user_groups'

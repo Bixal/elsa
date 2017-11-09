@@ -1,6 +1,6 @@
 uuid: bf76370d-f56c-4970-84f0-9d0a0b09dc44
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - social_event
@@ -9,7 +9,7 @@ dependencies:
     - elsa
 id: elsa_event_add_block
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -25
 provider: null
 plugin: event_add_block
