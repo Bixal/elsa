@@ -1,6 +1,6 @@
 uuid: 22a50fef-465d-4d0d-bdb2-dc9670be8483
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - social_profile
@@ -9,7 +9,7 @@ dependencies:
     - elsa
 id: elsa_profile_hero_block
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -4
 provider: null
 plugin: profile_hero_block

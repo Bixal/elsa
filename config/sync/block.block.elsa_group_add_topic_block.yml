@@ -1,6 +1,6 @@
 uuid: 4479fcea-9f09-4f27-960e-bfcd63e9ec14
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - social_group
@@ -9,7 +9,7 @@ dependencies:
     - elsa
 id: elsa_group_add_topic_block
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -21
 provider: null
 plugin: group_add_topic_block

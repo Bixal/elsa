@@ -1,6 +1,6 @@
 uuid: e73c6cf0-a376-4b8b-b26e-8ec2d881ad6a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.event_enrollments
@@ -11,7 +11,7 @@ dependencies:
     - elsa
 id: elsa_views_block__event_enrollments_event_enrollments_socialbase
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -20
 provider: null
 plugin: 'views_block:event_enrollments-event_enrollments'

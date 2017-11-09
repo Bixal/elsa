@@ -1,6 +1,6 @@
 uuid: 421c16d2-0326-4e68-a1cb-5595c92bd1b0
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.group_topics
@@ -11,7 +11,7 @@ dependencies:
     - elsa
 id: elsa_exposedformgroup_topicspage_group_topics
 theme: elsa
-region: sidebar_right_bottom
+region: nav
 weight: -2
 provider: null
 plugin: 'views_exposed_filter_block:group_topics-page_group_topics'

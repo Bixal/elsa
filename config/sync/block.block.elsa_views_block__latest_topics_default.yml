@@ -1,6 +1,6 @@
 uuid: 5ea9000d-df02-4047-b67e-3549601bbc3a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.latest_topics
@@ -11,8 +11,8 @@ dependencies:
     - elsa
 id: elsa_views_block__latest_topics_default
 theme: elsa
-region: sidebar_right_top
-weight: -22
+region: nav
+weight: -26
 provider: null
 plugin: 'views_block:latest_topics-block_latest_topics'
 settings:

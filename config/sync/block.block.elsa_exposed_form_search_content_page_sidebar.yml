@@ -1,6 +1,6 @@
 uuid: 0113fd52-53b6-4fc2-81da-975c66775c2a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.search_content
@@ -11,7 +11,7 @@ dependencies:
     - elsa
 id: elsa_exposed_form_search_content_page_sidebar
 theme: elsa
-region: sidebar_right_top
+region: nav
 weight: -23
 provider: null
 plugin: 'views_exposed_filter_block:search_content-page'
