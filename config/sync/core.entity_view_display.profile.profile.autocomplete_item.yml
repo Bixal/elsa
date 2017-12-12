@@ -53,8 +53,11 @@ content:
 hidden:
   field_profile_expertise: true
   field_profile_function: true
+  field_profile_gender: true
   field_profile_interests: true
+  field_profile_location: true
   field_profile_organization: true
   field_profile_profile_tag: true
+  field_profile_project: true
   field_profile_self_introduction: true
   field_profile_show_email: true
