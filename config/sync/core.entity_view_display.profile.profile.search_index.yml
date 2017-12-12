@@ -80,6 +80,9 @@ content:
     type: text_default
     region: content
 hidden:
+  field_profile_gender: true
   field_profile_image: true
+  field_profile_location: true
   field_profile_profile_tag: true
+  field_profile_project: true
   field_profile_show_email: true

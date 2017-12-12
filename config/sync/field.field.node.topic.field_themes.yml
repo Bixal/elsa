@@ -1,0 +1,29 @@
+uuid: bbf97b9b-2eb0-42e7-a002-42e2721d0b12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_themes
+    - node.type.topic
+    - taxonomy.vocabulary.themes
+id: node.topic.field_themes
+field_name: field_themes
+entity_type: node
+bundle: topic
+label: Themes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      themes: themes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
