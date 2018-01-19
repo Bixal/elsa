@@ -1,0 +1,20 @@
+uuid: 89d6f7c5-3f36-49dc-8b32-e76e2fcf83bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_search
+  theme:
+    - partners_colab
+id: partners_colab_search_content_block_header
+theme: partners_colab
+region: content_top
+weight: -29
+provider: null
+plugin: search_content_block
+settings:
+  id: search_content_block
+  label: 'Search content block'
+  provider: social_search
+  label_display: '0'
+visibility: {  }

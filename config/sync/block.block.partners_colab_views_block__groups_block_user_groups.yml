@@ -1,0 +1,30 @@
+uuid: 1868b118-aa2c-4e34-9a94-8667e9d1ca0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.groups
+  module:
+    - system
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_views_block__groups_block_user_groups
+theme: partners_colab
+region: complementary_bottom
+weight: -20
+provider: null
+plugin: 'views_block:groups-block_user_groups'
+settings:
+  id: 'views_block:groups-block_user_groups'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/stream'
+    negate: false
+    context_mapping: {  }

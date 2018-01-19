@@ -1,0 +1,29 @@
+uuid: 80fa7fa2-709f-4556-b674-716a4d979ab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_topics
+  module:
+    - system
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_exposedformgroup_topicspage_group_topics
+theme: partners_colab
+region: complementary_top
+weight: -21
+provider: null
+plugin: 'views_exposed_filter_block:group_topics-page_group_topics'
+settings:
+  id: 'views_exposed_filter_block:group_topics-page_group_topics'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/topics'
+    negate: false
+    context_mapping: {  }

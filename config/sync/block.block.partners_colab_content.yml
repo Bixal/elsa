@@ -1,0 +1,20 @@
+uuid: 6677e965-2f84-4e95-885c-6c679e558813
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_content
+theme: partners_colab
+region: content
+weight: -24
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

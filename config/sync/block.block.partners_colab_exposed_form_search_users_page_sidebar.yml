@@ -1,0 +1,29 @@
+uuid: 161f7485-7f1b-4b65-acb8-dbc4e240fbad
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_users
+  module:
+    - system
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_exposed_form_search_users_page_sidebar
+theme: partners_colab
+region: complementary_top
+weight: -16
+provider: null
+plugin: 'views_exposed_filter_block:search_users-page'
+settings:
+  id: 'views_exposed_filter_block:search_users-page'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search/users\r\n/search/users/*"
+    negate: false
+    context_mapping: {  }

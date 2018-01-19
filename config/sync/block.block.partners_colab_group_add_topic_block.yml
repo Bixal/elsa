@@ -1,0 +1,26 @@
+uuid: 334a0f4f-15d0-497b-ba75-d303dd3f0bae
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_group
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_group_add_topic_block
+theme: partners_colab
+region: complementary_top
+weight: -23
+provider: null
+plugin: group_add_topic_block
+settings:
+  id: group_add_topic_block
+  label: 'Group add topic block'
+  provider: social_group
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/topics'
+    negate: false
+    context_mapping: {  }

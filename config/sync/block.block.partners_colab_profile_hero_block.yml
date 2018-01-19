@@ -1,0 +1,28 @@
+uuid: 78542121-fd6f-42ae-b610-5d089ac341d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_profile
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_profile_hero_block
+theme: partners_colab
+region: hero
+weight: -28
+provider: null
+plugin: profile_hero_block
+settings:
+  id: profile_hero_block
+  label: 'Profile hero block'
+  provider: social_profile
+  label_display: '0'
+  context_mapping:
+    user: '@social_user.user_route_context:user'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*"
+    negate: false
+    context_mapping: {  }

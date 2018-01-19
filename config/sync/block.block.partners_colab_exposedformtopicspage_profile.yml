@@ -1,0 +1,37 @@
+uuid: af328cb7-e600-4a66-bb8a-77084b4e80b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.topics
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_exposedformtopicspage_profile
+theme: partners_colab
+region: complementary_top
+weight: -17
+provider: null
+plugin: 'views_exposed_filter_block:topics-page_profile'
+settings:
+  id: 'views_exposed_filter_block:topics-page_profile'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: '/user/*/topics'
+    negate: false
+    context_mapping: {  }

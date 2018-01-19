@@ -1,0 +1,29 @@
+uuid: 39450f91-8191-4def-836f-4d150173eca1
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+    - node
+  theme:
+    - partners_colab
+id: partners_colab_booknavigation
+theme: partners_colab
+region: content
+weight: -20
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Table of contents'
+  provider: book
+  label_display: visible
+  block_mode: 'book pages'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

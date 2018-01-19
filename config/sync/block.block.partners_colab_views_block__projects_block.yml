@@ -1,0 +1,33 @@
+uuid: 9de8ac02-35f3-4317-aba5-8312281701e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - node
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_views_block__projects_block
+theme: partners_colab
+region: content_bottom
+weight: -29
+provider: null
+plugin: 'views_block:projects-block_1'
+settings:
+  id: 'views_block:projects-block_1'
+  label: Projects
+  provider: views
+  label_display: visible
+  views_label: Projects
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
