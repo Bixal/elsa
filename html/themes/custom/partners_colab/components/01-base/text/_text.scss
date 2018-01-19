@@ -1,0 +1,119 @@
+/*
+@styleguide
+
+@title Typography
+
+Default styles are assigned to elements.
+
+<h1>H1 - Source Sans Pro SemiBold</h1>
+
+    <h1>Use h1 for hero and page structure</h1>
+
+<h1 class="section-header">Section Header - Source Sans Pro SemiBold</h1>
+
+    <h1 class="section-header">Section-headerfor structure for alternative styling</h1>
+
+<h2>H2 - Source Sans Pro SemiBold</h2>
+
+    <h2>Use h2 for title and subtitle</h2>
+
+<h4>H4 - Source Sans Pro Italic </h4>
+
+    <h4>Use h4 for emphasis</h4>
+
+The elements in this section give semantics to inline text.
+    <p>The default font-size and line-height properties are applied to the <code>&lt;body&gt;</code> element and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin.</p>
+    <p>You can use the mark tag to
+        <mark>highlight</mark> text.</p>
+    <p><del>This line of text is meant to be treated as deleted text.</del>
+    </p>
+    <p><s>This line of text is meant to be treated as no longer accurate.</s>
+    </p>
+    <p><ins>This line of text is meant to be treated as an addition to the document.</ins>
+    </p>
+    <p><u>This line of text will render as underlined</u>
+    </p>
+    <p><small>This line of text is meant to be treated as fine print.</small>
+    </p>
+    <p>The following snippets of text are <strong class="">rendered</strong> as <b class="">bold
+    text</b>. Bold text nested inside <i>italic text <b>should</b></i> <em>still be
+    <strong>bold</strong></em>.</p>
+    <p>The following snippets of text are <em class="">rendered</em> as <i class="">italic text</i>. Italic text nested inside <b>bold text <i>should</i></b> <strong>still be
+    <em>italic</em></strong>
+    </p>
+    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>. And <abbr title="HyperText Markup Language">HTML</abbr> is an acroynm.</p>
+    <p><abbr>M<sup>lle</sup></abbr> Gwendoline wrote the equation <code>f(x, n) = log<sub>4</sub>x<sup class="">n</sup></code>.</p>
+
+Addresses
+Present contact information for the nearest ancestor or the
+entire body of work. Preserve formatting by ending all lines with `<br>`.
+
+Blockquotes
+Wrap `<blockquote>` around any __HTML__ as the quote.
+For straight quotes, we recommend a `<p>`.
+
+Horizontal rule
+The `<hr>` element represents a paragraph-level thematic break,
+e.g. a scene change in a story, or a transition to another topic
+within a section of a reference book.
+<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id
+dolor id nibh ultricies vehicula.</p>
+<hr>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+//assign our rembase to the html render
+html {
+  font-size: $rembase;
+  line-height: $lineheight;
+}
+
+//body type styles
+
+//default
+body {
+  @include font ($body-font-default, 1.6rem, $black, null, 2.3rem);
+}
+
+// Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+b,
+strong {
+  font-weight: bold;
+}
+
+// Abbreviations and acronyms
+
+abbr[title],
+
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $black;
+}
+
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+ul {
+  list-style: none !important; 
+}

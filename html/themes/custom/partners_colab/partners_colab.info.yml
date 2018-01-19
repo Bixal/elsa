@@ -1,0 +1,10 @@
+name: Partners CoLab
+type: theme
+description: Open Social sub-theme for ME&L USAID El Salvador
+package: Other
+core: 8.x
+libraries:
+  - partners_colab/global-styling
+ 
+base theme: socialbase
+

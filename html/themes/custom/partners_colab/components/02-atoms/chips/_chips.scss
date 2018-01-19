@@ -1,0 +1,20 @@
+/*
+@styleguide
+
+@title Chips
+
+Use  a chip for taxonomy or tag indicators throughout the theme
+
+<a class="chip" href="#">Success Stories Chip</a>
+
+    <a class="chip" href="#">Use links consistently</a>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+//our linked chips
+a.chip {
+    @include font ($body-font-default, 1.6rem, $grey, null, 2.3rem);
+    @include vertical-margin($small-margin);
+    text-decoration: none;
+  }

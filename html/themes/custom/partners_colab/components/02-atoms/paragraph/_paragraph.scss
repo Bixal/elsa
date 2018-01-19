@@ -1,0 +1,19 @@
+/*
+@styleguide
+
+@title Paragraphs
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<p>Paragraph 1 - Under this pricing agreement with Mylan Laboratories Limited and Aurobindo Pharma, regimens will cost about $75 per person per year, considerably less than the $80 to $90 paid for other regimens. Mylan Laboratories and Aurobindo Pharma are the first two generic antiretroviral (ARV) manufacturers to receive tentative approval from the U.S. Food and Drug Administration for the drug tenofovir disoproxil fumarate, lamivudine, and dolutegravir (TLD).</p>
+<p>Paragraph 2 - Under this pricing agreement with Mylan Laboratories Limited and Aurobindo Pharma, regimens will cost about $75 per person per year, considerably less than the $80 to $90 paid for other regimens. Mylan Laboratories and Aurobindo Pharma are the first two generic antiretroviral (ARV) manufacturers to receive tentative approval from the U.S. Food and Drug Administration for the drug tenofovir disoproxil fumarate, lamivudine, and dolutegravir (TLD).</p>
+
+    <p>This is our basic paragraph styling.</p>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+p {
+    @include font ($body-font-default, 1.6rem, $black, null, 2.3rem);
+    @include vertical-margin ($lrg-margin);
+  }

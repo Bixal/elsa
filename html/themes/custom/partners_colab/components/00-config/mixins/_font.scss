@@ -1,0 +1,9 @@
+// @include font ($font, $size, $colour, $weight, $line-height);
+//for false use null
+@mixin font ($font: false, $size: false, $colour: false, $weight: false,  $lineheight: false) {
+    @if $font { font-family: $font; }
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lineheight { line-height: $lineheight; }
+}

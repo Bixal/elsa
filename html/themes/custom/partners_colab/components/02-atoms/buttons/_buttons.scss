@@ -1,0 +1,72 @@
+/*
+@styleguide
+
+@title Buttons
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<input type="submit" value="Submit" class="btn btn--input"></input>
+
+    <input type="submit" class="btn btn--input"></input>
+
+
+Use the btn--reset class on `<button type="reset">` elements.
+
+<button class="btn btn--reset">Submit</button>
+
+    <button class="btn btn--reset"></button>
+
+
+Use the btn--go class on `<button type="go">` elements.
+
+<button class="btn btn--go">Submit</button>
+
+    <button class="btn btn--go"></button>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+// @include button;
+@mixin button {
+  @include vertical-margin($med-margin);
+  @include equal-padding ($med-padding);
+  @include font ($secondary-font, 2.4rem, $white, 600, 1rem);
+  border: 0;
+}
+
+//inputs as buttons
+input[type="submit"] {
+
+  &.btn {
+    @include button;
+
+    &--input {
+      background-color: $primary-colour;
+    }
+
+  }
+
+}
+
+//buttons
+button {
+
+  // &.btn {
+    @include button;
+    background-color: $primary-colour;
+
+    &--reset {
+      background-color: $secondary-colour;
+    }
+
+    &--go {
+      background-color: $op-grey;
+    }
+
+  // }
+
+}
+
+.hero-action-button {
+  float: right;
+}

@@ -1,0 +1,36 @@
+/*
+@styleguide
+
+@title Form Fields
+
+Use the input--field class on `<input>` elements.
+
+<input type="text-input" class="input--field"></input>
+
+<span style="font-weight:bold; font-size:22px;">CSS<span>
+*/
+
+//@include input-placeholder
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+//our elements
+input[type="text-input"] {
+
+  &.input--field {
+    @include vertical-margin ($lrg-margin);
+    height: 3.5rem;
+    width: 100%;
+
+    @include input-placeholder {
+      color: $grey;
+    }
+
+  }
+
+}
