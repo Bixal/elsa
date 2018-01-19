@@ -1,0 +1,13 @@
+{%
+  set classes = [
+    'region--' ~ region|clean_class,
+    'site-footer'
+  ]
+%}
+{% if content %}
+  <footer {{ attributes.addClass(classes) }} role="contentinfo">
+    <div class="container row">
+      {{ content }}
+    </div>
+  </footer>
+{% endif %}

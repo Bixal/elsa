@@ -6,8 +6,8 @@ core: 8.x
 base theme: socialbase
 # Defines libraries group in which we can add css/js
 libraries:
-  - elsa/global-css
-  - elsa/global-js
+  - partners_colab/global-css
+  - partners_colab/global-js
 # Regions
 regions:
   header: Header

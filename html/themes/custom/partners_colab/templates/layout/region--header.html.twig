@@ -1,0 +1,13 @@
+{%
+  set classes = [
+    'region--' ~ region|clean_class,
+    'navbar', 'navbar-default', 'navbar-fixed-top'
+  ]
+%}
+{% if content %}
+  <nav {{ attributes.addClass(classes) }} role="banner">
+    <div class="container container--navbar">
+      {{ content }}
+    </div>
+  </nav>
+{% endif %}
