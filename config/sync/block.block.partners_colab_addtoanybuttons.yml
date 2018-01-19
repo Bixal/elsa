@@ -9,7 +9,7 @@ dependencies:
     - partners_colab
 id: partners_colab_addtoanybuttons
 theme: partners_colab
-region: complementary_bottom
+region: sidebar_second
 weight: -29
 provider: null
 plugin: addtoany_block

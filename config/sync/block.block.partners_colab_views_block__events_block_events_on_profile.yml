@@ -11,7 +11,7 @@ dependencies:
     - partners_colab
 id: partners_colab_views_block__events_block_events_on_profile
 theme: partners_colab
-region: complementary_bottom
+region: sidebar_second
 weight: -28
 provider: null
 plugin: 'views_block:events-block_events_on_profile'

@@ -9,7 +9,7 @@ dependencies:
     - partners_colab
 id: partners_colab_group_add_topic_block
 theme: partners_colab
-region: complementary_top
+region: sidebar_first
 weight: -23
 provider: null
 plugin: group_add_topic_block

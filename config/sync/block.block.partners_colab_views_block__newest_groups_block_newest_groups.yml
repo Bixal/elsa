@@ -11,7 +11,7 @@ dependencies:
     - partners_colab
 id: partners_colab_views_block__newest_groups_block_newest_groups
 theme: partners_colab
-region: complementary_bottom
+region: sidebar_second
 weight: -21
 provider: null
 plugin: 'views_block:newest_groups-block_newest_groups'
