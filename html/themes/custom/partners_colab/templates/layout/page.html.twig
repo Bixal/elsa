@@ -83,7 +83,7 @@
       {% endif %} #}
 
       {% block content %}
-        <a id="main-content" tabindex="-1"></a>
+        <span id="main-content" tabindex="-1" aria-label="start main content"></span>{# link is in html.html.twig #}
         {{ page.content }}
       {% endblock %}
       {# an extra check for complementary regions to be empty #}

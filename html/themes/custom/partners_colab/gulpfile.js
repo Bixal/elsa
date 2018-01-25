@@ -17,12 +17,8 @@ var scsslint = require('gulp-scss-lint');
 var scssLintStylish = require('gulp-scss-lint-stylish');
 var imagemin = require('gulp-imagemin');
 var insert = require('gulp-insert');
-var styleGuide = require('postcss-style-guide')
-// TODO: consider removing these if not needed
-// var nano = require('cssnano')
-// var customProperties = require('postcss-custom-properties')
-// var Import = require('postcss-import')
-
+var styleGuide = require('postcss-style-guide');
+var access = require('gulp-accessibility');
 
 // Compile Our Sass
 gulp.task('sass', function() {
@@ -94,23 +90,23 @@ gulp.task('scsslint', function() {
     }))
 });
 
-// Style Guide
-// gulp.task('style-guide', function () {
-//
-//   return gulp.src('css/elsa.css')
-//       .pipe(postcss([
-//           Import,
-//           customProperties({ preserve: true }),
-//           styleGuide({
-//               project: 'ELSA Living Styleguide',
-//               dest: '../../../style-guide.html',
-//               showCode: true,
-//               //remove theme (https://www.npmjs.com/package/psg-theme-minimal) and path to retun to default
-//               theme: 'psg-theme-minimal',
-//               themePath: 'node_modules/psg-theme-minimal',
-//           }),
-//       ]))
-// });
+gulp.task('test', function() {
+  return gulp.src('./templates/**/*.html.twig')
+    .pipe(access({
+      force: true,
+      accessibilityLevel: 'WCAG2A',
+      ignore: [
+        'WCAG2A.Principle2.Guideline2_4.2_4_2.H25.1.NoTitleEl',
+        'WCAG2A.Principle3.Guideline3_1.3_1_1.H57.2'
+      ]
+    }))
+    .on('error', console.log)
+    .pipe(access.report({reportType: 'txt'}))
+    .pipe(rename({
+      extname: '508-compliance-report.txt'
+    }))
+    .pipe(gulp.dest('./templates/compliance_reports'));
+});
 
 // Image minification
 // gulp.task('imagemin', function() {
@@ -123,9 +119,8 @@ gulp.task('scsslint', function() {
 gulp.task('watch', function() {
   gulp.watch('components/**/*.js', ['scripts']);
   gulp.watch('components/**/*.scss', ['sass']);
-  // gulp.watch('components/**/*.scss', ['style-guide']);
   // gulp.watch('images/**/*', ['imagemin']);
 });
 
 // Default Task
-gulp.task('default', ['sass','scsslint','scripts','watch']);
+gulp.task('default', ['sass', 'scsslint', 'scripts', 'watch']);
