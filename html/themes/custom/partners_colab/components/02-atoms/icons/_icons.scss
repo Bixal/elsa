@@ -32,7 +32,7 @@ Use the .icn and its --modifiers to implement icons
   background-size: 1.5rem 1.5rem;
 
   &--small {
-    color: white;
+    color: $white;
   }
 
 }
@@ -42,21 +42,21 @@ Use the .icn and its --modifiers to implement icons
 }
 
 .icn--linkedin {
-  background-image: url("/themes/custom/elsa/components/02-atoms/icons/linkedin-logo.svg");
+  background-image: url('/themes/custom/partners_colab/components/02-atoms/icons/linkedin-logo.svg');
   background-size: cover;
 }
 
 .icn--facebook {
-  background-image: url("/themes/custom/elsa/components/02-atoms/icons/facebook-logo.svg");
+  background-image: url('/themes/custom/partners_colab/components/02-atoms/icons/facebook-logo.svg');
   background-size: cover;
 }
 
 .icn--twitter {
-  background-image: url("/themes/custom/elsa/components/02-atoms/icons/twitter-logo-silhouette.svg");
+  background-image: url('/themes/custom/partners_colab/components/02-atoms/icons/twitter-logo-silhouette.svg');
   background-size: cover;
 }
 
 .icn--chat {
-  background-image: url("/themes/custom/elsa/components/02-atoms/icons/chat.svg");
+  background-image: url('/themes/custom/partners_colab/components/02-atoms/icons/chat.svg');
   background-size: cover;
 }

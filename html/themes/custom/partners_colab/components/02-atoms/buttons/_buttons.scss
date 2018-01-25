@@ -50,20 +50,16 @@ input[type="submit"] {
 
 //buttons
 button {
+  @include button;
+  background-color: $primary-colour;
 
-  // &.btn {
-    @include button;
-    background-color: $primary-colour;
+  &--reset {
+    background-color: $secondary-colour;
+  }
 
-    &--reset {
-      background-color: $secondary-colour;
-    }
-
-    &--go {
-      background-color: $op-grey;
-    }
-
-  // }
+  &--go {
+    background-color: $op-grey;
+  }
 
 }
 

@@ -7,13 +7,13 @@ $desktop: 1025px;
 
 //@include breakpoint(point){}
 @mixin breakpoint($point) {
+
   @if $point == mobile {
-    @media (min-width: $mobile) { @content ; }
- }
-  @else if $point == tablet {
-    @media (min-width: $tablet) { @content ; }
- }
-   @else if $point == desktop {
-    @media (min-width: $desktop) { @content ; }
- }
+      @media (min-width: $mobile) { @content ; }
+  } @else if $point == tablet {
+      @media (min-width: $tablet) { @content ; }
+  } @else if $point == desktop {
+     @media (min-width: $desktop) { @content ; }
+  }
+
 }

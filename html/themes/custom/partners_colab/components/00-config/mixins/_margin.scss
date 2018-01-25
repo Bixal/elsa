@@ -1,7 +1,7 @@
 // Use the margin variables and mixins to set margin accross the theme.
 
 // margin varibles
-$clear-margin: 0rem;
+$clear-margin: 0;
 $small-margin: 1rem;
 $med-margin: 2rem;
 $lrg-margin: 2.5rem;
@@ -12,7 +12,7 @@ $section-margin: 6.7rem;
 //@include small-margin ($spacing);
 @mixin vertical-margin ($spacing) {
   margin-top: 0;
-  margin-bottom: $spacing;  
+  margin-bottom: $spacing;
 }
 
 //@include small-margin ($spacing);

@@ -32,14 +32,16 @@ html {
   -webkit-text-size-adjust: 100%; // 4
   -ms-text-size-adjust: 100%; // 4
   -ms-overflow-style: scrollbar; // 5
-  -webkit-tap-highlight-color: rgba(0,0,0,0); // 6
+  -webkit-tap-highlight-color: $transparent; // 6
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
 @at-root {
+
   @-ms-viewport {
     width: device-width;
   }
+
 }
 
 // stylelint-disable selector-list-comma-newline-after
@@ -62,9 +64,9 @@ body {
   font-size: 1.2rem;
   font-weight: normal;
   line-height: 1;
-  color: black;
+  color: $black;
   text-align: left; // 3
-  background-color: white; // 2
+  background-color: $white; // 2
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -192,21 +194,21 @@ sup {
 sub { bottom: -.25em; }
 sup { top: -.5em; }
 
-
 //
 // Links
 //
 
 a {
-  color: blue;
+  color: $primary-colour;
   text-decoration: none;
   background-color: transparent; // Remove the gray background on active links in IE 10.
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
   a:hover {
-    color: darkblue;
+    color: $primary-colour;
     text-decoration: underline;
   }
+
 }
 
 // And undo these styles for placeholder links/named anchors (without href)
@@ -222,6 +224,7 @@ a:not([href]):not([tabindex]) {
   &:focus {
     outline: 0;
   }
+
 }
 
 
@@ -298,7 +301,6 @@ textarea {
   touch-action: manipulation;
 }
 
-
 //
 // Tables
 //
@@ -310,7 +312,7 @@ table {
 caption {
   padding-top: .5rem;
   padding-bottom: .5rem;
-  color: grey;
+  color: $grey;
   text-align: left;
   caption-side: bottom;
 }
@@ -320,7 +322,6 @@ th {
   // closest parent with a set `text-align`.
   text-align: inherit;
 }
-
 
 //
 // Forms

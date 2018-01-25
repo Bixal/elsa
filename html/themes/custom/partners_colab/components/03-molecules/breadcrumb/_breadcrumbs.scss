@@ -22,37 +22,36 @@ Use the btn--input classes on `<input type="submit">` elements.
 <span style="font-weight:bold; font-size:22px;">CSS</span>
 */
 
-ul.breadcrumbs {
-    @include clearfix;
-    padding-left: 0;
-  
-    li {
+.breadcrumbs {
+  @include clearfix;
+  padding-left: 0;
+
+  li {
     list-style: none;
     float: left;
     padding-right: 1rem;
-  
-      a {
-  
-        &:after {
-        content: ">";
+
+    a {
+
+      &:after {
+        content: '>';
         padding-left: 1rem;
-  
-        }
-  
       }
-  
-      &:last-child {
-  
-        a {
-  
-          &:after {
-          content: none;
-          }
-  
-        }
-  
-      }
-  
+
     }
-  
+
+    &:last-child {
+
+      a {
+
+        &:after {
+          content: none;
+        }
+
+      }
+
+    }
+
   }
+
+}

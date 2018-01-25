@@ -28,9 +28,9 @@ Use horizontal breaks to seperate from content below
 <span style="font-weight:bold; font-size:22px;">CSS<span>
 */
 
-hr.horizontal-break {
+.horizontal-break {
   display: block;
-  content: "";
+  content: '';
   width: 100%;
   border-top: solid $op-grey 2px;
 }

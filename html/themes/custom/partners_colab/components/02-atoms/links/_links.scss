@@ -25,7 +25,7 @@ a {
   }
 
   a:visited {
-    color: red;
+    color: $secondary-colour;
   }
 
   &:hover {
@@ -35,7 +35,7 @@ a {
   }
 
   &:active {
-    color: red;
+    color: $secondary-colour;
   }
 
 }

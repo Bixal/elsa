@@ -1,20 +1,19 @@
 /* @start color */
 :root {
   --black: #000000;
-  --white: #ffffff;
+  --white: #FFFFFF;
   --grey: #6C6463;
   --op-grey: rgba(108, 100, 99, 0.3);
   --primary-colour: #002F6C;
   --secondary-colour: #D0021B; }
 
 /* @end color */
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
+    color: #000000 !important;
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -24,12 +23,12 @@
     content: " (" attr(href) ")"; }
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: ""; }
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: ''; }
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid rgba(108, 100, 99, 0.3);
     page-break-inside: avoid; }
   thead {
     display: table-header-group; }
@@ -50,17 +49,17 @@
     display: none; }
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #000 !important; }
+    border-top-color: #000000 !important; }
   .label {
-    border: 1px solid #000; }
+    border: 1px solid #000000; }
   .table {
     border-collapse: collapse !important; }
     .table td,
     .table th {
-      background-color: #fff !important; }
+      background-color: #FFFFFF !important; }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #ddd !important; } }
+    border: 1px solid #FFFFFF !important; } }
 
 *,
 *::before,
@@ -87,9 +86,9 @@ body {
   font-size: 1.2rem;
   font-weight: normal;
   line-height: 1;
-  color: black;
+  color: #000000;
   text-align: left;
-  background-color: white; }
+  background-color: #FFFFFF; }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
@@ -165,12 +164,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: blue;
+  color: #002F6C;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a a:hover {
-    color: darkblue;
+    color: #002F6C;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -220,7 +219,7 @@ table {
 caption {
   padding-top: .5rem;
   padding-bottom: .5rem;
-  color: grey;
+  color: #6C6463;
   text-align: left;
   caption-side: bottom; }
 
@@ -348,7 +347,7 @@ template {
   height: 0;
   overflow: hidden;
   transition-property: height, visibility;
-  transition-duration: 0.35s;
+  transition-duration: .35s;
   transition-timing-function: ease; }
 
 /*
@@ -368,73 +367,61 @@ main {
   padding: 0; }
 
 .grid-layout {
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-template-areas: "hero" "secondary-nav" "breadcrumb" "content-top" "content" "content-bottom"   "sidebar-first" "sidebar-second" "footer"; }
+  grid-template-columns: 1fr;
+  grid-template-areas: 'hero' 'secondary-nav' 'breadcrumb' 'content-top' 'content' 'content-bottom' 'sidebar-first' 'sidebar-second' 'footer'; }
   @media (min-width: 767px) {
     .grid-layout {
-      -ms-grid-columns: minmax(450px, 650px) minmax(250px, 1fr);
-          grid-template-columns: minmax(450px, 650px) minmax(250px, 1fr);
-      grid-template-areas: "hero hero" "secondary-nav secondary-nav"       "breadcrumb sidebar-first" "content-top sidebar-first" "content sidebar-second"      "content-bottom sidebar-second"      "footer footer"; } }
+      grid-template-columns: minmax(450px, 650px) minmax(250px, 1fr);
+      grid-template-areas: 'hero hero' 'secondary-nav secondary-nav' 'breadcrumb sidebar-first' 'content-top sidebar-first' 'content sidebar-second' 'content-bottom sidebar-second' 'footer footer'; } }
   @media (min-width: 1025px) {
     .grid-layout {
-      -ms-grid-columns: 1fr auto minmax(450px, 650px) minmax(250px, 1fr) 1fr;
-          grid-template-columns: 1fr auto minmax(450px, 650px) minmax(250px, 1fr) 1fr;
-      grid-template-areas: "hero hero hero hero hero" "secondary-nav secondary-nav secondary-nav secondary-nav secondary-nav"  "... sidebar-first breadcrumb sidebar-second ..." "... sidebar-first content-top sidebar-second ..." "... sidebar-first content sidebar-second ..." "... content-bottom content-bottom sidebar-second ..."     "footer footer footer footer footer"; } }
+      grid-template-columns: 1fr auto minmax(450px, 650px) minmax(250px, 1fr) 1fr;
+      grid-template-areas: 'hero hero hero hero hero' 'secondary-nav secondary-nav secondary-nav secondary-nav secondary-nav' '... sidebar-first breadcrumb sidebar-second ...' '... sidebar-first content-top sidebar-second ...' '... sidebar-first content sidebar-second ...' '... content-bottom content-bottom sidebar-second ...' 'footer footer footer footer footer'; } }
   .grid-layout .region--hero {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: hero;
-    background-color: orange; }
+    grid-area: hero; }
   .grid-layout .region--secondary-navigation {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: secondary-nav;
-    background-color: pink; }
+    grid-area: secondary-nav; }
   .grid-layout .region--sidebar-first {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: sidebar-first;
-    background-color: lightgoldenrodyellow; }
+    grid-area: sidebar-first; }
   .grid-layout .region--sidebar-second {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: sidebar-second;
-    background-color: lightcyan; }
+    grid-area: sidebar-second; }
   .grid-layout .region--breadcrumb {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: breadcrumb;
-    background-color: lightgreen; }
+    grid-area: breadcrumb; }
   .grid-layout .region--content-top {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: content-top;
-    background-color: lightblue; }
+    grid-area: content-top; }
   .grid-layout .region--content {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: content;
-    background-color: lightblue; }
+    grid-area: content; }
   .grid-layout .region--content-bottom {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: content-bottom;
-    background-color: lightseagreen; }
+    grid-area: content-bottom; }
   .grid-layout .region--footer {
     max-width: none;
     margin: 0;
     position: static;
-    grid-area: footer;
-    background-color: purple; }
+    grid-area: footer; }
 
 /*
 @styleguide
@@ -530,10 +517,10 @@ sup {
   vertical-align: baseline; }
 
 sup {
-  top: -0.5em; }
+  top: -.5em; }
 
 sub {
-  bottom: -0.25em; }
+  bottom: -.25em; }
 
 ul {
   list-style: none !important; }
@@ -567,9 +554,9 @@ Use horizontal breaks to seperate from content below
 
 <span style="font-weight:bold; font-size:22px;">CSS<span>
 */
-hr.horizontal-break {
+.horizontal-break {
   display: block;
-  content: "";
+  content: '';
   width: 100%;
   border-top: solid rgba(108, 100, 99, 0.3) 2px; }
 
@@ -623,7 +610,7 @@ input[type="submit"].btn {
   padding-left: 2rem;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 2.4rem;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 600;
   line-height: 1rem;
   border: 0; }
@@ -639,7 +626,7 @@ button {
   padding-left: 2rem;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 2.4rem;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 600;
   line-height: 1rem;
   border: 0;
@@ -688,7 +675,7 @@ Use  a chip for taxonomy or tag indicators throughout the theme
 
 <span style="font-weight:bold; font-size:22px;">CSS</span>
 */
-a.chip {
+.chip {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   color: #6C6463;
@@ -853,25 +840,25 @@ Use the .icn and its --modifiers to implement icons
   height: 1.5rem;
   background-size: 1.5rem 1.5rem; }
   .icn--small {
-    color: white; }
+    color: #FFFFFF; }
 
 .btn-icon {
   display: none; }
 
 .icn--linkedin {
-  background-image: url("/themes/custom/elsa/components/02-atoms/icons/linkedin-logo.svg");
+  background-image: url("/themes/custom/partners_colab/components/02-atoms/icons/linkedin-logo.svg");
   background-size: cover; }
 
 .icn--facebook {
-  background-image: url("/themes/custom/elsa/components/02-atoms/icons/facebook-logo.svg");
+  background-image: url("/themes/custom/partners_colab/components/02-atoms/icons/facebook-logo.svg");
   background-size: cover; }
 
 .icn--twitter {
-  background-image: url("/themes/custom/elsa/components/02-atoms/icons/twitter-logo-silhouette.svg");
+  background-image: url("/themes/custom/partners_colab/components/02-atoms/icons/twitter-logo-silhouette.svg");
   background-size: cover; }
 
 .icn--chat {
-  background-image: url("/themes/custom/elsa/components/02-atoms/icons/chat.svg");
+  background-image: url("/themes/custom/partners_colab/components/02-atoms/icons/chat.svg");
   background-size: cover; }
 
 /*
@@ -881,11 +868,11 @@ Use the .icn and its --modifiers to implement icons
 
 These are our image styles
 
-<img src="/themes/custom/elsa/components/02-atoms/images/style-img.png"></img>
+<img src="/themes/custom/partners_colab/components/02-atoms/images/style-img.png"></img>
 
-<p><img class="img-align-right" src="/themes/custom/elsa/components/02-atoms/images/style-img-square.png" align="right"></img>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+<p><img class="img-align-right" src="/themes/custom/partners_colab/components/02-atoms/images/style-img-square.png" align="right"></img>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
 
-<p><img class="img-align-left" src="/themes/custom/elsa/components/02-atoms/images/style-img-square.png" align="left">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+<p><img class="img-align-left" src="/themes/custom/partners_colab/components/02-atoms/images/style-img-square.png" align="left">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
 
 <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
 
@@ -893,8 +880,8 @@ These are our image styles
 img {
   margin-top: 0;
   margin-bottom: 2.5rem;
-  margin-right: 0rem;
-  margin-left: 0rem;
+  margin-right: 0;
+  margin-left: 0;
   width: 100%;
   height: auto; }
   img.img-align-left {
@@ -929,13 +916,13 @@ a {
   a:link {
     text-decoration: underline; }
   a a:visited {
-    color: red; }
+    color: #D0021B; }
   a:hover {
     color: #002453;
     background: #b9d7ff;
     cursor: pointer; }
   a:active {
-    color: red; }
+    color: #D0021B; }
 
 /*
 @styleguide
@@ -1030,21 +1017,21 @@ Use the btn--input classes on `<input type="submit">` elements.
 
 <span style="font-weight:bold; font-size:22px;">CSS</span>
 */
-ul.breadcrumbs {
+.breadcrumbs {
   padding-left: 0; }
-  ul.breadcrumbs:before, ul.breadcrumbs:after {
-    content: " ";
+  .breadcrumbs:before, .breadcrumbs:after {
+    content: ' ';
     display: table; }
-  ul.breadcrumbs:after {
+  .breadcrumbs:after {
     clear: both; }
-  ul.breadcrumbs li {
+  .breadcrumbs li {
     list-style: none;
     float: left;
     padding-right: 1rem; }
-    ul.breadcrumbs li a:after {
-      content: ">";
+    .breadcrumbs li a:after {
+      content: '>';
       padding-left: 1rem; }
-    ul.breadcrumbs li:last-child a:after {
+    .breadcrumbs li:last-child a:after {
       content: none; }
 
 /*
@@ -1067,7 +1054,7 @@ Use the #search-form id on `search-form` components.
     </div>
 
 */
-#search-form {
+.search-form {
   padding: 1rem; }
 
 table {
@@ -1111,10 +1098,10 @@ th {
       align-content: flex-start; }
   .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
   .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
     margin-top: 0;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto; }
     @media (min-width: 767px) {
       .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
       .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
@@ -1123,73 +1110,6 @@ th {
       .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
       .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
         width: 25%; } }
-
-section.bottom-content-view-block {
-  display: -ms-grid;
-  display: grid;
-  margin-top: 0;
-  margin-bottom: 6.7rem;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-template-areas: "bottom-content-title" "bottom-content-view"; }
-  @media (min-width: 767px) {
-    section.bottom-content-view-block {
-      -ms-grid-columns: minmax(450px, 650px) minmax(250px, 1fr);
-          grid-template-columns: minmax(450px, 650px) minmax(250px, 1fr);
-      grid-template-areas: "bottom-content-title bottom-content-title" "bottom-content-view bottom-content-view"; } }
-  @media (min-width: 1025px) {
-    section.bottom-content-view-block {
-      -ms-grid-columns: 1fr auto minmax(450px, 650px) minmax(250px, 1fr) 1fr;
-          grid-template-columns: 1fr auto minmax(450px, 650px) minmax(250px, 1fr) 1fr;
-      grid-template-areas: "... bottom-content-title bottom-content-title bottom-content-title ..." "... bottom-content-view bottom-content-view bottom-content-view ..."; } }
-  section.bottom-content-view-block .section-title--bottom-content {
-    grid-area: bottom-content-title;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-column: 1/2;
-    grid-row: 1/2; }
-    @media (min-width: 767px) {
-      section.bottom-content-view-block .section-title--bottom-content {
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 1;
-        grid-column: 1/3;
-        grid-row: 1/2; } }
-    @media (min-width: 1025px) {
-      section.bottom-content-view-block .section-title--bottom-content {
-        -ms-grid-column: 2;
-        -ms-grid-column-span: 3;
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 1;
-        grid-column: 2/5;
-        grid-row: 1/2; } }
-  section.bottom-content-view-block .view {
-    grid-area: bottom-content-view;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-column: 1/2;
-    grid-row: 2/3; }
-    @media (min-width: 767px) {
-      section.bottom-content-view-block .view {
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
-        -ms-grid-row: 2;
-        -ms-grid-row-span: 1;
-        grid-column: 1/3;
-        grid-row: 2/3; } }
-    @media (min-width: 1025px) {
-      section.bottom-content-view-block .view {
-        -ms-grid-column: 2;
-        -ms-grid-column-span: 3;
-        -ms-grid-row: 2;
-        -ms-grid-row-span: 1;
-        grid-column: 2/5;
-        grid-row: 2/3; } }
 
 /*
 @styleguide

@@ -1,7 +1,7 @@
 // Use the padding variables and mixins to set padding accross the theme.
 
 // padding varibles
-$clear-padding: 0rem;
+$clear-padding: 0;
 $small-padding: 1rem;
 $med-padding: 2rem;
 $lrg-padding: 2.5rem;
@@ -11,7 +11,7 @@ $lrg-padding: 2.5rem;
   padding-top: 0;
   padding-bottom: $spacing;
   padding-left: 0;
-  padding-right: 0;  
+  padding-right: 0;
 }
 
 //@include small-padding ($spacing);
@@ -35,4 +35,3 @@ $lrg-padding: 2.5rem;
   margin-right: 0;
   margin-left: 0;
 }
-

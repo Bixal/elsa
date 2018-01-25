@@ -34,7 +34,7 @@ linters:
     enabled: true
 
   Comment:
-    enabled: true
+    enabled: false
     style: silent
 
   DebugStatement:
@@ -82,7 +82,7 @@ linters:
     enabled: true
 
   ImportantRule:
-    enabled: true
+    enabled: false
 
   ImportPath:
     enabled: true
@@ -133,7 +133,7 @@ linters:
 
   PropertySpelling:
     enabled: true
-    extra_properties: []
+    extra_properties: ['grid-template-columns']
     disabled_properties: []
 
   PropertyUnits:
@@ -146,7 +146,7 @@ linters:
       'ms', 's',                               # Duration
       'Hz', 'kHz',                             # Frequency
       'dpi', 'dpcm', 'dppx',                   # Resolution
-      '%']                                     # Other
+      '%', 'fr']                               # Other
     properties: {}
 
   PseudoElement:
@@ -154,7 +154,7 @@ linters:
 
   QualifyingElement:
     enabled: true
-    allow_element_with_attribute: false
+    allow_element_with_attribute: true
     allow_element_with_class: false
     allow_element_with_id: false
 
@@ -246,7 +246,7 @@ linters:
     properties: []
 
   VendorPrefix:
-    enabled: true
+    enabled: false
     identifier_list: base
     additional_identifiers: []
     excluded_identifiers: []

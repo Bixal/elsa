@@ -1,27 +1,26 @@
 .block-views-blockprojects-block-1,
 .block-views-blocknews-and-highlights-topic-view--block-1 {
-    
-    .view {
-        display: flex;
-        flex-wrap: wrap;
-        // justify-content: space-between;
-        align-items: flex-start;
-        align-content: flex-start;
 
-        .view-row-group-wrapper {
-            flex: 0 1 auto;
-            @include vertical-margin ($med-margin);
+  .view {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
 
-            @include breakpoint (tablet) {
-            width: 50%;
-            }
+    .view-row-group-wrapper {
+      @include vertical-margin ($med-margin);
+      flex: 0 1 auto;
 
-            @include breakpoint (desktop) {
-            width: 25%;
-            }
+      @include breakpoint (tablet) {
+        width: 50%;
+      }
 
-        }
+      @include breakpoint (desktop) {
+        width: 25%;
+      }
 
     }
+
+  }
 
 }

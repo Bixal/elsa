@@ -2,7 +2,7 @@
 
 // Visually hidden
 // Make an element visually hidden, but accessible to screen readers, etc.
-// @see: http://a11yproject.com/posts/how-to-hide-content 
+// @see: http://a11yproject.com/posts/how-to-hide-content
 
 @mixin visually-hidden {
   position: absolute;
@@ -12,7 +12,7 @@
   word-wrap: normal;
   margin: -1px;
   padding: 0;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   border: 0;
 }
 
@@ -43,4 +43,5 @@
   &:focus {
     @include visually-hidden--off;
   }
+
 }

@@ -38,7 +38,8 @@ gulp.task('sass', function() {
     // Prefixing ONLY our CSS file with vendor prefixes so that we don't need them in our SCSS files
     .pipe(postcss([
       autoprefixer({
-      browsers: ['last 2 versions']
+      browsers: ['last 2 versions'],
+      grid: false // we are implementing a scss mixin to conver these prefixes 
     }),
     // Generate our styleguide
     styleGuide({

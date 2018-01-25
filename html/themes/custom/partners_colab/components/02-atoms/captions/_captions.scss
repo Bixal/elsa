@@ -15,7 +15,7 @@ Use the img-catption class on `<p>` elements wrapping `<caption>` elements.
 //styles that accompany images
 // TODO: figure out if we can assign this to the caption element
 .img-caption {
-    @include font ($body-font-default, 1.4rem, $grey, 500, 2rem);
-    @include vertical-margin($small-margin);
-    caption-side: bottom-outside;
-  }
+  @include font ($body-font-default, 1.4rem, $grey, 500, 2rem);
+  @include vertical-margin($small-margin);
+  caption-side: bottom-outside;
+}

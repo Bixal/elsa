@@ -39,27 +39,27 @@ h2,
       padding-left: 48px;
     }
 
-  } 
+  }
 
 }
 
 h4,
 .h4 {
-  @include font ($secondary-font, 2.0rem, $black, 300, 3.1rem);
+  @include font ($secondary-font, 2rem, $black, 300, 3.1rem);
   @include vertical-margin($med-margin);
   font-style: italic;
 }
 
 h5,
 .h5 {
-  @include font ($secondary-font, 2.0rem, $black, 300, 3.1rem);
+  @include font ($secondary-font, 2rem, $black, 300, 3.1rem);
   @include vertical-margin($med-margin);
   font-style: italic;
 }
 
 h6,
 .h6 {
-  @include font ($secondary-font, 2.0rem, $black, 300, 3.1rem);
+  @include font ($secondary-font, 2rem, $black, 300, 3.1rem);
   @include vertical-margin($med-margin);
   font-style: italic;
 }
