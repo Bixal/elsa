@@ -1,0 +1,13 @@
+// This file globs all partials from folders in the SCSS root. You shouldn't need to touch anything here.
+
+// Import
+@import '../00-config/variables/*';
+@import '../00-config/mixins/*';
+
+@import '../01-base/**/*';
+@import '../02-atoms/**/*';
+@import '../03-molecules/**/*';
+@import '../04-organisms/**/*';
+
+@import '../../style-guide/*';
+

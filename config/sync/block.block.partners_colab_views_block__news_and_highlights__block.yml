@@ -1,0 +1,33 @@
+uuid: 38ac39ec-57ee-4373-a284-f4f3c327277b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_and_highlights_topic_view_
+  module:
+    - node
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_views_block__news_and_highlights__block
+theme: partners_colab
+region: content_bottom
+weight: -27
+provider: null
+plugin: 'views_block:news_and_highlights_topic_view_-block_1'
+settings:
+  id: 'views_block:news_and_highlights_topic_view_-block_1'
+  label: 'News and Highlights'
+  provider: views
+  label_display: visible
+  views_label: 'News and Highlights'
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

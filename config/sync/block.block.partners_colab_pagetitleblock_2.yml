@@ -1,0 +1,26 @@
+uuid: 9ed91c31-cf9c-4b8f-81b5-7d025848e9f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_core
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_pagetitleblock_2
+theme: partners_colab
+region: hero
+weight: -25
+provider: null
+plugin: social_page_title_block
+settings:
+  id: social_page_title_block
+  label: 'Page title for enrollments'
+  provider: social_core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "*/enrollments\r\n*/managers"
+    negate: false
+    context_mapping: {  }

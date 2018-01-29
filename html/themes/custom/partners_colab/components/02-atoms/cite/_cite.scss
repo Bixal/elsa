@@ -1,0 +1,31 @@
+/*
+@styleguide
+
+@title Cite
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<cite>Photo by First Last Name of photographer</cite>
+
+    <cite>Use the cite element for images that need to show the source of content.</cite>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+cite {
+  @include font ($body-font-default, 1.4rem, $grey, 600, 2rem);
+  @include vertical-margin($med-margin);
+  position: relative;
+  font-style: italic;
+  right: -2rem;
+
+  &:before {
+    @include pseudo($pos: relative);
+    background: $grey;
+    width: 1rem;
+    height: 1rem;
+    top: 1.6rem;
+    right: 1.6rem;
+  }
+
+}

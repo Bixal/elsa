@@ -1,0 +1,28 @@
+uuid: b0dfc926-eb7d-45bc-a770-27f674aa23cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_breadcrumbs
+theme: partners_colab
+region: breadcrumb
+weight: -27
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

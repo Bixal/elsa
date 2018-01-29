@@ -1,0 +1,30 @@
+uuid: b18537c0-d4af-4b0e-a21a-1026afc9cfbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.upcoming_events
+  module:
+    - system
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_views_block__upcoming_events_block_community_events
+theme: partners_colab
+region: sidebar_second
+weight: -26
+provider: null
+plugin: 'views_block:upcoming_events-block_community_events'
+settings:
+  id: 'views_block:upcoming_events-block_community_events'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stream\r\n/explore"
+    negate: false
+    context_mapping: {  }

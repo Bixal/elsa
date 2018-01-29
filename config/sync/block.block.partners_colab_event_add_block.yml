@@ -1,0 +1,26 @@
+uuid: a9ddad8b-0863-4d5e-9415-0a8f074d5173
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_event
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_event_add_block
+theme: partners_colab
+region: sidebar_first
+weight: -27
+provider: null
+plugin: event_add_block
+settings:
+  id: event_add_block
+  label: 'Event add block'
+  provider: social_event
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/events'
+    negate: false
+    context_mapping: {  }

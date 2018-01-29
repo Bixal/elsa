@@ -1,0 +1,28 @@
+name: Partners CoLab
+type: theme
+description: Open Social sub-theme for ME&L USAID El Salvador
+package: Custom
+core: 8.x
+base theme: socialbase
+# Defines libraries group in which we can add css/js
+libraries:
+  - partners_colab/global-css
+  - partners_colab/global-js
+# Regions
+regions:
+  header: Header
+  breadcrumb: Breadcrumb
+  hero: Hero
+  secondary_navigation: Secondary navigation
+  content_top: Content top
+  title: Page title
+  content: Content
+  complementary_top: Complementary top
+  complementary_bottom: Complementary bottom
+  content_bottom: Content bottom
+  sidebar_first: Sidebar First
+  sidebar_second: Sidebar Second
+  footer: Footer
+  disabled: 'Disabled'
+
+

@@ -1,0 +1,20 @@
+uuid: 758bf699-4579-4710-afc2-16ac0d7d71f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - partners_colab
+id: partners_colab_help
+theme: partners_colab
+region: content
+weight: -25
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

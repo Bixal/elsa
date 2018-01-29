@@ -1,0 +1,26 @@
+uuid: a7f271da-f732-4859-8561-e894b42db18f
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_group
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_groupheroblock
+theme: partners_colab
+region: hero
+weight: -27
+provider: null
+plugin: group_hero_block
+settings:
+  id: group_hero_block
+  label: 'Group hero block'
+  provider: social_group
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*'
+    negate: false
+    context_mapping: {  }

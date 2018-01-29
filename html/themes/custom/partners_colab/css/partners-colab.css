@@ -1,0 +1,1162 @@
+/* @start color */
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --grey: #6C6463;
+  --op-grey: rgba(108, 100, 99, 0.3);
+  --primary-colour: #002F6C;
+  --secondary-colour: #D0021B; }
+
+/* @end color */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: ''; }
+  pre,
+  blockquote {
+    border: 1px solid rgba(108, 100, 99, 0.3);
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; }
+  .navbar {
+    display: none; }
+  .btn > .caret,
+  .dropup > .btn > .caret {
+    border-top-color: #000000 !important; }
+  .label {
+    border: 1px solid #000000; }
+  .table {
+    border-collapse: collapse !important; }
+    .table td,
+    .table th {
+      background-color: #FFFFFF !important; }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #FFFFFF !important; } }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent; }
+
+@-ms-viewport {
+  width: device-width; }
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block; }
+
+body {
+  margin: 0;
+  font-family: arial;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #000000;
+  text-align: left;
+  background-color: #FFFFFF; }
+
+[tabindex="-1"]:focus {
+  outline: none !important; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0; }
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit; }
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0; }
+
+dt {
+  font-weight: 500; }
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; }
+
+blockquote {
+  margin: 0 0 1rem; }
+
+dfn {
+  font-style: italic; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -.25em; }
+
+sup {
+  top: -.5em; }
+
+a {
+  color: #002F6C;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+  a a:hover {
+    color: #002F6C;
+    text-decoration: underline; }
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none; }
+  a:not([href]):not([tabindex]):focus {
+    outline: 0; }
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar; }
+
+figure {
+  margin: 0 0 1rem; }
+
+img {
+  vertical-align: middle;
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+a,
+area,
+button,
+[role="button"],
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; }
+
+table {
+  border-collapse: collapse; }
+
+caption {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: #6C6463;
+  text-align: left;
+  caption-side: bottom; }
+
+th {
+  text-align: inherit; }
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem; }
+
+button {
+  border-radius: 0; }
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color; }
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal; }
+
+progress {
+  vertical-align: baseline; }
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none; }
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button; }
+
+output {
+  display: inline-block; }
+
+summary {
+  display: list-item; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none !important; }
+
+.fade {
+  opacity: 0;
+  transition: opacity .15s linear; }
+  .fade.in {
+    opacity: 1; }
+
+.collapse {
+  display: none; }
+  .collapse.in {
+    display: block; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-duration: .35s;
+  transition-timing-function: ease; }
+
+/*
+@styleguide
+
+@title Regions
+
+Use regions to place our blocks. The regions will use a gridCSS formula to deal with structure and placement at breakpoints.
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+main {
+  display: grid;
+  display: -ms-grid; }
+
+.main-container {
+  padding: 0; }
+
+.grid-layout {
+  grid-template-columns: 1fr;
+  grid-template-areas: 'hero' 'secondary-nav' 'breadcrumb' 'content-top' 'content' 'content-bottom' 'sidebar-first' 'sidebar-second' 'footer'; }
+  @media (min-width: 767px) {
+    .grid-layout {
+      grid-template-columns: minmax(450px, 650px) minmax(250px, 1fr);
+      grid-template-areas: 'hero hero' 'secondary-nav secondary-nav' 'breadcrumb sidebar-first' 'content-top sidebar-first' 'content sidebar-second' 'content-bottom sidebar-second' 'footer footer'; } }
+  @media (min-width: 1025px) {
+    .grid-layout {
+      grid-template-columns: 1fr auto minmax(450px, 650px) minmax(250px, 1fr) 1fr;
+      grid-template-areas: 'hero hero hero hero hero' 'secondary-nav secondary-nav secondary-nav secondary-nav secondary-nav' '... sidebar-first breadcrumb sidebar-second ...' '... sidebar-first content-top sidebar-second ...' '... sidebar-first content sidebar-second ...' '... content-bottom content-bottom sidebar-second ...' 'footer footer footer footer footer'; } }
+  .grid-layout .region--hero {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: hero; }
+  .grid-layout .region--secondary-navigation {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: secondary-nav; }
+  .grid-layout .region--sidebar-first {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: sidebar-first; }
+  .grid-layout .region--sidebar-second {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: sidebar-second; }
+  .grid-layout .region--breadcrumb {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: breadcrumb; }
+  .grid-layout .region--content-top {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: content-top; }
+  .grid-layout .region--content {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: content; }
+  .grid-layout .region--content-bottom {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: content-bottom; }
+  .grid-layout .region--footer {
+    max-width: none;
+    margin: 0;
+    position: static;
+    grid-area: footer; }
+
+/*
+@styleguide
+
+@title Typography
+
+Default styles are assigned to elements.
+
+<h1>H1 - Source Sans Pro SemiBold</h1>
+
+    <h1>Use h1 for hero and page structure</h1>
+
+<h1 class="section-header">Section Header - Source Sans Pro SemiBold</h1>
+
+    <h1 class="section-header">Section-headerfor structure for alternative styling</h1>
+
+<h2>H2 - Source Sans Pro SemiBold</h2>
+
+    <h2>Use h2 for title and subtitle</h2>
+
+<h4>H4 - Source Sans Pro Italic </h4>
+
+    <h4>Use h4 for emphasis</h4>
+
+The elements in this section give semantics to inline text.
+    <p>The default font-size and line-height properties are applied to the <code>&lt;body&gt;</code> element and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin.</p>
+    <p>You can use the mark tag to
+        <mark>highlight</mark> text.</p>
+    <p><del>This line of text is meant to be treated as deleted text.</del>
+    </p>
+    <p><s>This line of text is meant to be treated as no longer accurate.</s>
+    </p>
+    <p><ins>This line of text is meant to be treated as an addition to the document.</ins>
+    </p>
+    <p><u>This line of text will render as underlined</u>
+    </p>
+    <p><small>This line of text is meant to be treated as fine print.</small>
+    </p>
+    <p>The following snippets of text are <strong class="">rendered</strong> as <b class="">bold
+    text</b>. Bold text nested inside <i>italic text <b>should</b></i> <em>still be
+    <strong>bold</strong></em>.</p>
+    <p>The following snippets of text are <em class="">rendered</em> as <i class="">italic text</i>. Italic text nested inside <b>bold text <i>should</i></b> <strong>still be
+    <em>italic</em></strong>
+    </p>
+    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>. And <abbr title="HyperText Markup Language">HTML</abbr> is an acroynm.</p>
+    <p><abbr>M<sup>lle</sup></abbr> Gwendoline wrote the equation <code>f(x, n) = log<sub>4</sub>x<sup class="">n</sup></code>.</p>
+
+Addresses
+Present contact information for the nearest ancestor or the
+entire body of work. Preserve formatting by ending all lines with `<br>`.
+
+Blockquotes
+Wrap `<blockquote>` around any __HTML__ as the quote.
+For straight quotes, we recommend a `<p>`.
+
+Horizontal rule
+The `<hr>` element represents a paragraph-level thematic break,
+e.g. a scene change in a story, or a transition to another topic
+within a section of a reference book.
+<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id
+dolor id nibh ultricies vehicula.</p>
+<hr>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+html {
+  font-size: 10px;
+  line-height: 10px; }
+
+body {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #000000;
+  line-height: 2.3rem; }
+
+b,
+strong {
+  font-weight: bold; }
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #000000; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+ul {
+  list-style: none !important; }
+
+/*
+@styleguide
+
+@title Breaks
+
+Use vertical breaks to seperate content from left or right
+
+<p class="vertical-break--right">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+    <p class="vertical-break--right">Use the vertical-break--class as needed</p>
+
+<p class="vertical-break--left">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+    <p class="vertical-break--left">Use the vertical-break--class as needed</p>
+
+<p class="vertical-break--both">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+    <p class="vertical-break--both">Use the vertical-break--class as needed</p>
+
+Use horizontal breaks to seperate from content below
+
+<p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+<br class="horizontal-break"></br>
+<p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+    <hr class="horizontal-break"></hr>
+
+<span style="font-weight:bold; font-size:22px;">CSS<span>
+*/
+.horizontal-break {
+  display: block;
+  content: '';
+  width: 100%;
+  border-top: solid rgba(108, 100, 99, 0.3) 2px; }
+
+.vertical-break--right {
+  padding-right: 1rem;
+  border-right: solid rgba(108, 100, 99, 0.3) 2px; }
+
+.vertical-break--left {
+  padding-left: 1rem;
+  border-left: solid rgba(108, 100, 99, 0.3) 2px; }
+
+.vertical-break--both {
+  padding-left: 1rem;
+  border-left: solid rgba(108, 100, 99, 0.3) 2px;
+  padding-right: 1rem;
+  border-right: solid rgba(108, 100, 99, 0.3) 2px; }
+
+/*
+@styleguide
+
+@title Buttons
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<input type="submit" value="Submit" class="btn btn--input"></input>
+
+    <input type="submit" class="btn btn--input"></input>
+
+
+Use the btn--reset class on `<button type="reset">` elements.
+
+<button class="btn btn--reset">Submit</button>
+
+    <button class="btn btn--reset"></button>
+
+
+Use the btn--go class on `<button type="go">` elements.
+
+<button class="btn btn--go">Submit</button>
+
+    <button class="btn btn--go"></button>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+input[type="submit"].btn {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  line-height: 1rem;
+  border: 0; }
+  input[type="submit"].btn--input {
+    background-color: #002F6C; }
+
+button {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  line-height: 1rem;
+  border: 0;
+  background-color: #002F6C; }
+  button--reset {
+    background-color: #D0021B; }
+  button--go {
+    background-color: rgba(108, 100, 99, 0.3); }
+
+.hero-action-button {
+  float: right; }
+
+/*
+@styleguide
+
+@title Captions
+
+Use the img-catption class on `<p>` elements wrapping `<caption>` elements.
+
+<p class="img-caption"><caption>Under this pricing agreement with Mylan Laboratories Limited and Aurobindo Pharma, regimens will cost about $75 per person per year.</caption></p>
+
+    <p class="img-caption"><caption>Use "img-caption" class for images that have captions.</caption></p>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+.img-caption {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  color: #6C6463;
+  font-weight: 500;
+  line-height: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  caption-side: bottom-outside; }
+
+/*
+@styleguide
+
+@title Chips
+
+Use  a chip for taxonomy or tag indicators throughout the theme
+
+<a class="chip" href="#">Success Stories Chip</a>
+
+    <a class="chip" href="#">Use links consistently</a>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+.chip {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #6C6463;
+  line-height: 2.3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-decoration: none; }
+
+/*
+@styleguide
+
+@title Cite
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<cite>Photo by First Last Name of photographer</cite>
+
+    <cite>Use the cite element for images that need to show the source of content.</cite>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+cite {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  color: #6C6463;
+  font-weight: 600;
+  line-height: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  position: relative;
+  font-style: italic;
+  right: -2rem; }
+  cite:before {
+    content: "";
+    display: block;
+    position: relative;
+    background: #6C6463;
+    width: 1rem;
+    height: 1rem;
+    top: 1.6rem;
+    right: 1.6rem; }
+
+/*
+@styleguide
+
+@title Form Fields
+
+Use the input--field class on `<input>` elements.
+
+<input type="text-input" class="input--field"></input>
+
+<span style="font-weight:bold; font-size:22px;">CSS<span>
+*/
+input[type="text-input"].input--field {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  height: 3.5rem;
+  width: 100%; }
+  input[type="text-input"].input--field.placeholder {
+    color: #6C6463; }
+  input[type="text-input"].input--field:-moz-placeholder {
+    color: #6C6463; }
+  input[type="text-input"].input--field::-moz-placeholder {
+    color: #6C6463; }
+  input[type="text-input"].input--field:-ms-input-placeholder {
+    color: #6C6463; }
+  input[type="text-input"].input--field::-webkit-input-placeholder {
+    color: #6C6463; }
+
+h1,
+.h1 {
+  font-family: "Gill Sans", Gill Sans MT, Calibri, sans-serif;
+  font-size: 6.4rem;
+  color: #002F6C;
+  font-weight: 600;
+  line-height: 6.9rem;
+  margin-top: 0;
+  margin-bottom: 2.5rem; }
+
+h2,
+.h2 {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 3.9rem;
+  color: #002F6C;
+  font-weight: 600;
+  line-height: 4.6rem;
+  margin-top: 0;
+  margin-bottom: 2rem; }
+
+.section-title,
+.section-title--bottom-content {
+  font-family: "Gill Sans", Gill Sans MT, Calibri, sans-serif;
+  font-size: 2.4rem;
+  color: #002F6C;
+  font-weight: 600;
+  line-height: 3.9rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-transform: uppercase; }
+
+h4,
+.h4 {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 300;
+  line-height: 3.1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-style: italic; }
+
+h5,
+.h5 {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 300;
+  line-height: 3.1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-style: italic; }
+
+h6,
+.h6 {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 300;
+  line-height: 3.1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-style: italic; }
+
+/*
+@styleguide
+
+@title Icons
+
+Use the .icn and its --modifiers to implement icons
+
+<div class="icn-style-grid">
+<i class="icn icn--linkedin"></i>
+
+<i class="icn icn--facebook"></i>
+
+<i class="icn icn--twitter"></i>
+
+<i class="icn icn--chat"></i>
+</div>
+
+    <i class="icn icn--linkedin"></i>
+    <i class="icn icn--facebook"></i>
+    <i class="icn icn--twitter"></i>
+    <i class="icn icn--chat"></i>
+
+<span style="font-weight:bold; font-size:22px;">CSS<span>
+*/
+.icn {
+  display: block;
+  text-indent: -9999px;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 1.5rem 1.5rem; }
+  .icn--small {
+    color: #FFFFFF; }
+
+.btn-icon {
+  display: none; }
+
+.icn--linkedin {
+  background-image: url("/themes/custom/partners_colab/components/02-atoms/icons/linkedin-logo.svg");
+  background-size: cover; }
+
+.icn--facebook {
+  background-image: url("/themes/custom/partners_colab/components/02-atoms/icons/facebook-logo.svg");
+  background-size: cover; }
+
+.icn--twitter {
+  background-image: url("/themes/custom/partners_colab/components/02-atoms/icons/twitter-logo-silhouette.svg");
+  background-size: cover; }
+
+.icn--chat {
+  background-image: url("/themes/custom/partners_colab/components/02-atoms/icons/chat.svg");
+  background-size: cover; }
+
+/*
+@styleguide
+
+@title Images
+
+These are our image styles
+
+<img src="/themes/custom/partners_colab/components/02-atoms/images/style-img.png"></img>
+
+<p><img class="img-align-right" src="/themes/custom/partners_colab/components/02-atoms/images/style-img-square.png" align="right"></img>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+
+<p><img class="img-align-left" src="/themes/custom/partners_colab/components/02-atoms/images/style-img-square.png" align="left">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+
+*/
+img {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  height: auto; }
+  img.img-align-left {
+    margin-right: 2.5rem; }
+    @media (min-width: 767px) {
+      img.img-align-left {
+        width: auto; } }
+  img.img-align-right {
+    margin-left: 2.5rem; }
+    @media (min-width: 767px) {
+      img.img-align-right {
+        width: auto; } }
+
+/*
+@styleguide
+
+@title Links
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<a href="#">This is a link.</a>
+
+    <a href="#">Use links consistently</a>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+a {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #002F6C;
+  line-height: 2.3rem; }
+  a:link {
+    text-decoration: underline; }
+  a a:visited {
+    color: #D0021B; }
+  a:hover {
+    color: #002453;
+    background: #b9d7ff;
+    cursor: pointer; }
+  a:active {
+    color: #D0021B; }
+
+/*
+@styleguide
+
+@title Lists
+
+Our list styles are specific to the element and the class breadcrumbs
+
+<ul>
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+</ul>
+
+    <ul>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ul>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+ul li {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #000000;
+  line-height: 3.2rem; }
+
+/*
+@styleguide
+
+@title Paragraphs
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<p>Paragraph 1 - Under this pricing agreement with Mylan Laboratories Limited and Aurobindo Pharma, regimens will cost about $75 per person per year, considerably less than the $80 to $90 paid for other regimens. Mylan Laboratories and Aurobindo Pharma are the first two generic antiretroviral (ARV) manufacturers to receive tentative approval from the U.S. Food and Drug Administration for the drug tenofovir disoproxil fumarate, lamivudine, and dolutegravir (TLD).</p>
+<p>Paragraph 2 - Under this pricing agreement with Mylan Laboratories Limited and Aurobindo Pharma, regimens will cost about $75 per person per year, considerably less than the $80 to $90 paid for other regimens. Mylan Laboratories and Aurobindo Pharma are the first two generic antiretroviral (ARV) manufacturers to receive tentative approval from the U.S. Food and Drug Administration for the drug tenofovir disoproxil fumarate, lamivudine, and dolutegravir (TLD).</p>
+
+    <p>This is our basic paragraph styling.</p>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+p {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #000000;
+  line-height: 2.3rem;
+  margin-top: 0;
+  margin-bottom: 2.5rem; }
+
+/*
+@styleguide
+
+@title Time
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<time datetime="2016-06-10">October 06, 2016</time>
+
+    <time datetime="2016-06-10">October 06, 2016</time>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+time[datetime] {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  color: #6C6463;
+  line-height: 2.4rem; }
+
+/*
+@styleguide
+
+@title Breadcrumbs
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<ul class="breadcrumbs">
+  <li><a>Linked List Item</a></li>
+  <li><a>Linked List Item</a></li>
+  <li><a>Linked List Item</a></li>
+  <li><a>Linked List Item</a></li>
+</ul>
+
+    <ul class="breadcrumbs">
+      <li><a>Linked List Item</a></li>
+      <li><a>Linked List Item</a></li>
+      <li><a>Linked List Item</a></li>
+      <li><a>Linked List Item</a></li>
+    </ul>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+.breadcrumbs {
+  padding-left: 0; }
+  .breadcrumbs:before, .breadcrumbs:after {
+    content: ' ';
+    display: table; }
+  .breadcrumbs:after {
+    clear: both; }
+  .breadcrumbs li {
+    list-style: none;
+    float: left;
+    padding-right: 1rem; }
+    .breadcrumbs li a:after {
+      content: '>';
+      padding-left: 1rem; }
+    .breadcrumbs li:last-child a:after {
+      content: none; }
+
+/*
+@styleguide
+
+@title Search Form
+
+Use the #search-form id on `search-form` components.
+
+<div id="search-form">
+<h2>Search</h2>
+<input type="text-input" class="input--field"></input>
+<input type="submit" class="btn btn--input"></input>
+</div>
+
+    <div id="search-form">
+      <h2>Search</h2>
+        <input type="text-input" class="input--field"></input>
+        <input type="submit" class="btn btn--input"></input>
+    </div>
+
+*/
+.search-form {
+  padding: 1rem; }
+
+table {
+  border-collapse: collapse; }
+  table caption {
+    color: #000000;
+    text-align: left;
+    caption-side: bottom; }
+
+th {
+  text-align: left; }
+
+.table {
+  width: 100%;
+  max-width: 100%; }
+  .table th,
+  .table td {
+    vertical-align: top;
+    word-wrap: break-word; }
+  .table thead th {
+    text-transform: uppercase;
+    vertical-align: bottom; }
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+  .table-responsive .table-bordered {
+    border: 0; }
+
+.block-views-blockprojects-block-1 .view,
+.block-views-blocknews-and-highlights-topic-view--block-1 .view {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+  .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
+  .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto; }
+    @media (min-width: 767px) {
+      .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
+      .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
+        width: 50%; } }
+    @media (min-width: 1025px) {
+      .block-views-blockprojects-block-1 .view .view-row-group-wrapper,
+      .block-views-blocknews-and-highlights-topic-view--block-1 .view .view-row-group-wrapper {
+        width: 25%; } }
+
+/*
+@styleguide
+
+@title Styleguide Styles
+
+tracking our temp styleguide styles
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+.psg-menu {
+  position: absolute;
+  width: 100%;
+  background: white;
+  height: 20px;
+  z-index: 1;
+  padding: 0 2rem;
+  box-shadow: -12px 17px 74px -14px rgba(0, 0, 0, 0.37); }
+
+.psg-menu:hover {
+  height: auto;
+  max-height: 50vh; }
+
+ul.psg-componentList {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around; }
+  ul.psg-componentList li {
+    margin: 0 2rem;
+    -ms-flex: 1 1 auto;
+        flex: 1 1 auto; }
+
+h2.psg-componentTitle {
+  font-size: 3.9rem; }
+
+.psg-updatedTime,
+.psg-colorBox-color,
+.psg-colorBox-name {
+  font-size: 1.4rem; }
+
+.icn-style-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }

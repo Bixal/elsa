@@ -1,0 +1,20 @@
+uuid: 34bfdd96-dfc7-4bed-b129-724af0fc8f06
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_messages
+theme: partners_colab
+region: content
+weight: -26
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: cbd971db-e6e8-4467-9965-aa9425845197
+langcode: en
+status: true
+dependencies:
+  module:
+    - addtoany
+    - node
+  theme:
+    - partners_colab
+id: partners_colab_addtoanybuttons
+theme: partners_colab
+region: sidebar_second
+weight: -29
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'Share this page'
+  provider: addtoany
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      event: event
+      page: page
+      topic: topic
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

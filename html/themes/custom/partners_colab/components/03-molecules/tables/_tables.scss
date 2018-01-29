@@ -1,0 +1,56 @@
+// Tables
+// The `<table>` element displays tabular data in rows, columns, and cells.
+
+table {
+  border-collapse: collapse;
+
+  caption {
+    color: $black;
+    text-align: left;
+    caption-side: bottom;
+  }
+
+}
+
+// Matches default `<td>` alignment
+
+th {
+  text-align: left;
+}
+
+// Baseline styles
+
+.table {
+  width: 100%;
+  max-width: 100%;
+
+  th,
+  td {
+    vertical-align: top;
+    word-wrap: break-word;
+  }
+
+  // Bottom align for column headings
+
+  thead th {
+    text-transform: uppercase;
+    vertical-align: bottom;
+  }
+
+}
+// Responsive tables
+// Add `.table-responsive` around table`s and we'll make them mobile friendly by enabling horizontal scrolling.
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  // Prevent double border on horizontal scroll due to use of `display: block;`
+
+  .table-bordered {
+    border: 0;
+  }
+
+}

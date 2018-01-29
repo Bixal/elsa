@@ -1,0 +1,24 @@
+uuid: a0cc68cb-4836-42c6-bef0-138be8dab5df
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_mainnavigation
+theme: partners_colab
+region: header
+weight: -19
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

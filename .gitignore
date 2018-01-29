@@ -12,3 +12,4 @@ settings.local.php
 *--dump.sql
 node_modules
 /html/private
+compliance_reports

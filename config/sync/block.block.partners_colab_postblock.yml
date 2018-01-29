@@ -1,0 +1,28 @@
+uuid: a2a454dd-020b-4ec0-b69c-cccd8d022a68
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post_photo
+    - system
+  theme:
+    - partners_colab
+_core:
+  default_config_hash: P48P5vAKh5cdHENgfiw66njirMIylYzdKUN2jOQg00o
+id: partners_colab_postblock
+theme: partners_colab
+region: disabled
+weight: -25
+provider: null
+plugin: post_photo_block
+settings:
+  id: post_block
+  label: 'Post block'
+  provider: social_post
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /stream
+    negate: false
+    context_mapping: {  }

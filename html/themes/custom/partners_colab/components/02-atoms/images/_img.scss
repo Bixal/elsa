@@ -1,0 +1,42 @@
+/*
+@styleguide
+
+@title Images
+
+These are our image styles
+
+<img src="/themes/custom/partners_colab/components/02-atoms/images/style-img.png"></img>
+
+<p><img class="img-align-right" src="/themes/custom/partners_colab/components/02-atoms/images/style-img-square.png" align="right"></img>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+
+<p><img class="img-align-left" src="/themes/custom/partners_colab/components/02-atoms/images/style-img-square.png" align="left">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</img>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+
+*/
+
+img {
+  @include vertical-margin ($lrg-margin);
+  @include horizontal-margin ($clear-margin);
+  width: 100%;
+  height: auto;
+
+  &.img-align-left {
+    margin-right: $lrg-margin;
+
+    @include breakpoint(tablet) {
+      width: auto;
+    }
+
+  }
+
+  &.img-align-right {
+    margin-left: $lrg-margin;
+
+    @include breakpoint(tablet) {
+      width: auto;
+    }
+
+  }
+
+}

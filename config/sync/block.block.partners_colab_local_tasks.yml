@@ -1,0 +1,36 @@
+uuid: 6ce82a72-12d8-4f24-b6e0-64bbc531d4bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - partners_colab
+id: partners_colab_local_tasks
+theme: partners_colab
+region: secondary_navigation
+weight: -27
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: "post/*/edit\r\npost/*/delete\r\n/post/*/edit\r\n/post/*/delete"
+    negate: true
+    context_mapping: {  }

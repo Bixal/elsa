@@ -1,0 +1,18 @@
+/*
+@styleguide
+
+@title Time
+
+Use the btn--input classes on `<input type="submit">` elements.
+
+<time datetime="2016-06-10">October 06, 2016</time>
+
+    <time datetime="2016-06-10">October 06, 2016</time>
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+//date and time
+time[datetime] {
+  @include font ($body-font-default, 1.4rem, $grey, null, 2.4rem);
+}

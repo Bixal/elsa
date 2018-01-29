@@ -1,0 +1,30 @@
+uuid: 9c3a4cf1-6c1d-480b-8d4d-4a3a0547f210
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_members
+  module:
+    - system
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_views_block__group_members_block_newest_members
+theme: partners_colab
+region: sidebar_second
+weight: -19
+provider: null
+plugin: 'views_block:group_members-block_newest_members'
+settings:
+  id: 'views_block:group_members-block_newest_members'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/group/*/stream\r\n/group/*/about"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,33 @@
+uuid: bbf73d44-8147-44c6-ad0e-5078cdb88570
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.upcoming_events_block
+  module:
+    - node
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_views_block__upcoming_events_block
+theme: partners_colab
+region: content_bottom
+weight: -26
+provider: null
+plugin: 'views_block:upcoming_events_block-block_1'
+settings:
+  id: 'views_block:upcoming_events_block-block_1'
+  label: Events
+  provider: views
+  label_display: visible
+  views_label: Events
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

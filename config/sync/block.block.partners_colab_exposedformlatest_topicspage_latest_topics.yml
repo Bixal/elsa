@@ -1,0 +1,29 @@
+uuid: 1663279a-1562-42d0-a866-b682a3f89234
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_topics
+  module:
+    - system
+    - views
+  theme:
+    - partners_colab
+id: partners_colab_exposedformlatest_topicspage_latest_topics
+theme: partners_colab
+region: sidebar_first
+weight: -19
+provider: null
+plugin: 'views_exposed_filter_block:latest_topics-page_latest_topics'
+settings:
+  id: 'views_exposed_filter_block:latest_topics-page_latest_topics'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    pages: /all-topics
+    negate: false
+    context_mapping: {  }

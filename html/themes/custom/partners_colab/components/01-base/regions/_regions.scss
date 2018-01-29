@@ -1,0 +1,244 @@
+/*
+@styleguide
+
+@title Regions
+
+Use regions to place our blocks. The regions will use a gridCSS formula to deal with structure and placement at breakpoints.
+
+<span style="font-weight:bold; font-size:22px;">CSS</span>
+*/
+
+main {
+  display: grid;
+  display: -ms-grid;
+}
+
+//fallbacks for IE mixin
+@mixin grid-child ($col-start, $col-end, $row-start, $row-end) {
+  -ms-grid-column: $col-start;
+  -ms-grid-column-span: $col-end - $col-start;
+  -ms-grid-row: $row-start;
+  -ms-grid-row-span: $row-end - $row-start;
+  grid-column: #{$col-start}/#{$col-end};
+  grid-row: #{$row-start}/#{$row-end};
+}
+
+@mixin overrideDefaultLayout {
+  // over-rides the connected sub-theme
+  max-width: none;
+  margin: 0;
+  position: static;
+}
+
+//main-container class is left over from the base theme, you can overwrite here
+.main-container {
+  padding: 0;
+}
+
+// define our named region tablet/desktop grid layout
+.grid-layout {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  'hero'
+  'secondary-nav'
+  'breadcrumb'
+  'content-top'
+  'content'
+  'content-bottom'
+  'sidebar-first'
+  'sidebar-second'
+  'footer';
+
+  @include breakpoint (tablet) {
+    grid-template-columns: minmax(450px, 650px) minmax(250px, 1fr);
+    grid-template-areas:
+    'hero hero'
+    'secondary-nav secondary-nav'
+    'breadcrumb sidebar-first'
+    'content-top sidebar-first'
+    'content sidebar-second'
+    'content-bottom sidebar-second'
+    'footer footer';
+  }
+
+  @include breakpoint (desktop) {
+    grid-template-columns: 1fr auto minmax(450px, 650px) minmax(250px, 1fr) 1fr;
+    grid-template-areas:
+    'hero hero hero hero hero'
+    'secondary-nav secondary-nav secondary-nav secondary-nav secondary-nav'
+    '... sidebar-first breadcrumb sidebar-second ...'
+    '... sidebar-first content-top sidebar-second ...'
+    '... sidebar-first content sidebar-second ...'
+    '... content-bottom content-bottom sidebar-second ...'
+    'footer footer footer footer footer';
+  }
+
+  // define our grid area namesystem
+  // colours toggled for troubleshooting
+  .region {
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--hero {
+      @include overrideDefaultLayout;
+      grid-area: hero;
+      //fallbacks for IE
+      // @include grid-child (1, 2, 1, 2);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (1, 3, 2, 3);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (2, 5, 2, 3);
+      // }
+
+      // background-color: orange;
+    }
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--secondary-navigation {
+      @include overrideDefaultLayout;
+      grid-area: secondary-nav;
+      //fallbacks for IE
+      // @include grid-child (1, 2, 1, 2);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (1, 3, 2, 3);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (2, 5, 2, 3);
+      // }
+
+      // background-color: pink;
+    }
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--sidebar-first {
+      @include overrideDefaultLayout;
+      grid-area: sidebar-first;
+      //fallbacks for IE
+      // @include grid-child (1, 2, 3, 4);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (2, 3, 3, 4);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (2, 3, 3, 4);
+      // }
+
+      // background-color: lightgoldenrodyellow;
+    }
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--sidebar-second {
+      @include overrideDefaultLayout;
+      grid-area: sidebar-second;
+      //fallbacks for IE
+      // @include grid-child (1, 2, 4, 5);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (2, 3, 4, 5);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (4, 5, 3, 4);
+      // }
+
+      // background-color: lightcyan;
+    }
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--breadcrumb {
+      @include overrideDefaultLayout;
+      grid-area: breadcrumb;
+      //fallbacks for IE
+      // @include grid-child (1, 2, 2, 3);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (1, 2, 3, 6);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (3, 4, 3, 5);
+      // }
+
+      // background-color: lightgreen;
+    }
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--content-top {
+      @include overrideDefaultLayout;
+      grid-area: content-top;
+      //fallbacks for IE
+      // @include grid-child (1, 2, 2, 3);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (1, 2, 3, 6);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (3, 4, 3, 5);
+      // }
+
+      // background-color: lightblue;
+    }
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--content {
+      @include overrideDefaultLayout;
+      grid-area: content;
+      //fallbacks for IE
+      // @include grid-child (1, 2, 2, 3);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (1, 2, 3, 6);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (3, 4, 3, 5);
+      // }
+
+      // background-color: lightblue;
+    }
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--content-bottom {
+      @include overrideDefaultLayout;
+      grid-area: content-bottom;
+      // //fallbacks for IE
+      // @include grid-child (1, 2, 5, 6);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (1, 3, 6, 7);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (1, 7, 5, 6);
+      // }
+
+      // background-color: lightseagreen;
+    }
+
+    // ($col-start, $col-end, $row-start, $row-end)
+    &--footer {
+      @include overrideDefaultLayout;
+      grid-area: footer;
+      //fallbacks for IE
+      // @include grid-child (1, 2, 5, 6);
+
+      // @include breakpoint (tablet) {
+      //   @include grid-child (1, 3, 6, 7);
+      // }
+
+      // @include breakpoint (desktop) {
+      //   @include grid-child (1, 7, 5, 6);
+      // }
+
+      // background-color: purple;
+    }
+
+  }
+
+}

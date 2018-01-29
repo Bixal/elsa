@@ -1,0 +1,65 @@
+// Headings
+// <h1 class="{{modifier_class}}">A Heading Level 1 (h1) with enough text to wrap to another line</h1>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+// <h2 class="{{modifier_class}}">Heading Level 2 (h2) with enough text to wrap to another line; Heading Level 2 (h2) with enough text to wrap to another line</h2>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+// <h3 class="{{modifier_class}}">Heading Level 3 (h3) with enough text to wrap to another line; Heading Level 3 (h3) with enough text to wrap to another line</h3>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+// <h4 class="{{modifier_class}}">Heading Level 4 (h4) with enough text to wrap to another line; Heading Level 4 (h4) with enough text to wrap to another line; Heading Level 4 (h4) with enough text to wrap to another line</h4>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+// <h5 class="{{modifier_class}}">Heading Level 5 (h5) with enough text to wrap to another line; Heading Level 5 (h5) with enough text to wrap to another line; Heading Level 5 (h5) with enough text to wrap to another line</h5>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+// <h6 class="{{modifier_class}}">Heading Level 6 (h6) with enough text to wrap to another line; Heading Level 6 (h6) with enough text to wrap to another line; Heading Level 6 (h6) with enough text to wrap to another line</h6>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+h1,
+.h1 {
+  @include font ($primary-font, 6.4rem, $primary-colour, 600, 6.9rem);
+  @include vertical-margin($lrg-margin);
+}
+
+h2,
+.h2 {
+  @include font ($secondary-font, 3.9rem, $primary-colour, 600, 4.6rem);
+  @include vertical-margin($med-margin);
+}
+
+.section-title, // note this is an overwrite of the base theme .section-title
+.section-title--bottom-content {
+  @include font ($primary-font, 2.4rem, $primary-colour, 600, 3.9rem);
+  @include vertical-margin($med-margin);
+  text-transform: uppercase;
+
+  @include breakpoint($tablet) {
+
+    &.section-title-stream {
+      padding-left: 40px;
+    }
+
+    &.section-title-node {
+      padding-left: 48px;
+    }
+
+  }
+
+}
+
+h4,
+.h4 {
+  @include font ($secondary-font, 2rem, $black, 300, 3.1rem);
+  @include vertical-margin($med-margin);
+  font-style: italic;
+}
+
+h5,
+.h5 {
+  @include font ($secondary-font, 2rem, $black, 300, 3.1rem);
+  @include vertical-margin($med-margin);
+  font-style: italic;
+}
+
+h6,
+.h6 {
+  @include font ($secondary-font, 2rem, $black, 300, 3.1rem);
+  @include vertical-margin($med-margin);
+  font-style: italic;
+}

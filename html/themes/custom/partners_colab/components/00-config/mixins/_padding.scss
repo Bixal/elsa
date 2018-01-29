@@ -1,0 +1,37 @@
+// Use the padding variables and mixins to set padding accross the theme.
+
+// padding varibles
+$clear-padding: 0;
+$small-padding: 1rem;
+$med-padding: 2rem;
+$lrg-padding: 2.5rem;
+
+//@include small-padding ($spacing);
+@mixin vertical-padding ($spacing) {
+  padding-top: 0;
+  padding-bottom: $spacing;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//@include small-padding ($spacing);
+@mixin horizontal-padding ($spacing) {
+  padding-right: $spacing;
+  padding-left: $spacing;
+}
+
+//include reset-paddings;
+@mixin equal-padding ($spacing) {
+  padding-top: $spacing;
+  padding-bottom: $spacing;
+  padding-right: $spacing;
+  padding-left: $spacing;
+}
+
+//@include clear-padding;
+@mixin clear-padding {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}

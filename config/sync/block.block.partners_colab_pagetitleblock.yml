@@ -1,0 +1,37 @@
+uuid: 8c5a6ae5-6d0f-4cc7-834c-1f49179a4dff
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - social_core
+    - system
+  theme:
+    - partners_colab
+id: partners_colab_pagetitleblock
+theme: partners_colab
+region: hero
+weight: -29
+provider: null
+plugin: social_page_title_block
+settings:
+  id: social_page_title_block
+  label: 'Page title for nodes'
+  provider: social_core
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      event: event
+      page: page
+      topic: topic
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '/node/add/*'
+    negate: true
+    context_mapping: {  }

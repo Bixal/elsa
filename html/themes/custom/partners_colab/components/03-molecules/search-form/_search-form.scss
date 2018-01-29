@@ -1,0 +1,24 @@
+/*
+@styleguide
+
+@title Search Form
+
+Use the #search-form id on `search-form` components.
+
+<div id="search-form">
+<h2>Search</h2>
+<input type="text-input" class="input--field"></input>
+<input type="submit" class="btn btn--input"></input>
+</div>
+
+    <div id="search-form">
+      <h2>Search</h2>
+        <input type="text-input" class="input--field"></input>
+        <input type="submit" class="btn btn--input"></input>
+    </div>
+
+*/
+// TODO: update from ID to class
+.search-form {
+  padding: 1rem;
+}
