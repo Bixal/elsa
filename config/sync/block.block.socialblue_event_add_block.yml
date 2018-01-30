@@ -10,7 +10,7 @@ dependencies:
 id: socialblue_event_add_block
 theme: socialblue
 region: complementary_top
-weight: -99
+weight: -28
 provider: null
 plugin: event_add_block
 settings:

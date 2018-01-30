@@ -21,6 +21,7 @@ module:
   config_update: 0
   crop: 0
   datetime: 0
+  do_jump_links: 0
   dropdown: 0
   dynamic_entity_reference: 0
   editor: 0

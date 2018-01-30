@@ -1,0 +1,27 @@
+uuid: 76236688-c851-4d9c-832d-9e2a40776591
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - partners_colab
+id: jump_links_colab
+theme: partners_colab
+region: content
+weight: -19
+provider: null
+plugin: development_objective_jump_links_block
+settings:
+  id: null
+  label: 'Jump links'
+  provider: null
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

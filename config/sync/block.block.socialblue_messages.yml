@@ -9,7 +9,7 @@ dependencies:
 id: socialblue_messages
 theme: socialblue
 region: content
-weight: -17
+weight: -27
 provider: null
 plugin: system_messages_block
 settings:

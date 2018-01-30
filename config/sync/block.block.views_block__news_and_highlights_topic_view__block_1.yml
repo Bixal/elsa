@@ -1,0 +1,33 @@
+uuid: 3111eaaf-a3c6-4e66-ae48-fe060a5912f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_and_highlights_topic_view_
+  module:
+    - node
+    - views
+  theme:
+    - socialblue
+id: views_block__news_and_highlights_topic_view__block_1
+theme: socialblue
+region: content
+weight: -19
+provider: null
+plugin: 'views_block:news_and_highlights_topic_view_-block_1'
+settings:
+  id: 'views_block:news_and_highlights_topic_view_-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

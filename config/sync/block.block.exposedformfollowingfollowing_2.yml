@@ -12,7 +12,7 @@ dependencies:
 id: exposedformfollowingfollowing_2
 theme: partners_colab
 region: sidebar_first
-weight: -28
+weight: -29
 provider: null
 plugin: 'views_exposed_filter_block:following-following'
 settings:

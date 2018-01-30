@@ -12,7 +12,7 @@ dependencies:
 id: partners_colab_views_block__event_enrollments_event_enrollments_socialbase
 theme: partners_colab
 region: sidebar_first
-weight: -22
+weight: -23
 provider: null
 plugin: 'views_block:event_enrollments-event_enrollments'
 settings:

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/do_jump_links",
+  "type": "drupal-module",
+  "description": "Provides a block with jump links for development objectives",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/do_jump_links",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/do_jump_links",
+    "source": "http://cgit.drupalcode.org/do_jump_links"
+  },
+  "require": { }
+}

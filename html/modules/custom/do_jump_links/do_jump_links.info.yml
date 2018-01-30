@@ -1,0 +1,5 @@
+name: DO Jump Links
+type: module
+description: Provides a block with jump links for development objectives
+core: 8.x
+package: Custom

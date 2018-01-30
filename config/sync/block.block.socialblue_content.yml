@@ -9,7 +9,7 @@ dependencies:
 id: socialblue_content
 theme: socialblue
 region: content
-weight: -13
+weight: -25
 provider: null
 plugin: system_main_block
 settings:

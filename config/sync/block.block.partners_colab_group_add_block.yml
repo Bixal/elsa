@@ -10,7 +10,7 @@ dependencies:
 id: partners_colab_group_add_block
 theme: partners_colab
 region: sidebar_first
-weight: -25
+weight: -26
 provider: null
 plugin: group_add_block
 settings:

@@ -18,7 +18,7 @@ content:
   body:
     label: above
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -33,19 +33,19 @@ content:
     third_party_settings: {  }
   field_location:
     type: entity_reference_label
-    weight: 0
+    weight: 1
     region: content
-    label: hidden
+    label: above
     settings:
       link: true
     third_party_settings: {  }
   flag_follow_content:
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 100
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
