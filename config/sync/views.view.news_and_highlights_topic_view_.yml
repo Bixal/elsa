@@ -221,9 +221,20 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'News and highlights (topic view)'
+      title: 'News & Highlights'
       header: {  }
-      footer: {  }
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: 'Discover even more important topics from the community <a href="/all-topics">See all topics</a>'
+          plugin_id: text_custom
       empty: {  }
       relationships: {  }
       arguments:

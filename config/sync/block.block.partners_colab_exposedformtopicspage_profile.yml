@@ -13,7 +13,7 @@ dependencies:
 id: partners_colab_exposedformtopicspage_profile
 theme: partners_colab
 region: sidebar_first
-weight: -17
+weight: -18
 provider: null
 plugin: 'views_exposed_filter_block:topics-page_profile'
 settings:

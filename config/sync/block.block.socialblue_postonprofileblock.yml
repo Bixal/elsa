@@ -10,7 +10,7 @@ dependencies:
 id: socialblue_postonprofileblock
 theme: socialblue
 region: hidden
-weight: -9
+weight: -28
 provider: null
 plugin: post_profile_block
 settings:

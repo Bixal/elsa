@@ -10,7 +10,7 @@ dependencies:
 id: socialblue_postblock
 theme: socialblue
 region: hidden
-weight: -7
+weight: -27
 provider: null
 plugin: post_block
 settings:

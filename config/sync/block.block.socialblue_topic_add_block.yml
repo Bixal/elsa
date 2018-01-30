@@ -10,7 +10,7 @@ dependencies:
 id: socialblue_topic_add_block
 theme: socialblue
 region: complementary_top
-weight: -98
+weight: -28
 provider: null
 plugin: topic_add_block
 settings:

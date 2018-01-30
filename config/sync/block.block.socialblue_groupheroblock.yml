@@ -10,7 +10,7 @@ dependencies:
 id: socialblue_groupheroblock
 theme: socialblue
 region: hero
-weight: null
+weight: -28
 provider: null
 plugin: group_hero_block
 settings:

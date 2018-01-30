@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains do_jump_links.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function do_jump_links_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the do_jump_links module.
+    case 'help.page.do_jump_links':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a block with jump links for development objectives') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function do_jump_links_theme() {
+  return [
+    'do_jump_links' => [
+      'variables' => ['jump_links' => NULL],
+    ],
+  ];
+}

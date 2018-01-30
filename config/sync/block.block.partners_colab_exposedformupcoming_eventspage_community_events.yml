@@ -12,7 +12,7 @@ dependencies:
 id: partners_colab_exposedformupcoming_eventspage_community_events
 theme: partners_colab
 region: sidebar_first
-weight: -15
+weight: -16
 provider: null
 plugin: 'views_exposed_filter_block:upcoming_events-page_community_events'
 settings:

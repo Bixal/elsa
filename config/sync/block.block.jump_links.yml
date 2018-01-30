@@ -1,0 +1,27 @@
+uuid: 9c93396b-eaa0-486c-9bca-132924647b74
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - socialblue
+id: jump_links
+theme: socialblue
+region: complementary_top
+weight: 0
+provider: null
+plugin: development_objective_jump_links_block
+settings:
+  id: null
+  label: 'Jump links'
+  provider: null
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      development_objective: development_objective
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

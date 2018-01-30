@@ -10,7 +10,7 @@ dependencies:
 id: socialblue_postongroupblock
 theme: socialblue
 region: hidden
-weight: -9
+weight: -29
 provider: null
 plugin: post_group_block
 settings:
