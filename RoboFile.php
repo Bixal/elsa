@@ -123,7 +123,7 @@ class RoboFile extends \Robo\Tasks
     protected function drush()
     {
         // Drush needs an absolute path to the docroot.
-        $docroot = $this->getDocroot() . '/web';
+        $docroot = $this->getDocroot();
         return $this->taskExec('vendor/bin/drush')
           ->option('root', $docroot, '=');
     }
@@ -168,7 +168,7 @@ class RoboFile extends \Robo\Tasks
         return $this->taskPhpUnit('vendor/bin/phpunit')
           ->option('verbose')
           ->option('debug')
-          ->configFile('web/core')
+          ->configFile('html/core')
           ->group($module);
     }
 

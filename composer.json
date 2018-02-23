@@ -76,6 +76,7 @@
         "behat/mink-selenium2-driver": "^1.3",
         "bex/behat-screenshot": "^1.2",
         "drupal/coder": "^8.2",
-        "drupal/drupal-extension": "master-dev"
+        "drupal/drupal-extension": "master-dev",
+        "phpunit/phpunit": "^6.5"
     }
 }
