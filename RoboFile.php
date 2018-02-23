@@ -124,7 +124,7 @@ class RoboFile extends \Robo\Tasks
     {
         // Drush needs an absolute path to the docroot.
         $docroot = $this->getDocroot();
-        return $this->taskExec('vendor/bin/drush')
+        return $this->taskExec('../vendor/bin/drush')
           ->option('root', $docroot . "/..", '=');
     }
 
