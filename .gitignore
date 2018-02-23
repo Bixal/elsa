@@ -13,3 +13,4 @@ settings.local.php
 node_modules
 /html/private
 compliance_reports
+.env
