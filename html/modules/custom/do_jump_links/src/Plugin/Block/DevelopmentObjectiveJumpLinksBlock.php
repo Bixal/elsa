@@ -18,11 +18,11 @@ use Drupal\node\NodeInterface;
  *  admin_label = @Translation("Development objective jump links block"),
  * )
  */
-class DevelopmentObjectiveJumpLinksBlock extends BlockBase implements ContainerFactoryPluginInterface{
+class DevelopmentObjectiveJumpLinksBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   protected $node;
   protected $blockRepository;
-  protected $jumpLinks = array();
+  protected $jumpLinks = [];
 
   /**
    * {@inheritdoc}
@@ -117,7 +117,7 @@ class DevelopmentObjectiveJumpLinksBlock extends BlockBase implements ContainerF
     // With this when your node change your block will rebuild.
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
       // If there is node add its cachetag.
-      return Cache::mergeTags(parent::getCacheTags(), array('node:' . $node->id()));
+      return Cache::mergeTags(parent::getCacheTags(), ['node:' . $node->id()]);
     }
     else {
       // Return default tags instead.
@@ -135,7 +135,7 @@ class DevelopmentObjectiveJumpLinksBlock extends BlockBase implements ContainerF
     /* If you depends on \Drupal::routeMatch()
     you must set context of this block with 'route' context tag.
     Every new route this block will rebuild*/
-    return Cache::mergeContexts(parent::getCacheContexts(), array('route'));
+    return Cache::mergeContexts(parent::getCacheContexts(), ['route']);
   }
 
 }
